@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lianlin.ai/schemas/academic-skill.schema.json",
+  "title": "LL-AcademicSkillsHub skill record",
+  "type": "object",
+  "required": [
+    "id", "category", "title", "summary", "capabilities", "inputs", "outputs",
+    "environment", "quality", "risk", "source", "paths", "availability"
+  ],
+  "properties": {
+    "id": {"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "category": {"type":"string"},
+    "title": {"$ref":"#/$defs/i18n"},
+    "summary": {"$ref":"#/$defs/i18n"},
+    "capabilities": {"type":"object","required":["zh-CN","en"],"properties":{"zh-CN":{"type":"array","minItems":1,"items":{"type":"string"}},"en":{"type":"array","minItems":1,"items":{"type":"string"}}}},
+    "inputs": {"$ref":"#/$defs/i18nArray"},
+    "outputs": {"$ref":"#/$defs/i18nArray"},
+    "environment": {"type":"object","required":["runtime","network","credentials"],"properties":{"runtime":{"type":"array","items":{"type":"string"}},"network":{"type":"string","enum":["none","optional","required","unknown"]},"credentials":{"type":"array","items":{"type":"string"}}}},
+    "quality": {"type":"object","required":["status","testedOn"],"properties":{"status":{"type":"string","enum":["cataloged","beta","tested","verified","gold","restricted"]},"testedOn":{"type":"array","items":{"type":"string"}}}},
+    "risk": {"type":"object","required":["level","notes"],"properties":{"level":{"type":"string","enum":["low","medium","high","unknown"]},"notes":{"$ref":"#/$defs/i18n"}}},
+    "source": {"type":"object","required":["kind","upstream","licenseStatus"],"properties":{"kind":{"type":"string","enum":["lianlin-first-party","pinned-third-party"]},"upstream":{"type":"string"},"licenseStatus":{"type":"string","enum":["first-party","metadata-declared","review-required"]}}},
+    "paths": {"type":"object","required":["skill","zh-CN","en"],"properties":{"skill":{"type":"string"},"zh-CN":{"type":"string"},"en":{"type":"string"}}},
+    "availability": {"type":"object","required":["local","platform"],"properties":{"local":{"type":"boolean"},"platform":{"type":"boolean"}}}
+  },
+  "$defs": {
+    "i18n": {"type":"object","required":["zh-CN","en"],"properties":{"zh-CN":{"type":"string","minLength":1},"en":{"type":"string","minLength":1}}},
+    "i18nArray": {"type":"object","required":["zh-CN","en"],"properties":{"zh-CN":{"type":"array","minItems":1,"items":{"type":"string"}},"en":{"type":"array","minItems":1,"items":{"type":"string"}}}}
+  },
+  "additionalProperties": false
+}

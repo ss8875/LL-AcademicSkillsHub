@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LL-AcademicSkillsHub — bilingual, auditable, locally deployable academic skills.">
+  <title>LL-AcademicSkillsHub · 链邻学术技能仓库</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="#">LL-AcademicSkillsHub<small>链邻学术技能仓库</small></a>
+      <div class="navlinks">
+        <a href="#catalog" data-i18n="navCatalog">技能目录</a>
+        <a href="../docs/deployment.zh-CN.md" data-doc-link data-i18n="navDeploy">本地部署</a>
+        <a href="#platform" data-i18n="navPlatform">科研平台</a>
+        <a href="https://github.com/ss8875/LL-AcademicSkillsHub" target="_blank" rel="noopener noreferrer" data-i18n="navGithub">GitHub</a>
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" data-lang="zh-CN">中文</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow" data-i18n="eyebrow">本地优先 · 中英双语 · 可审计</div>
+          <h1><span data-i18n="heroTitle">链邻学术技能仓库</span><span data-i18n="heroSub">系统化组织学术 AI 能力</span></h1>
+          <p class="lead" data-i18n="heroLead">覆盖从选题、检索、精读、写作到数据、实验、可视化和成果转化的完整科研流程。</p>
+          <div class="actions">
+            <a class="button primary" href="#catalog" data-i18n="browse">浏览全部技能</a>
+            <a class="button" href="../docs/deployment.zh-CN.md" data-doc-link data-i18n="deploy">本地部署</a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-hidden="true"><div class="orbit"></div><div class="core">LL</div></div>
+      </div>
+    </section>
+    <section class="shell stats" aria-label="Repository statistics">
+      <div class="stats-grid">
+        <div class="stat"><strong id="stat-skills">—</strong><span data-i18n="allSkills">技能总数</span></div>
+        <div class="stat"><strong id="stat-categories">—</strong><span data-i18n="categories">类别</span></div>
+        <div class="stat"><strong id="stat-first">—</strong><span data-i18n="firstParty">链邻原创</span></div>
+        <div class="stat"><strong id="stat-external">—</strong><span data-i18n="external">固定第三方</span></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="shell">
+        <div class="section-head"><h2 data-i18n="whyTitle">不是堆文件，而是建立可信技能目录</h2><p data-i18n="whyText">同一入口说明能力、条件、产出、风险与验证状态。</p></div>
+        <div class="principles">
+          <article class="principle"><b data-i18n="p1">双语同构</b><p data-i18n="p1d"></p></article>
+          <article class="principle"><b data-i18n="p2">分级质量</b><p data-i18n="p2d"></p></article>
+          <article class="principle"><b data-i18n="p3">来源隔离</b><p data-i18n="p3d"></p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="catalog">
+      <div class="shell">
+        <div class="section-head"><h2 data-i18n="catalogTitle">完整技能与功能目录</h2><p data-i18n="catalogText"></p></div>
+        <div class="controls">
+          <input id="search" type="search" data-i18n-placeholder="search" placeholder="搜索技能、功能或说明" aria-label="Search">
+          <select id="quality" aria-label="Quality">
+            <option value="all" data-i18n="allQuality">全部质量状态</option>
+            <option value="cataloged">cataloged</option><option value="beta">beta</option>
+            <option value="tested">tested</option><option value="verified">verified</option>
+            <option value="gold">gold</option><option value="restricted">restricted</option>
+          </select>
+        </div>
+        <div id="category-strip" class="category-strip" aria-label="Categories"></div>
+        <div id="result-meta" class="result-meta" aria-live="polite"></div>
+        <div id="skill-grid" class="skill-grid"></div>
+      </div>
+    </section>
+    <section class="section platform" id="platform">
+      <div class="shell platform-wrap">
+        <div>
+          <div class="eyebrow">LIANLIN RESEARCH AI</div>
+          <h2 data-i18n="platformTitle">不想逐项安装？使用链邻科研 AI 平台</h2>
+          <p data-i18n="platformText"></p>
+        </div>
+        <aside class="platform-card">
+          <div class="download-placeholder" id="download-placeholder">
+            <div><strong data-i18n="pending">官方下载地址待配置</strong><br><small data-i18n="pendingSub"></small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><strong>LL-AcademicSkillsHub</strong><span data-i18n="footer"></span></div></footer>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>

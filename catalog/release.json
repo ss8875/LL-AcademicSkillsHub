@@ -1,0 +1,10 @@
+{
+  "version": "0.1.0",
+  "releaseDate": "2026-07-23",
+  "expected": {
+    "skills": 187,
+    "categories": 18,
+    "firstParty": 10,
+    "thirdParty": 177
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="title desc">
+  <title id="title">LL-AcademicSkillsHub 链邻学术技能仓库</title>
+  <desc id="desc">A bilingual promotional banner for a local, auditable academic skill repository.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset=".52" stop-color="#102a4f"/>
+      <stop offset="1" stop-color="#153d67"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#52e8c1"/>
+      <stop offset="1" stop-color="#72b7ff"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1440" height="640" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#bde7ff">
+    <path d="M0 80h1440M0 160h1440M0 240h1440M0 320h1440M0 400h1440M0 480h1440M0 560h1440"/>
+    <path d="M80 0v640M160 0v640M240 0v640M320 0v640M400 0v640M480 0v640M560 0v640M640 0v640M720 0v640M800 0v640M880 0v640M960 0v640M1040 0v640M1120 0v640M1200 0v640M1280 0v640M1360 0v640"/>
+  </g>
+  <circle cx="1210" cy="305" r="205" fill="#3fa5ff" opacity=".11" filter="url(#glow)"/>
+  <g transform="translate(1055 155)" stroke="url(#accent)" stroke-width="5" fill="none">
+    <circle cx="165" cy="165" r="88" fill="#0d2039"/>
+    <circle cx="165" cy="165" r="27" fill="#52e8c1" stroke="none"/>
+    <circle cx="40" cy="70" r="17"/><circle cx="287" cy="68" r="17"/>
+    <circle cx="298" cy="245" r="17"/><circle cx="53" cy="270" r="17"/>
+    <circle cx="165" cy="15" r="17"/>
+    <path d="M55 81l75 55M272 80l-70 55M283 236l-77-43M69 260l66-58M165 32v103"/>
+  </g>
+  <g transform="translate(92 86)">
+    <rect width="158" height="38" rx="19" fill="#52e8c1" opacity=".15"/>
+    <text x="22" y="26" font-family="Arial, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" fill="#7af3d2">LOCAL FIRST · 本地优先</text>
+    <text x="0" y="126" font-family="Arial, Microsoft YaHei, sans-serif" font-size="67" font-weight="800" fill="#ffffff">LL-AcademicSkillsHub</text>
+    <text x="0" y="198" font-family="Microsoft YaHei, Arial, sans-serif" font-size="44" font-weight="700" fill="url(#accent)">链邻学术技能仓库</text>
+    <text x="0" y="255" font-family="Arial, Microsoft YaHei, sans-serif" font-size="25" fill="#c6d9ee">Bilingual · Auditable · Locally deployable</text>
+    <text x="0" y="293" font-family="Microsoft YaHei, Arial, sans-serif" font-size="25" fill="#c6d9ee">中英双语 · 分级审计 · 本地部署</text>
+    <g transform="translate(0 346)">
+      <rect width="815" height="82" rx="18" fill="#07111f" opacity=".74" stroke="#315c86"/>
+      <text x="28" y="34" font-family="Microsoft YaHei, Arial, sans-serif" font-size="19" fill="#7af3d2">187 SKILLS · 18 CATEGORIES</text>
+      <text x="28" y="62" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#dcecff">检索 · 精读 · 写作 · 数据 · 实验 · 可视化 · 转化</text>
+    </g>
+    <text x="0" y="492" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#9db5cf">不想逐项安装？可选择链邻科研 AI 平台的一体化体验</text>
+  </g>
+</svg>

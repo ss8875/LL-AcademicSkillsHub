@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "releaseVersion": "0.1.0",
+  "generatedAt": "2026-07-23T00:00:00Z",
+  "result": "pass",
+  "summary": {
+    "skills": 187,
+    "categories": 18,
+    "errors": 0,
+    "warnings": 19,
+    "info": 1,
+    "quality": {
+      "cataloged": 177,
+      "beta": 10
+    },
+    "sources": {
+      "pinned-third-party": 177,
+      "lianlin-first-party": 10
+    }
+  },
+  "checks": {
+    "catalogSchema": {
+      "records": 187,
+      "uniqueIds": 187,
+      "categories": 18
+    },
+    "skillStructure": {
+      "diskSkills": 187,
+      "catalogSkills": 187
+    },
+    "bilingualParity": {
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "skills": 187,
+      "generatedArtifacts": 9
+    },
+    "codeSyntax": {
+      "pythonFiles": 234,
+      "pythonWarnings": 0,
+      "jsFiles": 1,
+      "jsFailures": 0
+    },
+    "securityStaticScan": {
+      "files": 1601,
+      "findings": {
+        "dynamic-python": 15,
+        "shell-pipe-exec": 2,
+        "shell-true": 2
+      }
+    },
+    "brandAndScope": {
+      "publicFiles": 5,
+      "firstReleaseRoutes": 2
+    },
+    "licenseProvenance": {
+      "statusCounts": {
+        "metadata-declared": 177,
+        "first-party": 10
+      }
+    },
+    "releaseContract": {
+      "skills": 187,
+      "categories": 18,
+      "firstParty": 10,
+      "thirdParty": 177
+    }
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/cheminformatics-drug-discovery/torchdrug/references/core_concepts.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/clinical-precision-medicine/pathml/references/data_management.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/clinical-precision-medicine/pathml/references/machine_learning.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/data-analysis-statistics/polars/references/operations.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/data-analysis-statistics/sympy/references/code-generation-printing.md"
+    },
+    {
+      "code": "security.shell-pipe-exec",
+      "message": "High-risk command pattern requires human review",
+      "path": "skills/document-data-tools/denario/references/llm_configuration.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/geospatial-remote-sensing/geomaster/references/machine-learning.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/pytorch-lightning/references/lightning_module.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/torch-geometric/SKILL.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/torch-geometric/scripts/benchmark_model.py"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/torch-geometric/scripts/create_gnn_template.py"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/transformers/references/models.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/materials-physics/qutip/references/visualization.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/platform-infrastructure/modal/references/examples.md"
+    },
+    {
+      "code": "security.shell-true",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/platform-infrastructure/modal/references/web-endpoints.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/presentation-visualization/paper-slide-deck/scripts/detect-figures.ts"
+    },
+    {
+      "code": "security.shell-true",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/protein-structural-biology/alphafold-database/SKILL.md"
+    },
+    {
+      "code": "security.shell-pipe-exec",
+      "message": "High-risk command pattern requires human review",
+      "path": "skills/protein-structural-biology/alphafold-database/references/api_reference.md"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/protein-structural-biology/esm/references/esm-c-api.md"
+    }
+  ],
+  "info": [
+    {
+      "code": "license.metadata-declared",
+      "message": "177 third-party skills rely on bundle-level license metadata",
+      "path": "THIRD_PARTY_NOTICES.md"
+    }
+  ],
+  "catalogSha256": "0910a9e5573eac123bf477c51ecad48fe645d8b8d0e7dcf94888adde4acc2c6a"
+}
