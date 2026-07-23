@@ -170,7 +170,7 @@ def readme(lang: str, payload: dict) -> str:
 
 # 链邻学术技能仓库
 
-LL-AcademicSkillsHub 将科研技能按任务体系组织为可搜索、可安装、可审计的双语目录。当前首期收录 **{summary['skillCount']} 项技能**、**{summary['categoryCount']} 个类别**：其中 **{summary['firstPartyCount']} 项链邻原创核心能力**，**{summary['thirdPartyCount']} 项固定版本第三方技能**。
+LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完成科研论文创作，共**{summary['skillCount']} 项技能**、**{summary['categoryCount']} 个类别**。
 
 ## 你可以做什么
 
