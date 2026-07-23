@@ -7,7 +7,7 @@
 - 阻断错误: 0
 - 复核警告: 19
 - 信息项: 1
-- 目录 SHA-256: `0910a9e5573eac123bf477c51ecad48fe645d8b8d0e7dcf94888adde4acc2c6a`
+- 目录 SHA-256: `5443cfc3b3f41c1bd63b78f5228cb5c8e7ee2a655f9e3e1a1a525e1248984ab4`
 
 ## 检查矩阵
 

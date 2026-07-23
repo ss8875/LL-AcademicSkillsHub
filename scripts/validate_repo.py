@@ -170,6 +170,7 @@ def scan_security(audit: Audit) -> None:
     extensions = {".md",".py",".js",".ts",".sh",".ps1",".json",".yaml",".yml",".toml"}
     for base in (ROOT / "skills", ROOT / "scripts", ROOT / "site"):
         text_files.extend(path for path in base.rglob("*") if path.is_file() and path.suffix.lower() in extensions)
+    text_files = sorted(set(text_files), key=lambda path: path.relative_to(ROOT).as_posix().casefold())
     counts = Counter()
     hardcoded = re.compile(r"""(?ix)\b(?:api[_-]?key|access[_-]?token|secret)\s*[:=]\s*["'](?!your|example|replace|<|\$)([A-Za-z0-9_\-]{16,})["']""")
     high_risk_patterns = {
@@ -279,7 +280,9 @@ def build_report(audit: Audit, categories: list[dict], records: list[dict], rele
         "errors": audit.errors,
         "warnings": audit.warnings,
         "info": audit.info,
-        "catalogSha256": hashlib.sha256((ROOT / "catalog" / "skills.seed.json").read_bytes()).hexdigest(),
+        "catalogSha256": hashlib.sha256(
+            json.dumps(records, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+        ).hexdigest(),
     }
 
 

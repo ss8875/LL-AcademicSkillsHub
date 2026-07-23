@@ -112,17 +112,17 @@
     {
       "code": "security.dynamic-python",
       "message": "Dynamic execution pattern requires sandbox review",
-      "path": "skills/machine-learning-ai/torch-geometric/SKILL.md"
-    },
-    {
-      "code": "security.dynamic-python",
-      "message": "Dynamic execution pattern requires sandbox review",
       "path": "skills/machine-learning-ai/torch-geometric/scripts/benchmark_model.py"
     },
     {
       "code": "security.dynamic-python",
       "message": "Dynamic execution pattern requires sandbox review",
       "path": "skills/machine-learning-ai/torch-geometric/scripts/create_gnn_template.py"
+    },
+    {
+      "code": "security.dynamic-python",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/machine-learning-ai/torch-geometric/SKILL.md"
     },
     {
       "code": "security.dynamic-python",
@@ -150,14 +150,14 @@
       "path": "skills/presentation-visualization/paper-slide-deck/scripts/detect-figures.ts"
     },
     {
-      "code": "security.shell-true",
-      "message": "Dynamic execution pattern requires sandbox review",
-      "path": "skills/protein-structural-biology/alphafold-database/SKILL.md"
-    },
-    {
       "code": "security.shell-pipe-exec",
       "message": "High-risk command pattern requires human review",
       "path": "skills/protein-structural-biology/alphafold-database/references/api_reference.md"
+    },
+    {
+      "code": "security.shell-true",
+      "message": "Dynamic execution pattern requires sandbox review",
+      "path": "skills/protein-structural-biology/alphafold-database/SKILL.md"
     },
     {
       "code": "security.dynamic-python",
@@ -172,5 +172,5 @@
       "path": "THIRD_PARTY_NOTICES.md"
     }
   ],
-  "catalogSha256": "0910a9e5573eac123bf477c51ecad48fe645d8b8d0e7dcf94888adde4acc2c6a"
+  "catalogSha256": "5443cfc3b3f41c1bd63b78f5228cb5c8e7ee2a655f9e3e1a1a525e1248984ab4"
 }
