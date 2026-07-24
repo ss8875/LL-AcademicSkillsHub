@@ -104,59 +104,65 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"./{skill['paths']['zh-CN']}", readme)
 
-    def test_chinese_quick_start_is_systematic_and_complete(self):
+    def test_chinese_installation_is_detailed_and_follows_the_skill_catalog(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("## 立即开始", readme)
-        self.assertLess(readme.index("## 你可以做什么"), readme.index("## 快速开始"))
+        self.assertNotIn("## 快速开始", readme)
         self.assertLess(
-            readme.index("## 快速开始"),
-            readme.index("## 不想本地安装？直接使用链邻科研 AI 平台"),
+            readme.rindex("[↑ 返回分类总览]"),
+            readme.index("## 安装说明"),
         )
-        self.assertIn(
-            "[不想本地安装？直接使用链邻科研 AI 平台](#lianlin-platform)",
-            readme,
-        )
+        self.assertLess(readme.index("## 安装说明"), readme.index("## 品牌与推广边界"))
         self.assertIn('<a id="lianlin-platform"></a>', readme)
-        quick_start = readme.split("## 快速开始", 1)[1].split(
-            "## 不想本地安装？直接使用链邻科研 AI 平台", 1
+        installation = readme.split("## 安装说明", 1)[1].split(
+            "## 品牌与推广边界", 1
         )[0]
-        for step in range(1, 7):
-            self.assertIn(f"### 第 {step} 步", quick_start)
-        for category in self.categories:
-            self.assertIn(f"(#category-{category['id']})", quick_start)
-        self.assertIn("研究目标、已有材料、任务范围、期望产出、质量要求", quick_start)
-        self.assertIn("请从 LL-AcademicSkillsHub 中选择最合适的技能或技能组合", quick_start)
-        self.assertIn("不补造缺失信息", quick_start)
-        self.assertIn("分阶段检查比一次生成全部结果更容易发现", quick_start)
+        required = [
+            "### 1. 准备环境",
+            "### 2. 方式一：部署本地技能目录",
+            "### 3. 方式二：安装技能到本地 Agent",
+            "### 4. 常见问题",
+            r".\scripts\setup.ps1",
+            r"scripts\setup.bat",
+            "python3 scripts/serve.py",
+            "http://127.0.0.1:8765/",
+            '"ready": true',
+            "Found 187 skills",
+            "npx skills add ss8875/LL-AcademicSkillsHub --list",
+            "--global --agent codex --skill '*' --yes --copy",
+            "--skill ll-paper-search",
+            "npx skills update --global --yes",
+            "完全关闭并重新打开 Agent 会话",
+            "C:\\Windows\\System32",
+            "`winget` 无法识别",
+        ]
+        for value in required:
+            self.assertIn(value, installation)
 
-    def test_english_quick_start_matches_the_onboarding_structure(self):
+    def test_english_installation_matches_the_deployment_structure(self):
         readme = (ROOT / "README.en.md").read_text(encoding="utf-8")
-        self.assertLess(readme.index("## What you can do"), readme.index("## Quick start"))
+        self.assertNotIn("## Quick start", readme)
         self.assertLess(
-            readme.index("## Quick start"),
-            readme.index(
-                "## Don't want to install locally? Use Lianlin Research AI Platform"
-            ),
+            readme.index("## Don't want to install locally? Use Lianlin Research AI Platform"),
+            readme.index("## Installation"),
         )
-        self.assertIn(
-            "[Don't want to install locally? Use Lianlin Research AI Platform]"
-            "(#lianlin-platform)",
-            readme,
-        )
-        quick_start = readme.split("## Quick start", 1)[1].split(
-            "## Don't want to install locally? Use Lianlin Research AI Platform", 1
+        self.assertLess(readme.index("## Installation"), readme.index("## Brand and promotion boundary"))
+        installation = readme.split("## Installation", 1)[1].split(
+            "## Brand and promotion boundary", 1
         )[0]
-        for step in range(1, 7):
-            self.assertIn(f"### Step {step}", quick_start)
-        for category in self.categories:
-            self.assertIn(category["en"], quick_start)
-        self.assertIn(
-            "research goal, available materials, task scope, expected output, "
-            "and quality requirements",
-            quick_start,
-        )
-        self.assertIn("do not invent missing information", quick_start)
-        self.assertIn("Staged review makes evidence gaps", quick_start)
+        required = [
+            "### 1. Prerequisites",
+            "### 2. Method one: Deploy the local skill catalog",
+            "### 3. Method two: Install skills into a local Agent",
+            "### 4. Troubleshooting",
+            "python3 scripts/serve.py",
+            "Found 187 skills",
+            "npx skills add ss8875/LL-AcademicSkillsHub --list",
+            "--global --agent codex --skill '*' --yes --copy",
+            "fully close and reopen the Agent session",
+        ]
+        for value in required:
+            self.assertIn(value, installation)
 
     def test_chinese_skill_guides_are_complete_and_unique(self):
         required_headings = [

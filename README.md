@@ -22,87 +22,6 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 - 在 Windows、macOS 或 Linux 上使用 Python 标准库启动本地可搜索站点；
 - 不想逐项配置技能时，选择链邻科研 AI 平台的一体化使用方式。
 
-## 快速开始
-
-你不需要先记住 187 个技能名称。最简单的上手方式是：**先说清研究目标和已有材料，再让本地 Agent 从目录中选择合适的技能或技能组合。** 如果你已经知道技能名称，也可以在请求中直接指定。
-
-### 第 1 步：选择使用方式
-
-#### 方式 A：本地使用
-
-在项目根目录运行：
-
-```powershell
-./scripts/setup.ps1
-./scripts/start.ps1
-```
-
-浏览器打开 `http://127.0.0.1:8765/`，即可搜索分类、技能和功能。Windows 也可运行 `scripts\setup.bat` 与 `scripts\start.bat`；其他系统及环境检查请看[本地部署说明](./docs/deployment.zh-CN.md)。
-
-找到技能后，先打开对应的“详细用法”，确认适用场景、需要提供的材料、工作方式、产出、内置参考和边界，再把技能目录接入你所使用的本地 Agent Skill 环境。
-
-#### 方式 B：使用链邻科研 AI 平台
-
-如果不想逐项安装、配置依赖或调试环境，可以直接使用链邻科研 AI 平台的一体化能力。下载与微信客服入口见下方“[不想本地安装？直接使用链邻科研 AI 平台](#lianlin-platform)”。
-
-### 第 2 步：用一个完整请求启动任务
-
-一个好请求应包含五个要素：**研究目标、已有材料、任务范围、期望产出、质量要求**。可以直接复制下面的通用模板：
-
-> 请从 LL-AcademicSkillsHub 中选择最合适的技能或技能组合。我的研究目标是【要解决的问题】；已有材料是【论文、数据、代码、图片、协议或草稿】；任务范围是【研究对象、时间、语言、方法、期刊或排除条件】；请输出【表格、报告、代码、图件、文稿或审计清单】；要求保留证据来源和关键参数，区分事实、推断与不确定性，不补造缺失信息，并列出需要我确认的事项。
-
-材料不完整也可以开始。请明确告诉 Agent“先检查输入是否充分”，让它先返回缺失项、风险与建议步骤，再决定是否执行。
-
-### 第 3 步：按科研全流程找到入口
-
-| 科研阶段 | 先从这些分类开始 | 能完成什么 |
-|---|---|---|
-| 选题与立项 | [学术核心能力](#category-academic-core) · [研究方法与科学思维](#category-research-methods) | 分析趋势与缺口、形成研究问题、提出假设、评估创新性与可行性 |
-| 检索与证据获取 | [论文检索与文献管理](#category-literature-management) · [科学数据库](#category-scientific-databases) | 构造检索式、跨库搜索、去重筛选、获取元数据与合法全文 |
-| 精读与知识整理 | [学术核心能力](#category-academic-core) · [文档处理与数据工具](#category-document-data-tools) | 解析 PDF 和文档、双语精读、定位证据、建立论文阅读卡与证据矩阵 |
-| 研究设计与实验执行 | [研究方法与科学思维](#category-research-methods) · [实验室自动化与集成](#category-lab-automation) · [平台与基础设施](#category-platform-infrastructure) | 设计方案、识别偏倚、编写协议、连接实验流程、配置计算资源 |
-| 数据处理与建模 | [数据分析与统计建模](#category-data-analysis-statistics) · [机器学习与人工智能](#category-machine-learning-ai) | 清理数据、统计推断、训练模型、诊断误差、解释结果与保存复现记录 |
-| 论文写作与投稿 | [科学写作与学术交流](#category-scientific-communication) · [文档处理与数据工具](#category-document-data-tools) | 起草论文、基金与报告，润色语言，套用模板，生成投稿文件 |
-| 图表与成果展示 | [学术演示与可视化](#category-presentation-visualization) | 制作论文图、机制图、海报、幻灯片与可编辑视觉材料 |
-| 审稿、修订与治理 | [学术核心能力](#category-academic-core) · [科学写作与学术交流](#category-scientific-communication) | 模拟审稿、逐条回复、审计引用、检查数据可用性与成果合规边界 |
-
-### 第 4 步：按专业研究领域进入
-
-| 研究方向 | 相关分类 | 常见任务 |
-|---|---|---|
-| 生命科学与医学 | [生物信息与基因组学](#category-bioinformatics-genomics) · [临床医学与精准医疗](#category-clinical-precision-medicine) · [蛋白质工程与结构生物学](#category-protein-structural-biology) | 序列与组学分析、单细胞、医学影像、临床证据、蛋白结构与功能 |
-| 化学、药物与材料 | [化学信息与药物发现](#category-cheminformatics-drug-discovery) · [材料科学与物理计算](#category-materials-physics) | 分子处理、性质预测、虚拟筛选、结构设计、材料模拟与物理计算 |
-| 金融、经济与空间研究 | [金融与经济数据](#category-finance-economics) · [地理空间与遥感](#category-geospatial-remote-sensing) | 市场和宏观数据、企业研究、GIS、遥感影像与空间分析 |
-| 跨学科计算研究 | [科学数据库](#category-scientific-databases) · [数据分析与统计建模](#category-data-analysis-statistics) · [机器学习与人工智能](#category-machine-learning-ai) · [平台与基础设施](#category-platform-infrastructure) | 数据采集、规范化、统计与 AI 建模、云端计算和任务编排 |
-
-### 第 5 步：复制一个真实任务开始
-
-| 想做什么 | 可以直接这样说 |
-|---|---|
-| 分析研究选题 | “围绕【研究方向】检索近五年代表性研究，区分热点、已解决问题和真实证据缺口，提出 3 个可执行选题，并从创新性、数据、方法、伦理和资源方面评分。” |
-| 做可复现文献检索 | “把【研究问题】拆成概念块与同义词，为【目标数据库】设计可复现检索式，记录日期、过滤条件和命中数，去重后按【纳排标准】输出筛选表。” |
-| 精读中英文论文 | “逐篇精读这些 PDF，建立中英文术语表，按研究问题、方法、样本、结果、限制抽取证据；每项关键结论标注页码、图表或章节位置。” |
-| 做系统综述或证据表 | “基于这批论文建立证据矩阵，比较研究设计、样本、变量、方法、主要结果和偏倚风险；不要把作者主张与论文实际证据混在一起。” |
-| 设计研究方案 | “根据【研究问题和已有证据】提出研究设计，写清假设、分析单位、采样、对照、测量、排除、缺失处理、主要终点和可复现计划，并列出需要伦理审查的部分。” |
-| 分析科研数据 | “先检查这份数据的变量、缺失、异常、分布和采集质量，再选择合适的统计方法；输出可运行代码、效应量、不确定性、模型诊断和敏感性分析。” |
-| 做专业领域分析 | “这是【序列、临床、分子、材料、金融或空间】数据。请先确认数据版本、单位、参考体系和适用方法，再选择相应领域技能完成分析，并给出验证方案。” |
-| 写论文段落或全文 | “根据这些证据、结果和图表起草【摘要、引言、方法、结果或讨论】；保持事实、数字和引用不变，区分结果与解释，并标出证据不足的位置。” |
-| 制作论文图和汇报 | “根据这些数据和结论设计投稿级多面板图，同时生成可编辑源文件、图注和数据映射；再将核心证据整理成一份组会汇报。” |
-| 模拟审稿 | “从研究问题、创新性、方法、统计、图表、报告完整性和可复现性审查这篇稿件，按主要问题、次要问题和可执行修改建议输出审稿报告。” |
-| 审计引用与参考文献 | “核对正文引文与参考文献的一致性，检查 DOI、作者、期刊、年份和页码；把结果分为已核验、部分匹配、冲突和无法核验，不要补造字段。” |
-| 回复审稿意见 | “把审稿意见逐条拆解，关联到原稿位置和修改证据，起草礼貌、明确、可核查的回复；无法接受的建议请给出有证据的解释，并列出仍需作者决定的问题。” |
-
-### 第 6 步：需要时组合多个技能
-
-复杂科研任务通常不是调用一个技能，而是让多个技能按产物交接：
-
-- **从选题到论文：**选题分析 → 可复现检索 → 全文精读 → 研究设计 → 数据分析 → 科研图表 → 论文写作 → 引用审计。
-- **系统综述：**检索策略 → 去重筛选 → 全文证据抽取 → 偏倚评价 → 统计综合 → PRISMA 流程与综述写作。
-- **数据论文：**数据与变量审计 → 领域分析 → 统计或机器学习 → 可视化 → 方法与结果写作 → 数据可用性说明。
-- **投稿与返修：**期刊模板 → 投稿前审计 → 模拟审稿 → 修改稿 → 逐条回复 → 引用、图表和附件复核。
-
-可以直接说：“请先给出技能编排顺序、每一步的输入输出和人工确认点，等我提供材料后分阶段执行。” 分阶段检查比一次生成全部结果更容易发现证据缺口和方法错误。
-
 <a id="lianlin-platform"></a>
 
 ## 不想本地安装？直接使用链邻科研 AI 平台
@@ -522,6 +441,222 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 | **[Modal](./skills/platform-infrastructure/modal/locales/zh-CN.md)** | **核心能力：**检查运行资源与依赖；组织计算和平台配置；记录环境限制与可复现条件<br><strong>能力说明：</strong>使用无服务器容器、GPU和自动缩放在云中运行Python代码。在部署ML模型、运行批处理作业、调度计算密集型任务或为需要GPU加速或动态缩放的API提供服务时使用。 | [详细用法](./skills/platform-infrastructure/modal/locales/zh-CN.md) |
 
 [↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)
+
+## 安装说明
+
+LL-AcademicSkillsHub 的本地使用分为两个层次，请先确认自己需要哪一种：
+
+| 你的目的 | 应执行的步骤 | 完成后得到什么 |
+|---|---|---|
+| 浏览、搜索和阅读全部技能 | 完成“部署本地技能目录” | 一个只在本机运行的技能检索网站，可查看 18 个分类、187 项技能及详细用法 |
+| 让本地 Agent 实际调用技能 | 先部署目录，再完成“安装技能到本地 Agent” | 技能目录被复制到 Agent 的技能路径，重启 Agent 后即可按技能名称或自然语言调用 |
+| 不想配置本地环境 | 使用上方链邻科研 AI 平台入口 | 通过一体化平台使用科研能力 |
+
+### 1. 准备环境
+
+| 项目 | 最低要求 | 用途 |
+|---|---|---|
+| 操作系统 | Windows 10/11、macOS 12+ 或常见 Linux 发行版 | 运行本地目录和脚本 |
+| Python | 3.10 或更高版本 | 构建、检查并启动本地技能目录 |
+| Git | 可选 | 克隆仓库和获取后续更新；没有 Git 也可以下载 ZIP |
+| 磁盘空间 | 至少 100 MB | 保存仓库、目录数据和说明文档 |
+| Node.js | 18 或更高版本，仅安装 Agent 技能时需要 | 通过 `npx skills` 选择和复制技能 |
+
+先在终端检查已经安装的版本：
+
+```text
+python --version
+git --version
+node --version
+npm --version
+```
+
+只部署本地技能目录时，**不需要 Node.js、Docker、数据库或额外 Python 包**。如果只缺少 Git，可以在 GitHub 项目页点击 `Code → Download ZIP`，解压后继续下面的步骤。
+
+### 2. 方式一：部署本地技能目录
+
+#### 2.1 下载项目
+
+推荐使用 Git，这样后续可以直接更新：
+
+```powershell
+git clone https://github.com/ss8875/LL-AcademicSkillsHub.git
+cd LL-AcademicSkillsHub
+```
+
+如果下载的是 ZIP，请完整解压，然后在终端进入解压后的 `LL-AcademicSkillsHub` 目录。后续命令必须在项目根目录执行，不要停留在 `C:\Windows\System32` 等系统目录。
+
+#### 2.2 Windows 自动部署
+
+在项目根目录打开 PowerShell：
+
+```powershell
+.\scripts\setup.ps1
+.\scripts\start.ps1
+```
+
+`setup.ps1` 会依次完成四件事：
+
+1. 检查 Python 是否达到 3.10；
+2. 首次运行时把 `.env.example` 复制为本机 `.env`；
+3. 重新生成中英文目录和 187 项技能说明；
+4. 执行仓库审计和本地环境诊断。
+
+出现 `Setup complete` 后再执行 `start.ps1`。如果 PowerShell 提示禁止执行脚本，不需要修改系统策略，直接使用仓库提供的批处理入口：
+
+```bat
+scripts\setup.bat
+scripts\start.bat
+```
+
+#### 2.3 macOS 或 Linux 部署
+
+```bash
+git clone https://github.com/ss8875/LL-AcademicSkillsHub.git
+cd LL-AcademicSkillsHub
+cp .env.example .env
+python3 scripts/build_catalog.py
+python3 scripts/validate_repo.py
+python3 scripts/doctor.py
+python3 scripts/serve.py
+```
+
+前三个 Python 命令分别负责生成目录、审计仓库和检查环境；最后一个命令启动本地网站。
+
+#### 2.4 打开、停止和重新启动
+
+看到下面的提示说明服务已经启动：
+
+```text
+LL-AcademicSkillsHub: http://127.0.0.1:8765/site/
+Press Ctrl+C to stop.
+```
+
+在浏览器打开：
+
+```text
+http://127.0.0.1:8765/
+```
+
+根地址会自动跳转到 `/site/`。启动服务的终端窗口需要保持打开；按 `Ctrl+C` 可安全停止，之后再次运行 `scripts\start.ps1` 或 `python3 scripts/serve.py` 即可重新启动。
+
+#### 2.5 修改端口和访问范围
+
+默认配置保存在项目根目录的 `.env`：
+
+```dotenv
+LL_HOST=127.0.0.1
+LL_PORT=8765
+```
+
+端口被占用时，可以把 `LL_PORT` 改为 `9000`，或临时指定：
+
+```powershell
+.\scripts\start.ps1 --port 9000
+```
+
+`127.0.0.1` 表示只有本机可以访问。除非已经配置防火墙、访问控制、反向代理和 TLS，否则不要把 `LL_HOST` 改成 `0.0.0.0`。
+
+#### 2.6 验证部署是否成功
+
+Windows：
+
+```powershell
+python scripts\doctor.py
+python -m unittest discover -s tests -v
+```
+
+macOS / Linux：
+
+```bash
+python3 scripts/doctor.py
+python3 -m unittest discover -s tests -v
+```
+
+`doctor.py` 输出中的 `"ready": true` 表示目录和站点文件齐全；测试应以 `OK` 结束。浏览器中还应能够搜索技能、切换 18 个分类并打开“详细用法”。
+
+#### 2.7 获取项目更新
+
+使用 Git 安装时：
+
+```powershell
+git pull
+.\scripts\setup.ps1
+```
+
+macOS / Linux 把第二条替换为前面的三个生成与检查命令。使用 ZIP 时，需要重新下载新版并解压；如果修改过 `.env`，更新前请先备份该文件。
+
+### 3. 方式二：安装技能到本地 Agent
+
+仓库中的实际技能位于 `skills/<分类>/<技能名>/`，每个技能以完整的 `SKILL.md` 目录为安装单元。已经实测 `npx skills` 可以从本仓库识别全部 **187 项技能**。
+
+#### 3.1 查看可安装技能
+
+先安装 Node.js 18 或更高版本，然后运行：
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --list
+```
+
+正常结果会显示 `Found 187 skills`，并列出 `ll-paper-search`、`ll-paper-analysis`、`scanpy`、`scientific-writing` 等技能名称。
+
+#### 3.2 把全部技能安装到 Codex
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --global --agent codex --skill '*' --yes --copy
+```
+
+`--global` 表示所有本地项目都可使用；`--agent codex` 指定目标 Agent；`--skill '*'` 选择全部技能；`--copy` 保留完整技能目录，而不是只复制单个 `SKILL.md`。
+
+#### 3.3 只给当前项目安装一个技能
+
+省略 `--global` 即安装到当前项目。下面示例只安装链邻论文检索技能：
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --agent codex --skill ll-paper-search --yes --copy
+```
+
+将 `ll-paper-search` 替换为 `--list` 返回的任意技能名即可。
+
+#### 3.4 一次安装一组科研工作流
+
+例如同时安装论文检索、精读和引用审计：
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --global --agent codex `
+  --skill ll-paper-search `
+  --skill ll-paper-analysis `
+  --skill ll-citation-audit `
+  --yes --copy
+```
+
+在 macOS / Linux 中把 PowerShell 换行符 `` ` `` 改为反斜杠 `\`，也可以把命令写在同一行。
+
+#### 3.5 检查、更新并让技能生效
+
+```powershell
+npx skills list --global --agent codex --json
+npx skills update --global --yes
+```
+
+安装或更新后需要**完全关闭并重新打开 Agent 会话**，让它重新扫描技能目录。安装工具负责复制技能文件；某些专业技能所需的 Python/R 包、外部程序、模型或 API 凭据，应在真正使用该技能时按“详细用法”配置。
+
+### 4. 常见问题
+
+| 现象 | 原因 | 处理方法 |
+|---|---|---|
+| `python` 无法识别 | Python 未安装或未加入 PATH | 安装 Python 3.10+，Windows 安装时勾选 `Add Python to PATH`，重开终端 |
+| `git` 无法识别 | Git 未安装 | 安装 Git，或直接使用 GitHub 的 `Download ZIP` |
+| `winget` 无法识别 | 当前 Windows 没有 Windows 包管理器 | 本项目不依赖 `winget`；从 Python、Git 或 Node.js 官网下载安装即可 |
+| PowerShell 禁止运行脚本 | 系统执行策略限制 | 使用 `scripts\setup.bat` 和 `scripts\start.bat` |
+| `npx` 无法识别 | Node.js/npm 未安装或终端尚未刷新 | 安装 Node.js 18+，关闭并重新打开终端 |
+| 端口 8765 被占用 | 其他程序正在使用该端口 | 运行 `scripts\start.ps1 --port 9000`，或修改 `.env` |
+| 浏览器打不开页面 | 服务未启动、终端已关闭或地址错误 | 重新启动服务并打开 `http://127.0.0.1:8765/` |
+| Agent 看不到新技能 | Agent 在安装前已经启动 | 完全退出 Agent，重新打开后再检查技能列表 |
+| 技能已安装但执行失败 | 缺少该技能的专业运行依赖 | 打开对应“详细用法”，按需安装依赖并配置凭据 |
+
+更完整的系统说明也可查看[本地部署文档](./docs/deployment.zh-CN.md)。
+
 
 ## 品牌与推广边界
 

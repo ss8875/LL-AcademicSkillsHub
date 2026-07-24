@@ -22,87 +22,6 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 - Run the searchable local site on Windows, macOS, or Linux using only the Python standard library.
 - Choose the integrated Lianlin Research AI Platform route if individual skill setup is inconvenient.
 
-## Quick start
-
-You do not need to memorize 187 skill names. The easiest way to begin is to **state your research goal and available materials, then let your local Agent select the right skill or skill sequence from the catalog.** If you already know a skill name, mention it directly.
-
-### Step 1: Choose how to use the project
-
-#### Option A: Run it locally
-
-From the repository root:
-
-```powershell
-./scripts/setup.ps1
-./scripts/start.ps1
-```
-
-Open `http://127.0.0.1:8765/` to search categories, skills, and functions. Windows users may also run `scripts\setup.bat` and `scripts\start.bat`; see the [local deployment guide](./docs/deployment.en.md) for other systems and environment checks.
-
-After finding a skill, open its detailed guide and check its use cases, required materials, workflow, outputs, references, and boundaries before connecting the skill directory to your local Agent Skill environment.
-
-#### Option B: Use Lianlin Research AI Platform
-
-If you do not want to install skills, configure dependencies, or debug the environment one by one, use the integrated Lianlin Research AI Platform. The download and WeChat support entry is in “[Don't want to install locally? Use Lianlin Research AI Platform](#lianlin-platform)”.
-
-### Step 2: Start with one complete request
-
-A useful request has five parts: **research goal, available materials, task scope, expected output, and quality requirements**. Copy and adapt this template:
-
-> Select the most suitable skill or skill sequence from LL-AcademicSkillsHub. My research goal is [the question to solve]. My available materials are [papers, data, code, images, protocols, or drafts]. The scope is [population, time range, language, method, target journal, or exclusions]. Produce [a table, report, code, figure, manuscript, or audit checklist]. Preserve evidence sources and key parameters, distinguish facts from inferences and uncertainty, do not invent missing information, and list the decisions that require my confirmation.
-
-Incomplete materials are acceptable. Ask the Agent to check input sufficiency first and return missing items, risks, and a proposed plan before execution.
-
-### Step 3: Enter through the research workflow
-
-| Research stage | Start with these categories | Typical outcome |
-|---|---|---|
-| Topic selection and planning | Academic Core · Research Methods & Scientific Reasoning | Map trends and gaps, form research questions, propose hypotheses, and assess novelty and feasibility |
-| Search and evidence acquisition | Literature Search & Management · Scientific Databases | Build queries, search across databases, deduplicate and screen records, and acquire metadata or lawful full text |
-| Close reading and knowledge organization | Academic Core · Document Processing & Data Tools | Parse PDFs and documents, perform bilingual close reading, locate evidence, and create reading cards or evidence matrices |
-| Study design and experiment execution | Research Methods & Scientific Reasoning · Laboratory Automation & Integration · Platform & Infrastructure | Design studies, identify bias, draft protocols, connect laboratory workflows, and configure compute resources |
-| Data processing and modeling | Data Analysis & Statistical Modeling · Machine Learning & AI | Clean data, perform inference, train models, diagnose errors, interpret results, and preserve reproducibility records |
-| Manuscript writing and submission | Scientific Writing & Communication · Document Processing & Data Tools | Draft papers, grants, and reports; improve language; apply templates; and prepare submission files |
-| Figures and research communication | Academic Presentation & Visualization | Create paper figures, mechanism diagrams, posters, slide decks, and editable visual assets |
-| Review, revision, and governance | Academic Core · Scientific Writing & Communication | Simulate peer review, prepare point-by-point responses, audit citations, and check data-availability or compliance boundaries |
-
-### Step 4: Enter through your research domain
-
-| Research domain | Relevant categories | Common work |
-|---|---|---|
-| Life science and medicine | Bioinformatics & Genomics · Clinical & Precision Medicine · Protein Engineering & Structural Biology | Sequence and omics analysis, single-cell workflows, medical imaging, clinical evidence, and protein structure or function |
-| Chemistry, drug discovery, and materials | Cheminformatics & Drug Discovery · Materials Science & Computational Physics | Molecular processing, property prediction, virtual screening, structure design, materials simulation, and physics computation |
-| Finance, economics, and spatial research | Finance & Economics Data · Geospatial & Remote Sensing | Market and macroeconomic data, company research, GIS, remote-sensing imagery, and spatial analysis |
-| Cross-disciplinary computational research | Scientific Databases · Data Analysis & Statistical Modeling · Machine Learning & AI · Platform & Infrastructure | Data acquisition, normalization, statistical or AI modeling, cloud computing, and workflow orchestration |
-
-### Step 5: Copy a real task to begin
-
-| Goal | Example request |
-|---|---|
-| Analyze a research topic | “Search representative work from the past five years on [topic], separate active trends, solved problems, and evidence-backed gaps, then propose three feasible topics scored for novelty, data, methods, ethics, and resources.” |
-| Run a reproducible literature search | “Split [research question] into concept blocks and synonyms, build reproducible queries for [databases], record dates, filters, and hit counts, deduplicate the results, and screen them with [criteria].” |
-| Read Chinese and English papers closely | “Read these PDFs and build a bilingual terminology list. Extract the question, methods, sample, results, and limitations, and attach a page, figure, table, or section locator to every key claim.” |
-| Build a systematic-review evidence table | “Create an evidence matrix for these papers, comparing design, sample, variables, methods, results, and risk of bias. Keep author claims separate from evidence demonstrated in the paper.” |
-| Design a study | “Using [question and existing evidence], specify hypotheses, units of analysis, sampling, controls, measurements, exclusions, missing-data handling, primary outcomes, reproducibility plan, and any ethics-review requirements.” |
-| Analyze research data | “Audit variables, missingness, outliers, distributions, and collection quality first. Then choose suitable statistical methods and return runnable code, effect sizes, uncertainty, diagnostics, and sensitivity analyses.” |
-| Perform domain-specific analysis | “This is [sequence, clinical, molecular, materials, finance, or spatial] data. Confirm versions, units, reference systems, and method suitability before selecting the relevant domain skills and proposing validation.” |
-| Draft a paper section or manuscript | “Draft the [abstract, introduction, methods, results, or discussion] from these sources, results, and figures. Preserve facts, numbers, and citations; separate results from interpretation; flag unsupported statements.” |
-| Create figures and a presentation | “Design a submission-ready multi-panel figure from these data and conclusions, with editable source files, captions, and data mappings; then turn the central evidence into a lab-meeting deck.” |
-| Simulate peer review | “Review this manuscript for the question, novelty, methods, statistics, figures, reporting completeness, and reproducibility. Return major issues, minor issues, and actionable revisions.” |
-| Audit citations and references | “Check consistency between in-text citations and references, then verify DOI, authors, journal, year, and pages. Classify each item as verified, partial match, conflict, or unverifiable; do not invent fields.” |
-| Respond to reviewers | “Decompose every reviewer comment, map it to manuscript locations and revision evidence, and draft a courteous, specific, verifiable response. Explain any declined request with evidence and list decisions still requiring the authors.” |
-
-### Step 6: Combine skills when the task is complex
-
-Complex research usually requires skills to hand off explicit artifacts:
-
-- **Topic to paper:** topic analysis → reproducible search → full-text close reading → study design → data analysis → scientific figures → manuscript writing → citation audit.
-- **Systematic review:** search strategy → deduplication and screening → evidence extraction → bias assessment → statistical synthesis → PRISMA flow and review writing.
-- **Data paper:** data and variable audit → domain analysis → statistics or machine learning → visualization → methods and results writing → data-availability statement.
-- **Submission and revision:** journal template → pre-submission audit → simulated peer review → revised manuscript → point-by-point response → citation, figure, and supplement checks.
-
-You can say: “First propose the skill sequence, the input and output of each step, and the human checkpoints; execute it in stages after I provide the materials.” Staged review makes evidence gaps and methodological errors easier to detect than one-shot generation.
-
 <a id="lianlin-platform"></a>
 
 ## Don't want to install locally? Use Lianlin Research AI Platform
@@ -110,6 +29,211 @@ You can say: “First propose the skill sequence, the input and output of each s
 <p align="center">
   <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="Download Lianlin Research AI Platform or contact WeChat support" width="100%">
 </p>
+
+## Installation
+
+Local use has two separate layers. Choose the one that matches your goal:
+
+| Goal | What to complete | Result |
+|---|---|---|
+| Browse, search, and read every skill | Deploy the local skill catalog | A private local website covering 18 categories, 187 skills, and their detailed guides |
+| Let a local Agent invoke skills | Deploy the catalog, then install skills into the Agent | Complete skill directories in the Agent's skill path, available after the Agent restarts |
+| Avoid local configuration | Use the Lianlin Research AI Platform entry above | Integrated access to the research capabilities |
+
+### 1. Prerequisites
+
+| Component | Minimum | Purpose |
+|---|---|---|
+| Operating system | Windows 10/11, macOS 12+, or a mainstream Linux distribution | Run the local catalog and scripts |
+| Python | 3.10 or newer | Build, validate, and serve the catalog |
+| Git | Optional | Clone and update the repository; a ZIP download also works |
+| Disk | At least 100 MB | Store the repository, catalog data, and guides |
+| Node.js | 18 or newer, only for Agent skill installation | Select and copy skills with `npx skills` |
+
+Check installed versions:
+
+```text
+python --version
+git --version
+node --version
+npm --version
+```
+
+The local catalog itself needs **no Node.js, Docker, database, or third-party Python package**. If Git is unavailable, select `Code → Download ZIP` on GitHub, extract the archive, and continue below.
+
+### 2. Method one: Deploy the local skill catalog
+
+#### 2.1 Download the repository
+
+Git is recommended because it makes later updates simple:
+
+```powershell
+git clone https://github.com/ss8875/LL-AcademicSkillsHub.git
+cd LL-AcademicSkillsHub
+```
+
+For a ZIP download, extract the complete archive and open a terminal in the extracted `LL-AcademicSkillsHub` directory. Run every following command from the repository root, not from a system directory such as `C:\Windows\System32`.
+
+#### 2.2 Automated Windows setup
+
+Open PowerShell in the repository root:
+
+```powershell
+.\scripts\setup.ps1
+.\scripts\start.ps1
+```
+
+`setup.ps1` checks Python 3.10+, creates the local `.env` file on first run, regenerates the bilingual catalog and all 187 guides, then runs the repository audit and environment doctor.
+
+After `Setup complete` appears, run `start.ps1`. If PowerShell blocks script execution, use the supplied batch entry points without changing the system execution policy:
+
+```bat
+scripts\setup.bat
+scripts\start.bat
+```
+
+#### 2.3 macOS or Linux setup
+
+```bash
+git clone https://github.com/ss8875/LL-AcademicSkillsHub.git
+cd LL-AcademicSkillsHub
+cp .env.example .env
+python3 scripts/build_catalog.py
+python3 scripts/validate_repo.py
+python3 scripts/doctor.py
+python3 scripts/serve.py
+```
+
+The first three Python commands generate the catalog, audit the repository, and check the environment. The last command starts the local website.
+
+#### 2.4 Open, stop, and restart
+
+A successful start prints:
+
+```text
+LL-AcademicSkillsHub: http://127.0.0.1:8765/site/
+Press Ctrl+C to stop.
+```
+
+Open `http://127.0.0.1:8765/`; the root URL redirects to `/site/`. Keep the terminal open while using the site. Press `Ctrl+C` to stop it safely, then run `scripts\start.ps1` or `python3 scripts/serve.py` to restart.
+
+#### 2.5 Change the port or bind address
+
+Local settings live in `.env`:
+
+```dotenv
+LL_HOST=127.0.0.1
+LL_PORT=8765
+```
+
+If the port is busy, change `LL_PORT` to `9000` or run:
+
+```powershell
+.\scripts\start.ps1 --port 9000
+```
+
+`127.0.0.1` allows access only from the same computer. Do not change it to `0.0.0.0` unless firewall rules, access control, a reverse proxy, and TLS are already configured.
+
+#### 2.6 Verify the deployment
+
+Windows:
+
+```powershell
+python scripts\doctor.py
+python -m unittest discover -s tests -v
+```
+
+macOS / Linux:
+
+```bash
+python3 scripts/doctor.py
+python3 -m unittest discover -s tests -v
+```
+
+`"ready": true` in the doctor output confirms that the catalog and site exist; the tests should finish with `OK`. The browser should let you search skills, switch among 18 categories, and open detailed guides.
+
+#### 2.7 Update the repository
+
+For a Git installation:
+
+```powershell
+git pull
+.\scripts\setup.ps1
+```
+
+On macOS or Linux, rerun the generation and validation commands above after `git pull`. ZIP users should download and extract the new version; back up a customized `.env` first.
+
+### 3. Method two: Install skills into a local Agent
+
+Installable units live under `skills/<category>/<skill-name>/` and retain their complete `SKILL.md` directories. The repository has been tested with `npx skills`, which discovers all **187 skills**.
+
+#### 3.1 List available skills
+
+Install Node.js 18 or newer, then run:
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --list
+```
+
+A successful scan prints `Found 187 skills` and names such as `ll-paper-search`, `ll-paper-analysis`, `scanpy`, and `scientific-writing`.
+
+#### 3.2 Install every skill globally for Codex
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --global --agent codex --skill '*' --yes --copy
+```
+
+`--global` makes the skills available to all local projects; `--agent codex` selects the target Agent; `--skill '*'` selects every skill; and `--copy` preserves each complete skill directory.
+
+#### 3.3 Install one skill for the current project
+
+Omit `--global` for a project-scoped installation:
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --agent codex --skill ll-paper-search --yes --copy
+```
+
+Replace `ll-paper-search` with any exact name returned by `--list`.
+
+#### 3.4 Install a research workflow
+
+For example, install paper search, close reading, and citation audit together:
+
+```powershell
+npx skills add ss8875/LL-AcademicSkillsHub --global --agent codex `
+  --skill ll-paper-search `
+  --skill ll-paper-analysis `
+  --skill ll-citation-audit `
+  --yes --copy
+```
+
+On macOS or Linux, replace the PowerShell continuation character `` ` `` with `\`, or place the command on one line.
+
+#### 3.5 Check, update, and activate
+
+```powershell
+npx skills list --global --agent codex --json
+npx skills update --global --yes
+```
+
+After installation or update, **fully close and reopen the Agent session** so it rescans its skill directories. The installer copies skill files; configure any specialized Python/R packages, external programs, models, or API credentials only when the selected detailed guide requires them.
+
+### 4. Troubleshooting
+
+| Symptom | Cause | Resolution |
+|---|---|---|
+| `python` is not recognized | Python is missing or not on PATH | Install Python 3.10+; select `Add Python to PATH` on Windows, then reopen the terminal |
+| `git` is not recognized | Git is missing | Install Git or use GitHub's `Download ZIP` |
+| `winget` is not recognized | Windows Package Manager is unavailable | This project does not require `winget`; use the official Python, Git, or Node.js installers |
+| PowerShell blocks scripts | Execution policy restriction | Use `scripts\setup.bat` and `scripts\start.bat` |
+| `npx` is not recognized | Node.js/npm is missing or the terminal is stale | Install Node.js 18+, then reopen the terminal |
+| Port 8765 is busy | Another process uses the port | Run `scripts\start.ps1 --port 9000` or edit `.env` |
+| The browser cannot connect | The service is stopped or the URL is wrong | Restart the service and open `http://127.0.0.1:8765/` |
+| The Agent cannot see a new skill | The Agent started before installation | Exit the Agent completely, reopen it, and check the skill list |
+| An installed skill fails at runtime | A specialized dependency is missing | Open that skill's detailed guide and configure the required dependency or credential |
+
+See the [local deployment document](./docs/deployment.en.md) for the compact system reference.
+
 
 ## Brand and promotion boundary
 
