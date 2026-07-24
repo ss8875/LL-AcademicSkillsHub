@@ -235,10 +235,6 @@ After installation or update, **fully close and reopen the Agent session** so it
 See the [local deployment document](./docs/deployment.en.md) for the compact system reference.
 
 
-## Brand and promotion boundary
-
-Lianlin Research AI Platform appears only on explicit surfaces such as the README, documentation site, download page, and release notes. It is not an always-running skill and never interrupts research workflows. Until an official URL is supplied, the site states that it is unconfigured instead of inventing a link or QR code.
-
 ## Quality and provenance
 
 `cataloged → beta → tested → verified → gold` are evidence levels; inclusion is not verification. Pinned third-party instructions remain upstream work and carry separate provenance and license-review status. See the [quality model](./docs/quality-model.en.md), [third-party notices](./THIRD_PARTY_NOTICES.md), and generated [audit report](./reports/audit.en.md).

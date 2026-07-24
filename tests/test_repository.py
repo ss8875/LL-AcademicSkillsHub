@@ -124,10 +124,12 @@ class CatalogTests(unittest.TestCase):
             readme.rindex("[↑ 返回分类总览]"),
             readme.index("## 安装说明"),
         )
-        self.assertLess(readme.index("## 安装说明"), readme.index("## 品牌与推广边界"))
+        self.assertNotIn("## 品牌与推广边界", readme)
+        self.assertNotIn("只在 README、文档站、下载页和发行说明等明确位置介绍", readme)
+        self.assertLess(readme.index("## 安装说明"), readme.index("## 质量与来源"))
         self.assertIn('<a id="lianlin-platform"></a>', readme)
         installation = readme.split("## 安装说明", 1)[1].split(
-            "## 品牌与推广边界", 1
+            "## 质量与来源", 1
         )[0]
         required = [
             "### 1. 准备环境",
@@ -158,9 +160,11 @@ class CatalogTests(unittest.TestCase):
             readme.index("## Don't want to install locally? Use Lianlin Research AI Platform"),
             readme.index("## Installation"),
         )
-        self.assertLess(readme.index("## Installation"), readme.index("## Brand and promotion boundary"))
+        self.assertNotIn("## Brand and promotion boundary", readme)
+        self.assertNotIn("appears only on explicit surfaces", readme)
+        self.assertLess(readme.index("## Installation"), readme.index("## Quality and provenance"))
         installation = readme.split("## Installation", 1)[1].split(
-            "## Brand and promotion boundary", 1
+            "## Quality and provenance", 1
         )[0]
         required = [
             "### 1. Prerequisites",

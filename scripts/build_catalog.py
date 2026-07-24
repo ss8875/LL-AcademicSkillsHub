@@ -719,10 +719,6 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 {installation}
 
-## 品牌与推广边界
-
-链邻科研 AI 平台只在 README、文档站、下载页和发行说明等明确位置介绍，不作为“每次自动运行”的技能，不打断正常科研流程。官方下载地址尚未提供时，页面显示真实的“待配置”状态，不伪造链接或二维码。
-
 ## 质量与来源
 
 `cataloged → beta → tested → verified → gold` 是逐级证据状态；收录不等于验证。第三方固定包保留上游指令，并单独标注来源与许可证复核状态。详见 [质量模型](./docs/quality-model.zh-CN.md)、[第三方声明](./THIRD_PARTY_NOTICES.md)与生成的[审计报告](./reports/audit.zh-CN.md)。
@@ -765,10 +761,6 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 </p>
 
 {installation}
-
-## Brand and promotion boundary
-
-Lianlin Research AI Platform appears only on explicit surfaces such as the README, documentation site, download page, and release notes. It is not an always-running skill and never interrupts research workflows. Until an official URL is supplied, the site states that it is unconfigured instead of inventing a link or QR code.
 
 ## Quality and provenance
 
