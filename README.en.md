@@ -5,6 +5,7 @@
 <p align="center">
   <strong>Local-first, bilingual, and evidence-tiered academic AI skills</strong><br>
   <a href="./README.md">中文</a> ·
+  <a href="https://ky.ec51.com/">Official website</a> ·
   <a href="./docs/skills.en.md">All skills</a> ·
   <a href="./docs/deployment.en.md">Local setup</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">Download Research AI Platform</a> ·
@@ -94,6 +95,7 @@ Organize the evidence chain into papers, figures, talks, reviewer responses, and
 </p>
 
 <p align="center">
+  <a href="https://ky.ec51.com/"><strong>Visit the Lianlin Research AI Platform website</strong></a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe"><strong>⬇ Download Lianlin Research AI Platform 0.3.18 for Windows</strong></a><br>
   <sub>Approx. 116.75 MB · SHA-256: <code>E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6</code></sub>
 </p>

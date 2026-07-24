@@ -68,6 +68,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_platform_release_direct_download_is_consistent(self):
         release = self.platform_release
+        self.assertEqual(release["websiteUrl"], "https://ky.ec51.com/")
         self.assertEqual(release["version"], "0.3.18")
         self.assertEqual(release["sizeBytes"], 122424791)
         self.assertRegex(release["sha256"], r"^[A-F0-9]{64}$")
@@ -78,6 +79,7 @@ class CatalogTests(unittest.TestCase):
         )
         config = load("site/config.json")
         self.assertEqual(config["platformDownloadUrl"], release["downloadUrl"])
+        self.assertEqual(config["platformWebsiteUrl"], release["websiteUrl"])
         for relative in (
             "README.md",
             "README.en.md",
@@ -90,6 +92,16 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(path=relative):
                 text = (ROOT / relative).read_text(encoding="utf-8")
                 self.assertIn(release["downloadUrl"], text)
+        for relative in (
+            "README.md",
+            "README.en.md",
+            "site/index.html",
+            "docs/platform-download.zh-CN.md",
+            "docs/platform-download.en.md",
+        ):
+            with self.subTest(path=relative, link="website"):
+                text = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertIn(release["websiteUrl"], text)
 
     def test_first_party_frontmatter_and_locales(self):
         for skill in (s for s in self.skills if s["source"]["kind"] == "lianlin-first-party"):

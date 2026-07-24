@@ -26,7 +26,7 @@ function setLanguage(lang) {
 
 const UI = {
   "zh-CN": {
-    navCatalog:"技能目录", navDeploy:"本地部署", navPlatform:"科研平台", navGithub:"GitHub",
+    navCatalog:"技能目录", navDeploy:"本地部署", navPlatform:"科研平台", navWebsite:"官方网站", navGithub:"GitHub",
     eyebrow:"本地优先 · 中英双语 · 可审计", heroTitle:"链邻学术技能仓库", heroSub:"系统化组织学术 AI 能力",
     heroLead:"覆盖从选题、检索、精读、写作到数据、实验、可视化和成果转化的完整科研流程。每项技能都有功能、环境、来源、风险和质量状态。",
     browse:"浏览全部技能", deploy:"本地部署", allSkills:"技能总数", categories:"类别", firstParty:"链邻原创", external:"固定第三方",
@@ -38,11 +38,11 @@ const UI = {
     search:"搜索技能、功能或说明", allCategories:"全部类别", allQuality:"全部质量状态",
     result:"项结果", noResult:"没有匹配的技能，请调整筛选条件。",
     platformTitle:"不想逐项安装？使用链邻科研 AI 平台", platformText:"不想本地调试、安装和逐项配置技能，可直接下载 Windows 安装版，使用平台整合的技能、模型、数据工具和科研工作流。",
-    downloadNow:"下载 Windows 安装版 0.3.18", downloadMeta:"约 116.75 MB · 点击后直接下载",
+    officialWebsite:"访问官方网站", downloadNow:"下载 Windows 安装版 0.3.18", downloadMeta:"约 116.75 MB · 点击后直接下载",
     source:"来源", runtime:"环境", openSkill:"查看技能文件 →", footer:"首期范围：本地部署或下载链邻科研 AI 平台。"
   },
   en: {
-    navCatalog:"Skill catalog", navDeploy:"Local setup", navPlatform:"Research platform", navGithub:"GitHub",
+    navCatalog:"Skill catalog", navDeploy:"Local setup", navPlatform:"Research platform", navWebsite:"Official website", navGithub:"GitHub",
     eyebrow:"LOCAL FIRST · BILINGUAL · AUDITABLE", heroTitle:"LL-AcademicSkillsHub", heroSub:"A structured academic AI capability repository",
     heroLead:"Covers the research lifecycle from topic selection, search, reading, and writing to data, experiments, visualization, and translation. Every skill exposes function, environment, source, risk, and quality status.",
     browse:"Browse all skills", deploy:"Local setup", allSkills:"Skills", categories:"Categories", firstParty:"Lianlin originals", external:"Pinned third-party",
@@ -54,7 +54,7 @@ const UI = {
     search:"Search skills, functions, or descriptions", allCategories:"All categories", allQuality:"All quality levels",
     result:"results", noResult:"No skills match. Adjust the filters and try again.",
     platformTitle:"Do not want individual installs? Use Lianlin Research AI Platform", platformText:"Skip local debugging, installation, and per-skill setup. Download the Windows installer and use the platform's integrated skills, models, data tools, and research workflows.",
-    downloadNow:"Download Windows installer 0.3.18", downloadMeta:"Approx. 116.75 MB · direct download",
+    officialWebsite:"Visit official website", downloadNow:"Download Windows installer 0.3.18", downloadMeta:"Approx. 116.75 MB · direct download",
     source:"Source", runtime:"Runtime", openSkill:"Open skill file →", footer:"First-release scope: local deployment or Lianlin Research AI Platform download."
   }
 };
@@ -134,6 +134,10 @@ async function boot() {
   if (config.platformDownloadUrl) {
     const link = $("#platform-download-link");
     link.href = config.platformDownloadUrl;
+  }
+  if (config.platformWebsiteUrl) {
+    const link = $("#platform-website-link");
+    link.href = config.platformWebsiteUrl;
   }
   $("#search").addEventListener("input", (event) => { state.query = event.target.value; renderSkills(); });
   $("#quality").addEventListener("change", (event) => { state.quality = event.target.value; renderSkills(); });

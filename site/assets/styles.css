@@ -81,6 +81,7 @@ h1 { margin: 12px 0 18px; font-size: clamp(42px, 6.2vw, 76px); line-height: 1.03
 .platform-card { background:#09243d; color:white; }
 .platform-card p { color:#c1d3e2; }
 .download-placeholder { display:grid; place-items:center; min-height:220px; border:1px dashed #5a829f; border-radius:12px; color:#9bb6cb; text-align:center; padding:24px; }
+.platform-actions { display:flex; flex-direction:column; align-items:center; gap:12px; }
 .footer { padding:34px 0 46px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
 .footer-grid { display:flex; justify-content:space-between; gap:28px; }
 .hidden { display:none !important; }

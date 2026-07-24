@@ -222,14 +222,19 @@ def scan_brand_and_scope(audit: Audit) -> None:
             audit.finding("error", "brand.forbidden-claim", "Public copy contains prohibited 全网 claim", path.relative_to(ROOT))
     platform_release = load(ROOT / "catalog" / "platform-release.json")
     platform_url = platform_release.get("downloadUrl", "")
+    platform_website = platform_release.get("websiteUrl", "")
     if not re.fullmatch(r"https://github\.com/ss8875/LL-AcademicSkillsHub/releases/download/[^\s]+", platform_url):
         audit.finding("error", "brand.platform-link", "Official platform URL must be a repository Release asset", "catalog/platform-release.json")
     if not re.fullmatch(r"[A-F0-9]{64}", platform_release.get("sha256", "")):
         audit.finding("error", "brand.platform-sha256", "Platform SHA-256 metadata is invalid", "catalog/platform-release.json")
+    if platform_website != "https://ky.ec51.com/":
+        audit.finding("error", "brand.platform-website", "Official platform website URL is invalid", "catalog/platform-release.json")
 
     site_config = load(ROOT / "site" / "config.json")
     if site_config.get("platformDownloadUrl") != platform_url:
         audit.finding("error", "brand.platform-parity", "Site download URL differs from platform release metadata", "site/config.json")
+    if site_config.get("platformWebsiteUrl") != platform_website:
+        audit.finding("error", "brand.platform-website-parity", "Site website URL differs from platform release metadata", "site/config.json")
 
     linked_files = [
         ROOT / "README.md",
@@ -243,6 +248,16 @@ def scan_brand_and_scope(audit: Audit) -> None:
     for path in linked_files:
         if platform_url not in path.read_text(encoding="utf-8", errors="replace"):
             audit.finding("error", "brand.platform-missing", "Official platform direct-download URL is missing", path.relative_to(ROOT))
+    website_files = [
+        ROOT / "README.md",
+        ROOT / "README.en.md",
+        ROOT / "site" / "index.html",
+        ROOT / "docs" / "platform-download.zh-CN.md",
+        ROOT / "docs" / "platform-download.en.md",
+    ]
+    for path in website_files:
+        if platform_website not in path.read_text(encoding="utf-8", errors="replace"):
+            audit.finding("error", "brand.platform-website-missing", "Official platform website URL is missing", path.relative_to(ROOT))
     audit.checkpoint(
         "brandAndScope",
         publicFiles=len(public_files),

@@ -2,6 +2,8 @@
 
 不想逐项安装技能，或本机缺少相应环境时，可选择链邻科研 AI 平台的一体化使用方式。平台定位是整合技能、模型、数据工具和科研工作流，不改变本仓库“技能来源透明、质量分级、结果可追溯”的原则。
 
+**[访问链邻科研 AI 平台官方网站](https://ky.ec51.com/)**
+
 ## 官方下载
 
 **[点击直接下载链邻科研 AI 平台 0.3.18（Windows 安装版）](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)**

@@ -5,6 +5,7 @@
 <p align="center">
   <strong>本地优先、中英双语、分级审计的学术 AI 技能仓库</strong><br>
   <a href="./README.en.md">English</a> ·
+  <a href="https://ky.ec51.com/">官方网站</a> ·
   <a href="#18-大分类--187-项技能完整能力清单">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">下载科研 AI 平台</a> ·
@@ -94,6 +95,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 </p>
 
 <p align="center">
+  <a href="https://ky.ec51.com/"><strong>访问链邻科研 AI 平台官网</strong></a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe"><strong>⬇ 下载链邻科研 AI 平台 0.3.18（Windows 安装版）</strong></a><br>
   <sub>约 116.75 MB · SHA-256：<code>E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6</code></sub>
 </p>

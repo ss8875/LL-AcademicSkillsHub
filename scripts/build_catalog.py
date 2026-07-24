@@ -774,6 +774,7 @@ def readme(
     zh = lang == "zh-CN"
     summary = payload["summary"]
     platform_release = platform_release or {}
+    platform_website = platform_release.get("websiteUrl", "")
     platform_url = platform_release.get("downloadUrl", "")
     platform_version = platform_release.get("version", "")
     platform_size = platform_release.get("sizeMiB", "")
@@ -793,6 +794,7 @@ def readme(
 <p align="center">
   <strong>本地优先、中英双语、分级审计的学术 AI 技能仓库</strong><br>
   <a href="./README.en.md">English</a> ·
+  <a href="{platform_website}">官方网站</a> ·
   <a href="#18-大分类--187-项技能完整能力清单">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
   <a href="{platform_url}">下载科研 AI 平台</a> ·
@@ -826,6 +828,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 </p>
 
 <p align="center">
+  <a href="{platform_website}"><strong>访问链邻科研 AI 平台官网</strong></a> ·
   <a href="{platform_url}"><strong>⬇ 下载链邻科研 AI 平台 {platform_version}（Windows 安装版）</strong></a><br>
   <sub>约 {platform_size} MB · SHA-256：<code>{platform_sha256}</code></sub>
 </p>
@@ -850,6 +853,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 <p align="center">
   <strong>Local-first, bilingual, and evidence-tiered academic AI skills</strong><br>
   <a href="./README.md">中文</a> ·
+  <a href="{platform_website}">Official website</a> ·
   <a href="./docs/skills.en.md">All skills</a> ·
   <a href="./docs/deployment.en.md">Local setup</a> ·
   <a href="{platform_url}">Download Research AI Platform</a> ·
@@ -883,6 +887,7 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 </p>
 
 <p align="center">
+  <a href="{platform_website}"><strong>Visit the Lianlin Research AI Platform website</strong></a> ·
   <a href="{platform_url}"><strong>⬇ Download Lianlin Research AI Platform {platform_version} for Windows</strong></a><br>
   <sub>Approx. {platform_size} MB · SHA-256: <code>{platform_sha256}</code></sub>
 </p>
@@ -918,6 +923,7 @@ def main() -> None:
         ROOT / "site" / "config.json",
         {
             "platformDownloadUrl": platform_url,
+            "platformWebsiteUrl": platform_release["websiteUrl"],
             "platformVersion": platform_release["version"],
             "platformSizeMiB": platform_release["sizeMiB"],
             "platformSha256": platform_release["sha256"],

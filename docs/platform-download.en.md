@@ -2,6 +2,8 @@
 
 Researchers who do not want to install skills individually, or whose local machine lacks the required environment, can choose the integrated Lianlin Research AI Platform route. It combines skills, models, data tools, and research workflows while retaining the repository principles of transparent provenance, evidence-tiered quality, and traceable results.
 
+**[Visit the official Lianlin Research AI Platform website](https://ky.ec51.com/)**
+
 ## Official download
 
 **[Download Lianlin Research AI Platform 0.3.18 for Windows](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)**
