@@ -7,6 +7,7 @@ import threading
 import unittest
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -115,6 +116,36 @@ class CatalogTests(unittest.TestCase):
         for skill in self.skills:
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"../{skill['paths']['zh-CN']}", catalog)
+
+    def test_skill_architecture_map_covers_the_complete_catalog(self):
+        path = ROOT / "assets" / "brand" / "skill-architecture-map.svg"
+        ET.parse(path)
+        svg = path.read_text(encoding="utf-8")
+        self.assertIn("187 项技能", svg)
+        self.assertIn("18 个分类", svg)
+        self.assertIn("7 大可组合能力域", svg)
+        self.assertNotIn("183 项技能", svg)
+        for category in self.categories:
+            with self.subTest(category=category["id"]):
+                self.assertIn(category["zh"], svg)
+        for skill in self.skills:
+            with self.subTest(skill=skill["id"]):
+                self.assertIn(skill["id"], svg)
+
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertLess(readme.index("## 你可以做什么"), readme.index("## 技能架构图"))
+        self.assertLess(
+            readme.index("## 技能架构图"),
+            readme.index("## 不想本地安装？直接使用链邻科研 AI 平台"),
+        )
+        self.assertIn("./assets/brand/skill-architecture-map.svg", readme)
+
+        readme_en = (ROOT / "README.en.md").read_text(encoding="utf-8")
+        self.assertLess(
+            readme_en.index("## What you can do"),
+            readme_en.index("## Skill Architecture Map"),
+        )
+        self.assertIn("./assets/brand/skill-architecture-map.svg", readme_en)
 
     def test_chinese_installation_is_detailed_and_follows_the_skill_catalog(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

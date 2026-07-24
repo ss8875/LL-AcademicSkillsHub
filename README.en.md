@@ -22,6 +22,16 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 - Run the searchable local site on Windows, macOS, or Linux using only the Python standard library.
 - Choose the integrated Lianlin Research AI Platform route if individual skill setup is inconvenient.
 
+## Skill Architecture Map
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture-map.svg">
+    <img src="./assets/brand/skill-architecture-map.svg" alt="Architecture map connecting all 187 LL-AcademicSkillsHub skills" width="100%">
+  </a>
+</p>
+
+<p align="center"><sub>Seven capability domains connect research discovery, domain computation, data intelligence, research operations, and scholarly communication. Click the image for the scalable full-size map.</sub></p>
+
 <a id="lianlin-platform"></a>
 
 ## Don't want to install locally? Use Lianlin Research AI Platform

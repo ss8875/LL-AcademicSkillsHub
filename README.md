@@ -22,6 +22,16 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 - 在 Windows、macOS 或 Linux 上使用 Python 标准库启动本地可搜索站点；
 - 不想逐项配置技能时，选择链邻科研 AI 平台的一体化使用方式。
 
+## 技能架构图
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture-map.svg">
+    <img src="./assets/brand/skill-architecture-map.svg" alt="链邻学术技能仓库 187 项技能架构图" width="100%">
+  </a>
+</p>
+
+<p align="center"><sub>从研究发现、专业计算、数据智能到成果传播，7 大能力域通过证据反馈与科研基础设施有机连接。点击图片查看可缩放全尺寸图。</sub></p>
+
 <a id="lianlin-platform"></a>
 
 ## 不想本地安装？直接使用链邻科研 AI 平台
