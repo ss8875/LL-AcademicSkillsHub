@@ -177,7 +177,11 @@ def markdown_cell(value: str) -> str:
     return html.escape(value, quote=False).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
 
 
-def zh_skill_showcase(categories: list[dict], skills: list[dict]) -> str:
+def zh_skill_showcase(
+    categories: list[dict],
+    skills: list[dict],
+    descriptions: dict[str, str],
+) -> str:
     """Render the complete Chinese README capability panorama from catalog facts."""
     lines = [
         "### 18 大分类 · 187 项技能完整能力清单",
@@ -218,62 +222,44 @@ def zh_skill_showcase(categories: list[dict], skills: list[dict]) -> str:
             title = markdown_cell(item["title"]["zh-CN"])
             locale_link = f"./{item['paths']['zh-CN']}"
             skill_link = f"./{item['paths']['skill']}"
-            source = "链邻原创" if item["source"]["kind"] == "lianlin-first-party" else "固定第三方"
             capabilities = "；".join(markdown_cell(value) for value in item["capabilities"]["zh-CN"])
             summary_zh = markdown_cell(item["summary"]["zh-CN"])
-            upstream_detail = markdown_cell(item["summary"]["en"])
             if item["source"]["kind"] == "lianlin-first-party":
                 function_text = f"{summary_zh}<br>**核心能力：**{capabilities}"
+                skill_label = f"**[{title}]({locale_link})**<br><sub>链邻原创</sub>"
             else:
+                translated = descriptions.get(item["id"], "").strip()
+                if not translated:
+                    raise ValueError(f"Missing Chinese showcase description: {item['id']}")
                 function_text = (
                     f"**核心能力：**{capabilities}<br>"
-                    f"<sub><strong>上游能力说明：</strong>{upstream_detail}</sub>"
+                    f"<strong>能力说明：</strong>{markdown_cell(translated)}"
                 )
+                skill_label = f"**[{title}]({locale_link})**"
 
             inputs = "；".join(markdown_cell(value) for value in item["inputs"]["zh-CN"])
             outputs = "；".join(markdown_cell(value) for value in item["outputs"]["zh-CN"])
-            runtime_labels = {
-                "agent skill instructions": "Agent Skill 指令",
-                "POSIX shell": "POSIX 命令行",
-                "Python": "Python",
-                "Node.js": "Node.js",
-            }
-            runtime = "、".join(
-                runtime_labels.get(value, markdown_cell(value))
-                for value in item["environment"]["runtime"]
-            ) or "按技能说明"
-            network = {
-                "required": "需要联网",
-                "optional": "可选联网",
-                "none": "可离线",
-                "unknown": "按技能说明确认网络条件",
-            }.get(item["environment"]["network"], markdown_cell(item["environment"]["network"]))
-            credentials = item["environment"]["credentials"]
-            credential_text = (
-                "、".join(markdown_cell(value) for value in credentials)
-                if credentials else "无预置凭据"
-            )
             usage = (
                 f"**准备：**{inputs}<br>"
                 f"**执行：**阅读[中文说明]({locale_link})与[原始 SKILL]({skill_link})，"
                 f"按说明配置后运行<br>"
-                f"**获得：**{outputs}<br>"
-                f"<sub>环境：{runtime}；{network}；{credential_text}；"
-                f"来源：{source}；状态：`{item['quality']['status']}`</sub>"
+                f"**获得：**{outputs}"
             )
-            lines.append(
-                f"| **[{title}]({locale_link})**<br><sub>{source}</sub> | {function_text} | {usage} |"
-            )
+            lines.append(f"| {skill_label} | {function_text} | {usage} |")
         lines.extend(["", "[↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)", ""])
 
     return "\n".join(lines).rstrip()
 
 
-def readme(lang: str, payload: dict) -> str:
+def readme(lang: str, payload: dict, showcase_descriptions: dict[str, str] | None = None) -> str:
     zh = lang == "zh-CN"
     summary = payload["summary"]
     if zh:
-        showcase = zh_skill_showcase(payload["categories"], payload["skills"])
+        showcase = zh_skill_showcase(
+            payload["categories"],
+            payload["skills"],
+            showcase_descriptions or {},
+        )
         return f"""<p align="center">
   <img src="./assets/brand/hero-bilingual.svg" alt="LL-AcademicSkillsHub 链邻学术技能仓库" width="100%">
 </p>
@@ -377,6 +363,9 @@ Lianlin first-party code and original documentation are Apache-2.0. Third-party 
 def main() -> None:
     categories = load_json(ROOT / "catalog" / "categories.seed.json")
     skills = load_json(ROOT / "catalog" / "skills.seed.json")
+    showcase_descriptions = load_json(
+        ROOT / "catalog" / "showcase-descriptions.zh-CN.json"
+    )["descriptions"]
     payload = catalog_payload(categories, skills)
     write_json(ROOT / "catalog" / "categories.json", categories)
     write_json(ROOT / "catalog" / "skills.json", skills)
@@ -389,7 +378,10 @@ def main() -> None:
     (ROOT / "docs" / "skills.en.md").write_text(skills_markdown(categories, skills, "en"), encoding="utf-8")
     (ROOT / "docs" / "categories.zh-CN.md").write_text(categories_markdown(categories, skills, "zh-CN"), encoding="utf-8")
     (ROOT / "docs" / "categories.en.md").write_text(categories_markdown(categories, skills, "en"), encoding="utf-8")
-    (ROOT / "README.md").write_text(readme("zh-CN", payload), encoding="utf-8")
+    (ROOT / "README.md").write_text(
+        readme("zh-CN", payload, showcase_descriptions),
+        encoding="utf-8",
+    )
     (ROOT / "README.en.md").write_text(readme("en", payload), encoding="utf-8")
     print(json.dumps({"builtOn": date.today().isoformat(), **payload["summary"]}, ensure_ascii=False, indent=2))
 

@@ -22,6 +22,7 @@ class CatalogTests(unittest.TestCase):
     def setUpClass(cls):
         cls.categories = load("catalog/categories.seed.json")
         cls.skills = load("catalog/skills.seed.json")
+        cls.showcase_descriptions = load("catalog/showcase-descriptions.zh-CN.json")["descriptions"]
 
     def test_release_counts(self):
         first = sum(s["source"]["kind"] == "lianlin-first-party" for s in self.skills)
@@ -67,8 +68,17 @@ class CatalogTests(unittest.TestCase):
     def test_chinese_readme_showcase_is_complete(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("首期明确只支持", readme)
+        self.assertNotIn("固定第三方", readme)
+        self.assertNotIn("上游能力说明", readme)
+        self.assertNotIn("<sub>环境：", readme)
         self.assertEqual(readme.count('<a id="category-'), len(self.categories))
         self.assertEqual(readme.count("**准备：**"), len(self.skills))
+        third_party = [skill for skill in self.skills if skill["source"]["kind"] == "pinned-third-party"]
+        self.assertEqual(set(self.showcase_descriptions), {skill["id"] for skill in third_party})
+        self.assertEqual(readme.count("<strong>能力说明：</strong>"), len(third_party))
+        for skill_id, description in self.showcase_descriptions.items():
+            with self.subTest(skill=skill_id, field="showcase-description"):
+                self.assertRegex(description, r"[\u3400-\u9fff]")
         for skill in self.skills:
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"./{skill['paths']['zh-CN']}", readme)
