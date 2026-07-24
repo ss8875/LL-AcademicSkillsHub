@@ -39,16 +39,15 @@ python -m unittest discover -s tests -v
 python scripts/package_release.py
 ```
 
-## Real assets still required from the maintainer
+## Lianlin Research AI Platform installer
 
-These are not code blockers, but must be supplied before public GitHub promotion:
+The Windows 0.3.18 installer is published as a GitHub Release asset:
 
-1. official HTTPS download URL for Lianlin Research AI Platform;
-2. verified support/community/WeChat QR artwork if desired;
-3. maintainer security contact;
-4. final logo or registered trademark assets.
+- [Direct installer download](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)
+- Size: 122,424,791 bytes (approximately 116.75 MB)
+- SHA-256: `E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6`
 
-Until a real address exists, the site states that it is unconfigured and never generates a fake link or QR code. Platform promotion appears only in README, documentation site, download page, and release notes—not in skill execution instructions.
+The installer is not currently Windows code-signed, so the release page and download documentation explain checksum verification. For later versions, update version, direct asset URL, size, and digest in `catalog/platform-release.json`, then run the complete build.
 
 ## Handoff entry points
 

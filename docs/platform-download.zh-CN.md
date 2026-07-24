@@ -4,12 +4,19 @@
 
 ## 官方下载
 
-**状态：官方下载地址尚未配置。**
+**[点击直接下载链邻科研 AI 平台 0.3.18（Windows 安装版）](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)**
 
-维护者获得正式下载页、客服二维码或社区入口后，应放入站点配置与发布资料，并验证：
+- 支持系统：Windows 10/11
+- 安装包大小：122,424,791 字节（约 116.75 MB）
+- SHA-256：`E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6`
+- [查看版本说明](https://github.com/ss8875/LL-AcademicSkillsHub/releases/tag/lianlin-ai-v0.3.18)
 
-- 链接属于正式域名；
-- 二维码可扫描且内容与文字链接一致；
-- 图片中不出现无法核验的能力、用户量或效果承诺；
-- 不在具体技能的执行指令中强制推广；
-- 打赏、微信与社群入口清楚标注用途，并与技术文档保持视觉分隔。
+当前安装程序尚未进行 Windows 代码签名。首次运行时如 Windows 显示安全提示，请确认下载地址来自本仓库，并核对上方 SHA-256 校验值。
+
+### Windows 校验方法
+
+```powershell
+Get-FileHash ".\Lianlin-Research-AI-Platform-Setup-0.3.18.exe" -Algorithm SHA256
+```
+
+输出应与本页列出的 SHA-256 完全一致。

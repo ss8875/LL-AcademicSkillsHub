@@ -24,6 +24,7 @@ class CatalogTests(unittest.TestCase):
         cls.categories = load("catalog/categories.seed.json")
         cls.skills = load("catalog/skills.seed.json")
         cls.showcase_descriptions = load("catalog/showcase-descriptions.zh-CN.json")["descriptions"]
+        cls.platform_release = load("catalog/platform-release.json")
 
     def test_release_counts(self):
         first = sum(s["source"]["kind"] == "lianlin-first-party" for s in self.skills)
@@ -63,6 +64,31 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(site["summary"]["skillCount"], len(self.skills))
         self.assertEqual(site["summary"]["categoryCount"], len(self.categories))
         self.assertEqual({s["id"] for s in site["skills"]}, {s["id"] for s in self.skills})
+
+    def test_platform_release_direct_download_is_consistent(self):
+        release = self.platform_release
+        self.assertEqual(release["version"], "0.3.18")
+        self.assertEqual(release["sizeBytes"], 122424791)
+        self.assertRegex(release["sha256"], r"^[A-F0-9]{64}$")
+        self.assertIn(
+            "/releases/download/lianlin-ai-v0.3.18/"
+            "Lianlin-Research-AI-Platform-Setup-0.3.18.exe",
+            release["downloadUrl"],
+        )
+        config = load("site/config.json")
+        self.assertEqual(config["platformDownloadUrl"], release["downloadUrl"])
+        for relative in (
+            "README.md",
+            "README.en.md",
+            "site/index.html",
+            "docs/platform-download.zh-CN.md",
+            "docs/platform-download.en.md",
+            "docs/deployment.zh-CN.md",
+            "docs/deployment.en.md",
+        ):
+            with self.subTest(path=relative):
+                text = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertIn(release["downloadUrl"], text)
 
     def test_first_party_frontmatter_and_locales(self):
         for skill in (s for s in self.skills if s["source"]["kind"] == "lianlin-first-party"):

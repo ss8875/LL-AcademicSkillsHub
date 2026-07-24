@@ -7,6 +7,7 @@
   <a href="./README.en.md">English</a> ·
   <a href="./docs/skills.zh-CN.md">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">下载科研 AI 平台</a> ·
   <a href="./docs/quality-model.zh-CN.md">质量模型</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/actions">质量流水线</a>
 </p>
@@ -37,7 +38,14 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 ## 不想本地安装？直接使用链邻科研 AI 平台
 
 <p align="center">
-  <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="下载链邻科研 AI 平台或添加微信客服" width="100%">
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">
+    <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="下载链邻科研 AI 平台或添加微信客服" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe"><strong>⬇ 下载链邻科研 AI 平台 0.3.18（Windows 安装版）</strong></a><br>
+  <sub>约 116.75 MB · SHA-256：<code>E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6</code></sub>
 </p>
 
 ### 18 大分类 · 187 项技能完整能力清单

@@ -1,5 +1,7 @@
 # Local Deployment
 
+If you prefer not to deploy or debug a local environment, [download Lianlin Research AI Platform 0.3.18 for Windows](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe).
+
 ## Environment
 
 - Windows 10/11, macOS 12+, or a mainstream Linux distribution;
@@ -40,6 +42,6 @@ Open `http://127.0.0.1:8765/site/`.
 
 ## Configuration
 
-Copy `.env.example` to `.env`. `LL_HOST` and `LL_PORT` control the bind address and port. Set `LIANLIN_PLATFORM_DOWNLOAD_URL` only after an official URL exists; until then the site must show an honest unconfigured state rather than generate a fake link or QR code.
+Copy `.env.example` to `.env`. `LL_HOST` and `LL_PORT` control the bind address and port. `LIANLIN_PLATFORM_DOWNLOAD_URL` already points to the current official installer; override it only for a new release or an internal mirror.
 
 The default bind address is `127.0.0.1` for local access only. If you change it to `0.0.0.0`, configure firewall, reverse proxy, TLS, and access control yourself.

@@ -1,5 +1,7 @@
 # 本地部署
 
+如果不想部署或调试本地环境，可直接[下载链邻科研 AI 平台 0.3.18（Windows 安装版）](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)。
+
 ## 环境
 
 - Windows 10/11、macOS 12+ 或常见 Linux 发行版；
@@ -40,6 +42,6 @@ python3 scripts/serve.py
 
 ## 配置
 
-复制 `.env.example` 为 `.env`。`LL_HOST` 与 `LL_PORT` 控制监听地址和端口。只有在获得官方链接后才设置 `LIANLIN_PLATFORM_DOWNLOAD_URL`；未配置时页面必须显示“待配置”，不能生成虚假链接或二维码。
+复制 `.env.example` 为 `.env`。`LL_HOST` 与 `LL_PORT` 控制监听地址和端口。`LIANLIN_PLATFORM_DOWNLOAD_URL` 已指向当前正式安装包；仅在发布新版本或使用内部镜像时覆盖它。
 
 默认绑定 `127.0.0.1`，只供本机访问。若改为 `0.0.0.0`，请自行配置防火墙、反向代理、TLS 与访问控制。

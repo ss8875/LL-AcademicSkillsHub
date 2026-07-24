@@ -1,3 +1,6 @@
 {
-  "platformDownloadUrl": null
+  "platformDownloadUrl": "https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe",
+  "platformVersion": "0.3.18",
+  "platformSizeMiB": "116.75",
+  "platformSha256": "E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6"
 }

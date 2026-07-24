@@ -52,7 +52,9 @@
     },
     "brandAndScope": {
       "publicFiles": 5,
-      "firstReleaseRoutes": 2
+      "firstReleaseRoutes": 2,
+      "platformVersion": "0.3.18",
+      "platformDownloadLinkedFiles": 7
     },
     "licenseProvenance": {
       "statusCounts": {

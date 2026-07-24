@@ -1,0 +1,17 @@
+{
+  "productName": {
+    "zh-CN": "链邻科研 AI 平台",
+    "en": "Lianlin Research AI Platform"
+  },
+  "version": "0.3.18",
+  "platform": "Windows 10/11",
+  "tag": "lianlin-ai-v0.3.18",
+  "releaseUrl": "https://github.com/ss8875/LL-AcademicSkillsHub/releases/tag/lianlin-ai-v0.3.18",
+  "downloadUrl": "https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe",
+  "assetName": "Lianlin-Research-AI-Platform-Setup-0.3.18.exe",
+  "assetLabel": "链邻科研 AI 平台 0.3.18（Windows 安装版）",
+  "sizeBytes": 122424791,
+  "sizeMiB": "116.75",
+  "sha256": "E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6",
+  "codeSigned": false
+}

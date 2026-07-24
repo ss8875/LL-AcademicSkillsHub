@@ -39,16 +39,15 @@ python -m unittest discover -s tests -v
 python scripts/package_release.py
 ```
 
-## 仍需维护者提供的真实资产
+## 链邻科研 AI 平台安装包
 
-这些不是代码阻断项，但发布到公开 GitHub 前必须替换：
+Windows 安装版 0.3.18 已作为 GitHub Release 附件发布：
 
-1. 链邻科研 AI 平台官方 HTTPS 下载地址；
-2. 如需宣传，经过验证的客服/社群/微信二维码；
-3. 维护者安全联系地址；
-4. 最终品牌 Logo 或备案后的商标素材。
+- [直接下载安装包](https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe)
+- 大小：122,424,791 字节（约 116.75 MB）
+- SHA-256：`E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6`
 
-在正式地址缺失时，站点会明确显示“待配置”，不会生成假链接或二维码。平台宣传只位于 README、文档站、下载页和发行说明，不进入技能执行指令。
+安装包目前未进行 Windows 代码签名，发布页和下载文档已明确说明校验方式。后续版本应沿用 `catalog/platform-release.json` 更新版本、附件直链、大小和摘要，再运行完整构建。
 
 ## 交接入口
 

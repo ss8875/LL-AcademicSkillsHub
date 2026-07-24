@@ -7,6 +7,7 @@
   <a href="./README.md">中文</a> ·
   <a href="./docs/skills.en.md">All skills</a> ·
   <a href="./docs/deployment.en.md">Local setup</a> ·
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">Download Research AI Platform</a> ·
   <a href="./docs/quality-model.en.md">Quality model</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/actions">Quality workflow</a>
 </p>
@@ -37,7 +38,14 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 ## Don't want to install locally? Use Lianlin Research AI Platform
 
 <p align="center">
-  <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="Download Lianlin Research AI Platform or contact WeChat support" width="100%">
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">
+    <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="Download Lianlin Research AI Platform or contact WeChat support" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe"><strong>⬇ Download Lianlin Research AI Platform 0.3.18 for Windows</strong></a><br>
+  <sub>Approx. 116.75 MB · SHA-256: <code>E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6</code></sub>
 </p>
 
 ## Installation

@@ -220,19 +220,36 @@ def scan_brand_and_scope(audit: Audit) -> None:
         content = path.read_text(encoding="utf-8", errors="replace")
         if "全网" in content:
             audit.finding("error", "brand.forbidden-claim", "Public copy contains prohibited 全网 claim", path.relative_to(ROOT))
-    site_text = (ROOT / "site" / "index.html").read_text(encoding="utf-8")
-    if "LIANLIN_PLATFORM_DOWNLOAD_URL" in site_text or "http" in _platform_placeholder():
-        audit.finding("warning", "brand.platform-link", "Review platform link configuration", "site/index.html")
-    if "待配置" not in site_text:
-        audit.finding("error", "brand.placeholder", "Missing honest unconfigured platform state", "site/index.html")
-    audit.checkpoint("brandAndScope", publicFiles=len(public_files), firstReleaseRoutes=2)
+    platform_release = load(ROOT / "catalog" / "platform-release.json")
+    platform_url = platform_release.get("downloadUrl", "")
+    if not re.fullmatch(r"https://github\.com/ss8875/LL-AcademicSkillsHub/releases/download/[^\s]+", platform_url):
+        audit.finding("error", "brand.platform-link", "Official platform URL must be a repository Release asset", "catalog/platform-release.json")
+    if not re.fullmatch(r"[A-F0-9]{64}", platform_release.get("sha256", "")):
+        audit.finding("error", "brand.platform-sha256", "Platform SHA-256 metadata is invalid", "catalog/platform-release.json")
 
+    site_config = load(ROOT / "site" / "config.json")
+    if site_config.get("platformDownloadUrl") != platform_url:
+        audit.finding("error", "brand.platform-parity", "Site download URL differs from platform release metadata", "site/config.json")
 
-def _platform_placeholder() -> str:
-    env_file = ROOT / ".env"
-    if not env_file.exists():
-        return ""
-    return env_file.read_text(encoding="utf-8", errors="replace")
+    linked_files = [
+        ROOT / "README.md",
+        ROOT / "README.en.md",
+        ROOT / "site" / "index.html",
+        ROOT / "docs" / "platform-download.zh-CN.md",
+        ROOT / "docs" / "platform-download.en.md",
+        ROOT / "docs" / "deployment.zh-CN.md",
+        ROOT / "docs" / "deployment.en.md",
+    ]
+    for path in linked_files:
+        if platform_url not in path.read_text(encoding="utf-8", errors="replace"):
+            audit.finding("error", "brand.platform-missing", "Official platform direct-download URL is missing", path.relative_to(ROOT))
+    audit.checkpoint(
+        "brandAndScope",
+        publicFiles=len(public_files),
+        firstReleaseRoutes=2,
+        platformVersion=platform_release.get("version"),
+        platformDownloadLinkedFiles=len(linked_files),
+    )
 
 
 def scan_generated_parity(audit: Audit, categories: list[dict], records: list[dict]) -> None:

@@ -674,9 +674,19 @@ See the [local deployment document](./docs/deployment.en.md) for the compact sys
 """
 
 
-def readme(lang: str, payload: dict, showcase_descriptions: dict[str, str] | None = None) -> str:
+def readme(
+    lang: str,
+    payload: dict,
+    showcase_descriptions: dict[str, str] | None = None,
+    platform_release: dict | None = None,
+) -> str:
     zh = lang == "zh-CN"
     summary = payload["summary"]
+    platform_release = platform_release or {}
+    platform_url = platform_release.get("downloadUrl", "")
+    platform_version = platform_release.get("version", "")
+    platform_size = platform_release.get("sizeMiB", "")
+    platform_sha256 = platform_release.get("sha256", "")
     if zh:
         showcase = zh_skill_showcase(
             payload["categories"],
@@ -693,6 +703,7 @@ def readme(lang: str, payload: dict, showcase_descriptions: dict[str, str] | Non
   <a href="./README.en.md">English</a> ·
   <a href="./docs/skills.zh-CN.md">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
+  <a href="{platform_url}">下载科研 AI 平台</a> ·
   <a href="./docs/quality-model.zh-CN.md">质量模型</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/actions">质量流水线</a>
 </p>
@@ -723,7 +734,14 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 ## 不想本地安装？直接使用链邻科研 AI 平台
 
 <p align="center">
-  <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="下载链邻科研 AI 平台或添加微信客服" width="100%">
+  <a href="{platform_url}">
+    <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="下载链邻科研 AI 平台或添加微信客服" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="{platform_url}"><strong>⬇ 下载链邻科研 AI 平台 {platform_version}（Windows 安装版）</strong></a><br>
+  <sub>约 {platform_size} MB · SHA-256：<code>{platform_sha256}</code></sub>
 </p>
 
 {showcase}
@@ -748,6 +766,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
   <a href="./README.md">中文</a> ·
   <a href="./docs/skills.en.md">All skills</a> ·
   <a href="./docs/deployment.en.md">Local setup</a> ·
+  <a href="{platform_url}">Download Research AI Platform</a> ·
   <a href="./docs/quality-model.en.md">Quality model</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/actions">Quality workflow</a>
 </p>
@@ -778,7 +797,14 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 ## Don't want to install locally? Use Lianlin Research AI Platform
 
 <p align="center">
-  <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="Download Lianlin Research AI Platform or contact WeChat support" width="100%">
+  <a href="{platform_url}">
+    <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="Download Lianlin Research AI Platform or contact WeChat support" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="{platform_url}"><strong>⬇ Download Lianlin Research AI Platform {platform_version} for Windows</strong></a><br>
+  <sub>Approx. {platform_size} MB · SHA-256: <code>{platform_sha256}</code></sub>
 </p>
 
 {installation}
@@ -800,24 +826,36 @@ def main() -> None:
     showcase_descriptions = load_json(
         ROOT / "catalog" / "showcase-descriptions.zh-CN.json"
     )["descriptions"]
+    platform_release = load_json(ROOT / "catalog" / "platform-release.json")
     payload = catalog_payload(categories, skills)
     write_json(ROOT / "catalog" / "categories.json", categories)
     write_json(ROOT / "catalog" / "skills.json", skills)
     write_json(ROOT / "site" / "data" / "catalog.json", payload)
-    platform_url = env_value("LIANLIN_PLATFORM_DOWNLOAD_URL")
-    if platform_url and not re.fullmatch(r"https://[^\s]+", platform_url):
+    platform_url = env_value("LIANLIN_PLATFORM_DOWNLOAD_URL") or platform_release["downloadUrl"]
+    if not re.fullmatch(r"https://[^\s]+", platform_url):
         raise SystemExit("LIANLIN_PLATFORM_DOWNLOAD_URL must be blank or an https:// URL")
-    write_json(ROOT / "site" / "config.json", {"platformDownloadUrl": platform_url or None})
+    write_json(
+        ROOT / "site" / "config.json",
+        {
+            "platformDownloadUrl": platform_url,
+            "platformVersion": platform_release["version"],
+            "platformSizeMiB": platform_release["sizeMiB"],
+            "platformSha256": platform_release["sha256"],
+        },
+    )
     guide_summary = build_all_skill_guides(categories, skills, showcase_descriptions)
     (ROOT / "docs" / "skills.zh-CN.md").write_text(skills_markdown(categories, skills, "zh-CN"), encoding="utf-8")
     (ROOT / "docs" / "skills.en.md").write_text(skills_markdown(categories, skills, "en"), encoding="utf-8")
     (ROOT / "docs" / "categories.zh-CN.md").write_text(categories_markdown(categories, skills, "zh-CN"), encoding="utf-8")
     (ROOT / "docs" / "categories.en.md").write_text(categories_markdown(categories, skills, "en"), encoding="utf-8")
     (ROOT / "README.md").write_text(
-        readme("zh-CN", payload, showcase_descriptions),
+        readme("zh-CN", payload, showcase_descriptions, platform_release),
         encoding="utf-8",
     )
-    (ROOT / "README.en.md").write_text(readme("en", payload), encoding="utf-8")
+    (ROOT / "README.en.md").write_text(
+        readme("en", payload, platform_release=platform_release),
+        encoding="utf-8",
+    )
     print(
         json.dumps(
             {

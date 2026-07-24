@@ -18,7 +18,7 @@ Result: **PASS**
 | `bilingualParity` | `{"locales": ["zh-CN", "en"], "skills": 187, "generatedArtifacts": 9}` |
 | `codeSyntax` | `{"pythonFiles": 236, "pythonWarnings": 0, "jsFiles": 1, "jsFailures": 0}` |
 | `securityStaticScan` | `{"files": 1603, "findings": {"dynamic-python": 15, "shell-pipe-exec": 2, "shell-true": 2}}` |
-| `brandAndScope` | `{"publicFiles": 5, "firstReleaseRoutes": 2}` |
+| `brandAndScope` | `{"publicFiles": 5, "firstReleaseRoutes": 2, "platformVersion": "0.3.18", "platformDownloadLinkedFiles": 7}` |
 | `licenseProvenance` | `{"statusCounts": {"metadata-declared": 177, "first-party": 10}}` |
 | `releaseContract` | `{"skills": 187, "categories": 18, "firstParty": 10, "thirdParty": 177}` |
 

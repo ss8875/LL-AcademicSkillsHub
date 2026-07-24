@@ -37,8 +37,8 @@ const UI = {
     catalogTitle:"完整技能与功能目录", catalogText:"按关键词、类别和质量状态筛选。点击技能可查看双语说明与原始 SKILL.md。",
     search:"搜索技能、功能或说明", allCategories:"全部类别", allQuality:"全部质量状态",
     result:"项结果", noResult:"没有匹配的技能，请调整筛选条件。",
-    platformTitle:"不想逐项安装？使用链邻科研 AI 平台", platformText:"平台面向希望开箱即用的科研用户，整合技能、模型、数据工具和工作流。当前仓库仅保留官方下载入口，不在技能执行过程中插入宣传。",
-    pending:"官方下载地址待配置", pendingSub:"维护者可在 .env 中配置正式地址并重新构建。", downloadNow:"前往官方下载",
+    platformTitle:"不想逐项安装？使用链邻科研 AI 平台", platformText:"不想本地调试、安装和逐项配置技能，可直接下载 Windows 安装版，使用平台整合的技能、模型、数据工具和科研工作流。",
+    downloadNow:"下载 Windows 安装版 0.3.18", downloadMeta:"约 116.75 MB · 点击后直接下载",
     source:"来源", runtime:"环境", openSkill:"查看技能文件 →", footer:"首期范围：本地部署或下载链邻科研 AI 平台。"
   },
   en: {
@@ -53,8 +53,8 @@ const UI = {
     catalogTitle:"Complete skill and function catalog", catalogText:"Filter by keyword, category, and quality. Open any skill for bilingual guidance and the original SKILL.md.",
     search:"Search skills, functions, or descriptions", allCategories:"All categories", allQuality:"All quality levels",
     result:"results", noResult:"No skills match. Adjust the filters and try again.",
-    platformTitle:"Do not want individual installs? Use Lianlin Research AI Platform", platformText:"The platform integrates skills, models, data tools, and workflows for researchers who want an out-of-the-box route. This repository promotes it only at explicit documentation surfaces, never inside skill execution.",
-    pending:"Official download URL not configured", pendingSub:"Maintainers can set the official URL in .env and rebuild.", downloadNow:"Open official download",
+    platformTitle:"Do not want individual installs? Use Lianlin Research AI Platform", platformText:"Skip local debugging, installation, and per-skill setup. Download the Windows installer and use the platform's integrated skills, models, data tools, and research workflows.",
+    downloadNow:"Download Windows installer 0.3.18", downloadMeta:"Approx. 116.75 MB · direct download",
     source:"Source", runtime:"Runtime", openSkill:"Open skill file →", footer:"First-release scope: local deployment or Lianlin Research AI Platform download."
   }
 };
@@ -132,14 +132,8 @@ async function boot() {
   catalog = await catalogResponse.json();
   const config = configResponse.ok ? await configResponse.json() : {};
   if (config.platformDownloadUrl) {
-    const host = $("#download-placeholder");
-    const link = document.createElement("a");
-    link.className = "button primary";
+    const link = $("#platform-download-link");
     link.href = config.platformDownloadUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.dataset.i18n = "downloadNow";
-    host.replaceChildren(link);
   }
   $("#search").addEventListener("input", (event) => { state.query = event.target.value; renderSkills(); });
   $("#quality").addEventListener("change", (event) => { state.quality = event.target.value; renderSkills(); });
