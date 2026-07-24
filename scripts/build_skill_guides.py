@@ -440,7 +440,14 @@ def bundled_files(skill_root: Path) -> dict[str, list[Path]]:
         "模板与素材": [],
         "其他随附文件": [],
     }
-    for path in sorted(skill_root.rglob("*")):
+    paths = sorted(
+        skill_root.rglob("*"),
+        key=lambda path: (
+            path.relative_to(skill_root).as_posix().casefold(),
+            path.relative_to(skill_root).as_posix(),
+        ),
+    )
+    for path in paths:
         if not path.is_file() or path.name == "SKILL.md" or "locales" in path.parts:
             continue
         rel = path.relative_to(skill_root)
