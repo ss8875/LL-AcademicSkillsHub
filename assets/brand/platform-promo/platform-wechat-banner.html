@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>链邻科研 AI 平台与微信客服</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC",
+        "Noto Sans CJK SC", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 1600px;
+      height: 720px;
+      margin: 0;
+      overflow: hidden;
+      background: #eef4ff;
+    }
+
+    .banner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1080px 520px;
+      width: 1600px;
+      height: 720px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .platform {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      color: #ffffff;
+      background: #071b38;
+    }
+
+    .platform::before {
+      position: absolute;
+      z-index: -3;
+      inset: 0;
+      content: "";
+      background:
+        url("./research-ai-workspace.png") center center / cover no-repeat;
+      transform: scale(1.015);
+    }
+
+    .platform::after {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(90deg, rgba(5, 20, 46, 0.97) 0%, rgba(7, 28, 61, 0.90) 38%,
+          rgba(8, 38, 82, 0.47) 68%, rgba(8, 29, 62, 0.18) 100%),
+        linear-gradient(180deg, rgba(9, 31, 67, 0.15), rgba(5, 20, 45, 0.46));
+    }
+
+    .grid {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(rgba(154, 205, 255, 0.42) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 205, 255, 0.42) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(90deg, #000 0%, transparent 72%);
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 680px;
+      padding: 70px 0 60px 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 30px;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #d8ecff;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(155, 222, 255, 0.52);
+      border-radius: 13px;
+      color: #071b38;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      background: linear-gradient(135deg, #85f4da, #75bfff);
+      box-shadow: 0 12px 34px rgba(63, 173, 255, 0.28);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 38px;
+      margin-bottom: 22px;
+      padding: 0 17px;
+      border: 1px solid rgba(126, 216, 255, 0.38);
+      border-radius: 999px;
+      color: #bfe9ff;
+      font-size: 17px;
+      font-weight: 700;
+      background: rgba(10, 56, 99, 0.58);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #70efd3;
+      box-shadow: 0 0 16px rgba(112, 239, 211, 0.88);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 58px;
+      line-height: 1.13;
+      letter-spacing: -0.045em;
+      text-shadow: 0 5px 24px rgba(0, 14, 40, 0.34);
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .lead strong {
+      color: #85f4da;
+    }
+
+    .description {
+      max-width: 610px;
+      margin: 15px 0 0;
+      color: #c7dff4;
+      font-size: 19px;
+      line-height: 1.75;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      padding: 9px 13px;
+      border: 1px solid rgba(154, 211, 255, 0.25);
+      border-radius: 10px;
+      color: #d8ebfb;
+      font-size: 16px;
+      background: rgba(8, 33, 67, 0.62);
+      backdrop-filter: blur(8px);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      min-height: 56px;
+      margin-top: 30px;
+      padding: 0 24px;
+      border-radius: 14px;
+      color: #071b38;
+      font-size: 19px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #84f3d8, #82c7ff);
+      box-shadow: 0 14px 36px rgba(61, 176, 255, 0.28);
+    }
+
+    .cta-arrow {
+      font-family: Arial, sans-serif;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .support {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 52px 54px 40px;
+      border-left: 1px solid #dbe6f4;
+      color: #101c31;
+      background:
+        radial-gradient(circle at 50% 37%, rgba(78, 142, 255, 0.12), transparent 42%),
+        linear-gradient(180deg, #f9fbff 0%, #f2f7ff 100%);
+    }
+
+    .support::before,
+    .support::after {
+      position: absolute;
+      width: 96px;
+      height: 96px;
+      content: "";
+      opacity: 0.42;
+      background-image: radial-gradient(#9cc7ff 2px, transparent 2px);
+      background-size: 14px 14px;
+    }
+
+    .support::before {
+      top: 27px;
+      right: 24px;
+    }
+
+    .support::after {
+      bottom: 18px;
+      left: 25px;
+    }
+
+    .support-kicker {
+      margin: 0 0 8px;
+      color: #2872e2;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+    }
+
+    .support h2 {
+      margin: 0;
+      font-size: 35px;
+      letter-spacing: -0.04em;
+    }
+
+    .support-note {
+      margin: 10px 0 24px;
+      color: #607089;
+      font-size: 16px;
+    }
+
+    .qr-shell {
+      position: relative;
+      z-index: 1;
+      width: 383px;
+      padding: 15px;
+      border: 1px solid #dce7f5;
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 24px 60px rgba(43, 91, 155, 0.16);
+    }
+
+    .qr-crop {
+      position: relative;
+      width: 351px;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #ffffff;
+    }
+
+    .qr-crop img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 351px;
+      height: auto;
+      image-rendering: auto;
+    }
+
+    .caption {
+      position: relative;
+      z-index: 1;
+      margin: 24px 0 0;
+      font-size: 24px;
+      font-weight: 800;
+      color: #17233a;
+    }
+
+    .caption-sub {
+      position: relative;
+      z-index: 1;
+      margin: 8px 0 0;
+      color: #77859a;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <main class="banner" aria-label="链邻科研 AI 平台与微信客服宣传图">
+    <section class="platform">
+      <div class="grid"></div>
+      <div class="copy">
+        <div class="brand">
+          <span class="brand-mark">LL</span>
+          <span>链邻科研 · LIANLIN RESEARCH</span>
+        </div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          科研论文创作全流程 AI 平台
+        </div>
+        <h1>链邻科研 AI 平台</h1>
+        <p class="lead">不想本地安装、配置和调试？<br><strong>直接下载平台，即开即用</strong></p>
+        <p class="description">无需逐项部署科研 Skills，在统一平台中完成从文献到论文的关键任务，让科研工作更顺畅、更高效。</p>
+        <div class="features" aria-label="平台能力">
+          <span class="feature">文献检索</span>
+          <span class="feature">论文精读</span>
+          <span class="feature">学术写作</span>
+          <span class="feature">数据分析</span>
+          <span class="feature">图表制作</span>
+        </div>
+        <div class="cta">下载链邻科研 AI 平台 <span class="cta-arrow">→</span></div>
+      </div>
+    </section>
+
+    <aside class="support">
+      <p class="support-kicker">INSTALLATION SUPPORT</p>
+      <h2>微信客服</h2>
+      <p class="support-note">平台下载 · 安装与使用咨询</p>
+      <div class="qr-shell">
+        <div class="qr-crop">
+          <img src="./wechat-qr-source.png" alt="微信客服二维码">
+        </div>
+      </div>
+      <p class="caption">微信客服扫码添加</p>
+      <p class="caption-sub">扫码后添加客服，获取平台相关支持</p>
+    </aside>
+  </main>
+</body>
+</html>
