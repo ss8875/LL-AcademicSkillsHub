@@ -26,12 +26,62 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 ## Skill Architecture Map
 
 <p align="center">
-  <a href="./assets/brand/skill-architecture-map.svg">
-    <img src="./assets/brand/skill-architecture-map.svg" alt="Architecture map connecting all 187 LL-AcademicSkillsHub skills" width="100%">
+  <a href="./assets/brand/skill-architecture-map.en.svg">
+    <img src="./assets/brand/skill-architecture-map.en.svg" alt="LL-AcademicSkillsHub end-to-end skill system overview" width="100%">
   </a>
 </p>
 
-<p align="center"><sub>Seven capability domains connect research discovery, domain computation, data intelligence, research operations, and scholarly communication. Click the image for the scalable full-size map.</sub></p>
+<p align="center"><sub>Reading path: discovery → life-health / cross-domain computing (parallel) → experiments, data and AI → scholarly communication → review feedback. Click any map for full size.</sub></p>
+
+### 01 · Research Discovery & Study Design
+
+Move from research questions to search, evidence synthesis, study design, and database discovery.
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/01-discovery.en.svg">
+    <img src="./assets/brand/skill-architecture/01-discovery.en.svg" alt="01 · Research Discovery & Study Design" width="100%">
+  </a>
+</p>
+
+### 02 · Life Science & Health Research
+
+Build life and health evidence across omics, clinical research, and protein structure.
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/02-life-health.en.svg">
+    <img src="./assets/brand/skill-architecture/02-life-health.en.svg" alt="02 · Life Science & Health Research" width="100%">
+  </a>
+</p>
+
+### 03 · Cross-domain Scientific Computing
+
+Connect molecular, materials, financial, and spatial data for domain simulation and prediction.
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/03-domain-sciences.en.svg">
+    <img src="./assets/brand/skill-architecture/03-domain-sciences.en.svg" alt="03 · Cross-domain Scientific Computing" width="100%">
+  </a>
+</p>
+
+### 04 · Experiments, Data & Intelligent Computing
+
+Turn experiments and multi-source data into statistics, models, and reproducible artifacts.
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/04-data-compute.en.svg">
+    <img src="./assets/brand/skill-architecture/04-data-compute.en.svg" alt="04 · Experiments, Data & Intelligent Computing" width="100%">
+  </a>
+</p>
+
+### 05 · Scholarly Writing & Research Impact
+
+Organize the evidence chain into papers, figures, talks, reviewer responses, and final deliverables.
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/05-communication.en.svg">
+    <img src="./assets/brand/skill-architecture/05-communication.en.svg" alt="05 · Scholarly Writing & Research Impact" width="100%">
+  </a>
+</p>
 
 <a id="lianlin-platform"></a>
 

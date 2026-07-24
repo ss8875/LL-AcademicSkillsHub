@@ -27,11 +27,61 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <p align="center">
   <a href="./assets/brand/skill-architecture-map.svg">
-    <img src="./assets/brand/skill-architecture-map.svg" alt="链邻学术技能仓库 187 项技能架构图" width="100%">
+    <img src="./assets/brand/skill-architecture-map.svg" alt="链邻学术技能仓库科研全流程技能系统总览" width="100%">
   </a>
 </p>
 
-<p align="center"><sub>从研究发现、专业计算、数据智能到成果传播，7 大能力域通过证据反馈与科研基础设施有机连接。点击图片查看可缩放全尺寸图。</sub></p>
+<p align="center"><sub>阅读路线：研究发现 → 生命健康 / 跨学科专业计算（并行）→ 实验、数据与智能计算 → 论文创作与成果传播 → 审稿反馈回流。点击任意图片查看全尺寸。</sub></p>
+
+### 01 · 研究发现与方案设计
+
+从研究问题出发，完成检索、证据整合、方法设计与数据库发现。
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/01-discovery.zh-CN.svg">
+    <img src="./assets/brand/skill-architecture/01-discovery.zh-CN.svg" alt="01 · 研究发现与方案设计" width="100%">
+  </a>
+</p>
+
+### 02 · 生命科学与健康研究
+
+围绕组学、临床与蛋白结构形成生命健康研究证据。
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/02-life-health.zh-CN.svg">
+    <img src="./assets/brand/skill-architecture/02-life-health.zh-CN.svg" alt="02 · 生命科学与健康研究" width="100%">
+  </a>
+</p>
+
+### 03 · 跨学科专业计算
+
+连接分子、材料、金融和空间数据，完成领域模拟与预测。
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/03-domain-sciences.zh-CN.svg">
+    <img src="./assets/brand/skill-architecture/03-domain-sciences.zh-CN.svg" alt="03 · 跨学科专业计算" width="100%">
+  </a>
+</p>
+
+### 04 · 实验、数据与智能计算
+
+把实验和多源数据转化为统计结果、模型与可复现产物。
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/04-data-compute.zh-CN.svg">
+    <img src="./assets/brand/skill-architecture/04-data-compute.zh-CN.svg" alt="04 · 实验、数据与智能计算" width="100%">
+  </a>
+</p>
+
+### 05 · 论文创作与成果传播
+
+把证据链组织为论文、图表、演示、审稿回复与最终交付。
+
+<p align="center">
+  <a href="./assets/brand/skill-architecture/05-communication.zh-CN.svg">
+    <img src="./assets/brand/skill-architecture/05-communication.zh-CN.svg" alt="05 · 论文创作与成果传播" width="100%">
+  </a>
+</p>
 
 <a id="lianlin-platform"></a>
 

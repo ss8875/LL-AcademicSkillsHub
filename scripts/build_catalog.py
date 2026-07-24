@@ -674,6 +674,97 @@ See the [local deployment document](./docs/deployment.en.md) for the compact sys
 """
 
 
+def architecture_gallery(lang: str) -> str:
+    zh = lang == "zh-CN"
+    stages = [
+        (
+            "01-discovery",
+            "01 · 研究发现与方案设计",
+            "01 · Research Discovery & Study Design",
+            "从研究问题出发，完成检索、证据整合、方法设计与数据库发现。",
+            "Move from research questions to search, evidence synthesis, study design, and database discovery.",
+        ),
+        (
+            "02-life-health",
+            "02 · 生命科学与健康研究",
+            "02 · Life Science & Health Research",
+            "围绕组学、临床与蛋白结构形成生命健康研究证据。",
+            "Build life and health evidence across omics, clinical research, and protein structure.",
+        ),
+        (
+            "03-domain-sciences",
+            "03 · 跨学科专业计算",
+            "03 · Cross-domain Scientific Computing",
+            "连接分子、材料、金融和空间数据，完成领域模拟与预测。",
+            "Connect molecular, materials, financial, and spatial data for domain simulation and prediction.",
+        ),
+        (
+            "04-data-compute",
+            "04 · 实验、数据与智能计算",
+            "04 · Experiments, Data & Intelligent Computing",
+            "把实验和多源数据转化为统计结果、模型与可复现产物。",
+            "Turn experiments and multi-source data into statistics, models, and reproducible artifacts.",
+        ),
+        (
+            "05-communication",
+            "05 · 论文创作与成果传播",
+            "05 · Scholarly Writing & Research Impact",
+            "把证据链组织为论文、图表、演示、审稿回复与最终交付。",
+            "Organize the evidence chain into papers, figures, talks, reviewer responses, and final deliverables.",
+        ),
+    ]
+    overview = (
+        "./assets/brand/skill-architecture-map.svg"
+        if zh
+        else "./assets/brand/skill-architecture-map.en.svg"
+    )
+    lines = [
+        '<p align="center">',
+        f'  <a href="{overview}">',
+        (
+            f'    <img src="{overview}" alt="'
+            + (
+                "链邻学术技能仓库科研全流程技能系统总览"
+                if zh
+                else "LL-AcademicSkillsHub end-to-end skill system overview"
+            )
+            + '" width="100%">'
+        ),
+        "  </a>",
+        "</p>",
+        "",
+        (
+            "<p align=\"center\"><sub>阅读路线：研究发现 → 生命健康 / 跨学科专业计算（并行）→ "
+            "实验、数据与智能计算 → 论文创作与成果传播 → 审稿反馈回流。点击任意图片查看全尺寸。</sub></p>"
+            if zh
+            else
+            "<p align=\"center\"><sub>Reading path: discovery → life-health / cross-domain computing (parallel) → "
+            "experiments, data and AI → scholarly communication → review feedback. Click any map for full size.</sub></p>"
+        ),
+        "",
+    ]
+    suffix = "zh-CN" if zh else "en"
+    for slug, zh_title, en_title, zh_description, en_description in stages:
+        title = zh_title if zh else en_title
+        description = zh_description if zh else en_description
+        path = f"./assets/brand/skill-architecture/{slug}.{suffix}.svg"
+        lines.extend(
+            [
+                f"### {title}",
+                "",
+                description,
+                "",
+                '<p align="center">',
+                f'  <a href="{path}">',
+                f'    <img src="{path}" alt="{title}" width="100%">',
+                "  </a>",
+                "</p>",
+                "",
+            ]
+        )
+    return "\n".join(lines).rstrip()
+
+
 def readme(
     lang: str,
     payload: dict,
@@ -687,6 +778,7 @@ def readme(
     platform_version = platform_release.get("version", "")
     platform_size = platform_release.get("sizeMiB", "")
     platform_sha256 = platform_release.get("sha256", "")
+    architecture = architecture_gallery(lang)
     if zh:
         showcase = zh_skill_showcase(
             payload["categories"],
@@ -721,13 +813,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 ## 技能架构图
 
-<p align="center">
-  <a href="./assets/brand/skill-architecture-map.svg">
-    <img src="./assets/brand/skill-architecture-map.svg" alt="链邻学术技能仓库 187 项技能架构图" width="100%">
-  </a>
-</p>
-
-<p align="center"><sub>从研究发现、专业计算、数据智能到成果传播，7 大能力域通过证据反馈与科研基础设施有机连接。点击图片查看可缩放全尺寸图。</sub></p>
+{architecture}
 
 <a id="lianlin-platform"></a>
 
@@ -784,13 +870,7 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 
 ## Skill Architecture Map
 
-<p align="center">
-  <a href="./assets/brand/skill-architecture-map.svg">
-    <img src="./assets/brand/skill-architecture-map.svg" alt="Architecture map connecting all 187 LL-AcademicSkillsHub skills" width="100%">
-  </a>
-</p>
-
-<p align="center"><sub>Seven capability domains connect research discovery, domain computation, data intelligence, research operations, and scholarly communication. Click the image for the scalable full-size map.</sub></p>
+{architecture}
 
 <a id="lianlin-platform"></a>
 

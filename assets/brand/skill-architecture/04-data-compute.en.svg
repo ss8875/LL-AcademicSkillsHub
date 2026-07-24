@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1927" viewBox="0 0 1800 1927" role="img" aria-labelledby="title desc">
+<title id="title">04 Experiments, Data &amp; Intelligent Computing</title>
+<desc id="desc">37 skills in stage 4 of the LL-AcademicSkillsHub research workflow.</desc>
+
+<defs>
+  <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F8FAFF"/>
+    <stop offset="1" stop-color="#F4F7FB"/>
+  </linearGradient>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+    <path d="M48 0H0V48" fill="none" stroke="#0F172A" stroke-opacity=".035"/>
+  </pattern>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity=".10"/>
+  </filter>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0 0L12 6L0 12Z" fill="#64748B"/>
+  </marker>
+  <marker id="feedback" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0 0L12 6L0 12Z" fill="#0F9F8F"/>
+  </marker>
+  <style>
+    text { font-family: Inter, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; }
+    .eyebrow { font-size: 17px; font-weight: 800; letter-spacing: 3px; fill: #64748B; }
+    .page-title { font-size: 44px; font-weight: 900; fill: #0F172A; }
+    .page-subtitle { font-size: 20px; fill: #475569; }
+    .stage-title { font-size: 24px; font-weight: 900; fill: #0F172A; }
+    .stage-goal { font-size: 16px; fill: #475569; }
+    .count { font-size: 15px; font-weight: 800; }
+    .category-title { font-size: 23px; font-weight: 900; fill: #0F172A; }
+    .category-purpose { font-size: 16px; fill: #64748B; }
+    .skill-title { font-size: 17px; font-weight: 700; fill: #172033; }
+    .skill-id { font-size: 11px; font-weight: 600; fill: #64748B; letter-spacing: .25px; }
+    .label { font-size: 13px; font-weight: 900; letter-spacing: 1px; fill: #64748B; }
+    .flow-value { font-size: 18px; font-weight: 800; fill: #172033; }
+    .footer { font-size: 15px; fill: #64748B; }
+  </style>
+</defs>
+
+<rect width="1800" height="1927" fill="url(#page)"/>
+<rect width="1800" height="1927" fill="url(#grid)"/>
+<circle cx="1650" cy="70" r="290" fill="#2563EB" opacity=".035"/>
+<circle cx="80" cy="900" r="240" fill="#0F9F8F" opacity=".035"/>
+<rect x="0" y="0" width="18" height="1927" fill="#7C3AED"/>
+<text x="70" y="66" class="eyebrow">LL-ACADEMICSKILLSHUB · SKILL ARCHITECTURE</text>
+<rect x="70" y="94" width="94" height="54" rx="19" fill="#F1EBFF"/>
+<text x="117" y="130" text-anchor="middle" font-size="24" font-weight="900" fill="#7C3AED">04</text>
+<text x="188" y="134" class="page-title">Experiments, Data &amp; Intelligent Computing</text>
+<text x="70" y="184" class="page-subtitle">Turn experiments and multi-source data into reproducible, explainable results</text>
+<rect x="1460" y="82" width="270" height="82" rx="24" fill="#7C3AED"/>
+<text x="1595" y="119" text-anchor="middle" font-size="32" font-weight="900" fill="#FFFFFF">37</text>
+<text x="1595" y="146" text-anchor="middle" font-size="13" font-weight="900" fill="#FFFFFF" opacity=".9">STAGE SKILLS</text>
+<rect x="70" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="230" width="8" height="108" rx="4" fill="#7C3AED"/>
+<text x="98" y="264" class="label">INPUT</text>
+<rect x="96" y="279" width="326" height="42" rx="13" fill="#F1EBFF"/>
+<text x="113" y="297" font-size="15" font-weight="800" fill="#172033">Experimental records and</text>
+<text x="113" y="315" font-size="15" font-weight="800" fill="#172033">multi-source data</text>
+<path d="M456 284 H488" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="500" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="500" y="230" width="8" height="108" rx="4" fill="#7C3AED"/>
+<text x="528" y="264" class="label">STAGE GOAL</text>
+<rect x="526" y="279" width="326" height="42" rx="13" fill="#F1EBFF"/>
+<text x="543" y="297" font-size="15" font-weight="800" fill="#172033">Turn experiments and</text>
+<text x="543" y="315" font-size="15" font-weight="800" fill="#172033">multi-source data into</text>
+<path d="M886 284 H918" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="930" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="930" y="230" width="8" height="108" rx="4" fill="#7C3AED"/>
+<text x="958" y="264" class="label">OUTPUT</text>
+<rect x="956" y="279" width="326" height="42" rx="13" fill="#F1EBFF"/>
+<text x="973" y="297" font-size="15" font-weight="800" fill="#172033">Statistics, models, and</text>
+<text x="973" y="315" font-size="15" font-weight="800" fill="#172033">reproducible artifacts</text>
+<path d="M1316 284 H1348" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1360" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="1360" y="230" width="8" height="108" rx="4" fill="#7C3AED"/>
+<text x="1388" y="264" class="label">NEXT</text>
+<rect x="1386" y="279" width="326" height="42" rx="13" fill="#F1EBFF"/>
+<text x="1403" y="307" class="flow-value">Enter scholarly production</text>
+<text x="70" y="405" class="label">STAGE CAPABILITY MAP</text>
+<text x="70" y="444" font-size="28" font-weight="900" fill="#0F172A">Every skill belongs to an explicit research task</text>
+<rect x="70" y="480" width="1660" height="298" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="480" width="12" height="298" rx="6" fill="#7C3AED"/>
+<rect x="104" y="505" width="62" height="38" rx="15" fill="#F1EBFF"/>
+<text x="135" y="531" text-anchor="middle" class="count" fill="#7C3AED">14</text>
+<text x="188" y="533" class="category-title">Laboratory Automation &amp; Integration</text>
+<text x="1692" y="532" text-anchor="end" class="count" fill="#7C3AED">9 SKILLS</text>
+<text x="105" y="566" class="category-purpose">Protocols, instrument control, liquid handling, and laboratory automation</text>
+<rect x="105" y="584" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="602" r="5" fill="#7C3AED"/>
+<text x="139" y="606" class="skill-title"><title>Benchling Integration</title>Benchling Integration</text>
+<text x="139" y="624" class="skill-id">benchling-integration</text>
+<rect x="105" y="646" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="664" r="5" fill="#7C3AED"/>
+<text x="139" y="668" class="skill-title"><title>Dnanexus Integration</title>Dnanexus Integration</text>
+<text x="139" y="686" class="skill-id">dnanexus-integration</text>
+<rect x="105" y="708" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="726" r="5" fill="#7C3AED"/>
+<text x="139" y="730" class="skill-title"><title>Ginkgo Cloud Lab</title>Ginkgo Cloud Lab</text>
+<text x="139" y="748" class="skill-id">ginkgo-cloud-lab</text>
+<rect x="644" y="584" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="602" r="5" fill="#7C3AED"/>
+<text x="678" y="606" class="skill-title"><title>Labarchive Integration</title>Labarchive Integration</text>
+<text x="678" y="624" class="skill-id">labarchive-integration</text>
+<rect x="644" y="646" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="664" r="5" fill="#7C3AED"/>
+<text x="678" y="668" class="skill-title"><title>Latchbio Integration</title>Latchbio Integration</text>
+<text x="678" y="686" class="skill-id">latchbio-integration</text>
+<rect x="644" y="708" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="726" r="5" fill="#7C3AED"/>
+<text x="678" y="730" class="skill-title"><title>Omero Integration</title>Omero Integration</text>
+<text x="678" y="748" class="skill-id">omero-integration</text>
+<rect x="1183" y="584" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="602" r="5" fill="#7C3AED"/>
+<text x="1217" y="606" class="skill-title"><title>Opentrons Integration</title>Opentrons Integration</text>
+<text x="1217" y="624" class="skill-id">opentrons-integration</text>
+<rect x="1183" y="646" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="664" r="5" fill="#7C3AED"/>
+<text x="1217" y="668" class="skill-title"><title>Protocolsio Integration</title>Protocolsio Integration</text>
+<text x="1217" y="686" class="skill-id">protocolsio-integration</text>
+<rect x="1183" y="708" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="726" r="5" fill="#7C3AED"/>
+<text x="1217" y="730" class="skill-title"><title>Pylabrobot</title>Pylabrobot</text>
+<text x="1217" y="748" class="skill-id">pylabrobot</text>
+<rect x="70" y="804" width="1660" height="360" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="804" width="12" height="360" rx="6" fill="#7C3AED"/>
+<rect x="104" y="829" width="62" height="38" rx="15" fill="#F1EBFF"/>
+<text x="135" y="855" text-anchor="middle" class="count" fill="#7C3AED">12</text>
+<text x="188" y="857" class="category-title">Data Analysis &amp; Statistical Modeling</text>
+<text x="1692" y="856" text-anchor="end" class="count" fill="#7C3AED">11 SKILLS</text>
+<text x="105" y="890" class="category-purpose">Data cleaning, statistical inference, modeling, and analytical reporting</text>
+<rect x="105" y="908" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="926" r="5" fill="#7C3AED"/>
+<text x="139" y="930" class="skill-title"><title>Dask</title>Dask</text>
+<text x="139" y="948" class="skill-id">dask</text>
+<rect x="105" y="970" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="988" r="5" fill="#7C3AED"/>
+<text x="139" y="992" class="skill-title"><title>Exploratory Data Analysis</title>Exploratory Data Analysis</text>
+<text x="139" y="1010" class="skill-id">exploratory-data-analysis</text>
+<rect x="105" y="1032" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1050" r="5" fill="#7C3AED"/>
+<text x="139" y="1054" class="skill-title"><title>Matplotlib</title>Matplotlib</text>
+<text x="139" y="1072" class="skill-id">matplotlib</text>
+<rect x="105" y="1094" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1112" r="5" fill="#7C3AED"/>
+<text x="139" y="1116" class="skill-title"><title>Networkx</title>Networkx</text>
+<text x="139" y="1134" class="skill-id">networkx</text>
+<rect x="644" y="908" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="926" r="5" fill="#7C3AED"/>
+<text x="678" y="930" class="skill-title"><title>Plotly</title>Plotly</text>
+<text x="678" y="948" class="skill-id">plotly</text>
+<rect x="644" y="970" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="988" r="5" fill="#7C3AED"/>
+<text x="678" y="992" class="skill-title"><title>Polars</title>Polars</text>
+<text x="678" y="1010" class="skill-id">polars</text>
+<rect x="644" y="1032" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1050" r="5" fill="#7C3AED"/>
+<text x="678" y="1054" class="skill-title"><title>Seaborn</title>Seaborn</text>
+<text x="678" y="1072" class="skill-id">seaborn</text>
+<rect x="644" y="1094" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1112" r="5" fill="#7C3AED"/>
+<text x="678" y="1116" class="skill-title"><title>Statistical Analysis</title>Statistical Analysis</text>
+<text x="678" y="1134" class="skill-id">statistical-analysis</text>
+<rect x="1183" y="908" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="926" r="5" fill="#7C3AED"/>
+<text x="1217" y="930" class="skill-title"><title>Statsmodels</title>Statsmodels</text>
+<text x="1217" y="948" class="skill-id">statsmodels</text>
+<rect x="1183" y="970" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="988" r="5" fill="#7C3AED"/>
+<text x="1217" y="992" class="skill-title"><title>Sympy</title>Sympy</text>
+<text x="1217" y="1010" class="skill-id">sympy</text>
+<rect x="1183" y="1032" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1050" r="5" fill="#7C3AED"/>
+<text x="1217" y="1054" class="skill-title"><title>Vaex</title>Vaex</text>
+<text x="1217" y="1072" class="skill-id">vaex</text>
+<rect x="70" y="1190" width="1660" height="422" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="1190" width="12" height="422" rx="6" fill="#7C3AED"/>
+<rect x="104" y="1215" width="62" height="38" rx="15" fill="#F1EBFF"/>
+<text x="135" y="1241" text-anchor="middle" class="count" fill="#7C3AED">10</text>
+<text x="188" y="1243" class="category-title">Machine Learning &amp; AI</text>
+<text x="1692" y="1242" text-anchor="end" class="count" fill="#7C3AED">14 SKILLS</text>
+<text x="105" y="1276" class="category-purpose">Machine-learning modeling, training, inference, optimization, and interpretation</text>
+<rect x="105" y="1294" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1312" r="5" fill="#7C3AED"/>
+<text x="139" y="1316" class="skill-title"><title>Aeon</title>Aeon</text>
+<text x="139" y="1334" class="skill-id">aeon</text>
+<rect x="105" y="1356" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1374" r="5" fill="#7C3AED"/>
+<text x="139" y="1378" class="skill-title"><title>Hypogenic</title>Hypogenic</text>
+<text x="139" y="1396" class="skill-id">hypogenic</text>
+<rect x="105" y="1418" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1436" r="5" fill="#7C3AED"/>
+<text x="139" y="1440" class="skill-title"><title>Pufferlib</title>Pufferlib</text>
+<text x="139" y="1458" class="skill-id">pufferlib</text>
+<rect x="105" y="1480" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1498" r="5" fill="#7C3AED"/>
+<text x="139" y="1502" class="skill-title"><title>Pymc</title>Pymc</text>
+<text x="139" y="1520" class="skill-id">pymc</text>
+<rect x="105" y="1542" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1560" r="5" fill="#7C3AED"/>
+<text x="139" y="1564" class="skill-title"><title>Pymoo</title>Pymoo</text>
+<text x="139" y="1582" class="skill-id">pymoo</text>
+<rect x="644" y="1294" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1312" r="5" fill="#7C3AED"/>
+<text x="678" y="1316" class="skill-title"><title>Pytorch Lightning</title>Pytorch Lightning</text>
+<text x="678" y="1334" class="skill-id">pytorch-lightning</text>
+<rect x="644" y="1356" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1374" r="5" fill="#7C3AED"/>
+<text x="678" y="1378" class="skill-title"><title>Scikit Learn</title>Scikit Learn</text>
+<text x="678" y="1396" class="skill-id">scikit-learn</text>
+<rect x="644" y="1418" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1436" r="5" fill="#7C3AED"/>
+<text x="678" y="1440" class="skill-title"><title>Scikit Survival</title>Scikit Survival</text>
+<text x="678" y="1458" class="skill-id">scikit-survival</text>
+<rect x="644" y="1480" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1498" r="5" fill="#7C3AED"/>
+<text x="678" y="1502" class="skill-title"><title>Shap</title>Shap</text>
+<text x="678" y="1520" class="skill-id">shap</text>
+<rect x="644" y="1542" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1560" r="5" fill="#7C3AED"/>
+<text x="678" y="1564" class="skill-title"><title>Stable Baselines3</title>Stable Baselines3</text>
+<text x="678" y="1582" class="skill-id">stable-baselines3</text>
+<rect x="1183" y="1294" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1312" r="5" fill="#7C3AED"/>
+<text x="1217" y="1316" class="skill-title"><title>Timesfm Forecasting</title>Timesfm Forecasting</text>
+<text x="1217" y="1334" class="skill-id">timesfm-forecasting</text>
+<rect x="1183" y="1356" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1374" r="5" fill="#7C3AED"/>
+<text x="1217" y="1378" class="skill-title"><title>Torch Geometric</title>Torch Geometric</text>
+<text x="1217" y="1396" class="skill-id">torch-geometric</text>
+<rect x="1183" y="1418" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1436" r="5" fill="#7C3AED"/>
+<text x="1217" y="1440" class="skill-title"><title>Transformers</title>Transformers</text>
+<text x="1217" y="1458" class="skill-id">transformers</text>
+<rect x="1183" y="1480" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1498" r="5" fill="#7C3AED"/>
+<text x="1217" y="1502" class="skill-title"><title>Umap Learn</title>Umap Learn</text>
+<text x="1217" y="1520" class="skill-id">umap-learn</text>
+<rect x="70" y="1638" width="1660" height="174" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="1638" width="12" height="174" rx="6" fill="#7C3AED"/>
+<rect x="104" y="1663" width="62" height="38" rx="15" fill="#F1EBFF"/>
+<text x="135" y="1689" text-anchor="middle" class="count" fill="#7C3AED">18</text>
+<text x="188" y="1691" class="category-title">Platform &amp; Infrastructure</text>
+<text x="1692" y="1690" text-anchor="end" class="count" fill="#7C3AED">3 SKILLS</text>
+<text x="105" y="1724" class="category-purpose">Compute environments, cloud resources, orchestration, and infrastructure</text>
+<rect x="105" y="1742" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="125" cy="1760" r="5" fill="#7C3AED"/>
+<text x="139" y="1764" class="skill-title"><title>Get Available Resources</title>Get Available Resources</text>
+<text x="139" y="1782" class="skill-id">get-available-resources</text>
+<rect x="644" y="1742" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="664" cy="1760" r="5" fill="#7C3AED"/>
+<text x="678" y="1764" class="skill-title"><title>Iso 13485 Certification</title>Iso 13485 Certification</text>
+<text x="678" y="1782" class="skill-id">iso-13485-certification</text>
+<rect x="1183" y="1742" width="515" height="48" rx="14" fill="#F1EBFF" stroke="#7C3AED" stroke-opacity=".16"/>
+<circle cx="1203" cy="1760" r="5" fill="#7C3AED"/>
+<text x="1217" y="1764" class="skill-title"><title>Modal</title>Modal</text>
+<text x="1217" y="1782" class="skill-id">modal</text>
+<line x1="70" y1="1857" x2="1730" y2="1857" stroke="#CBD5E1"/>
+<text x="70" y="1892" class="footer">← Cross-domain Scientific Computing</text>
+<text x="900" y="1892" text-anchor="middle" class="footer">Stages 02 and 03 are parallel domain-research branches</text>
+<text x="1730" y="1892" text-anchor="end" class="footer">Scholarly Writing &amp; Research Impact →</text>
+</svg>

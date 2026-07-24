@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import functools
+import html
 import importlib.util
 import json
 import threading
@@ -143,20 +144,45 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"../{skill['paths']['zh-CN']}", catalog)
 
-    def test_skill_architecture_map_covers_the_complete_catalog(self):
-        path = ROOT / "assets" / "brand" / "skill-architecture-map.svg"
-        ET.parse(path)
-        svg = path.read_text(encoding="utf-8")
-        self.assertIn("187 项技能", svg)
-        self.assertIn("18 个分类", svg)
-        self.assertIn("7 大可组合能力域", svg)
-        self.assertNotIn("183 项技能", svg)
+    def test_skill_architecture_system_is_readable_complete_and_bilingual(self):
+        stage_slugs = [
+            "01-discovery",
+            "02-life-health",
+            "03-domain-sciences",
+            "04-data-compute",
+            "05-communication",
+        ]
+        overview_paths = {
+            "zh-CN": ROOT / "assets" / "brand" / "skill-architecture-map.svg",
+            "en": ROOT / "assets" / "brand" / "skill-architecture-map.en.svg",
+        }
+        for lang, path in overview_paths.items():
+            with self.subTest(lang=lang, kind="overview"):
+                ET.parse(path)
+                svg = path.read_text(encoding="utf-8")
+                self.assertIn("187", svg)
+                self.assertIn("18 CATEGORIES", svg)
+                self.assertNotIn("183", svg)
+
+        detail_text = {}
+        for lang in ("zh-CN", "en"):
+            documents = []
+            for slug in stage_slugs:
+                path = ROOT / "assets" / "brand" / "skill-architecture" / f"{slug}.{lang}.svg"
+                with self.subTest(lang=lang, stage=slug):
+                    ET.parse(path)
+                    documents.append(path.read_text(encoding="utf-8"))
+            detail_text[lang] = html.unescape("\n".join(documents))
+
         for category in self.categories:
             with self.subTest(category=category["id"]):
-                self.assertIn(category["zh"], svg)
+                self.assertIn(category["zh"], detail_text["zh-CN"])
+                self.assertIn(category["en"], detail_text["en"])
         for skill in self.skills:
             with self.subTest(skill=skill["id"]):
-                self.assertIn(skill["id"], svg)
+                marker = f">{skill['id']}</text>"
+                self.assertEqual(detail_text["zh-CN"].count(marker), 1)
+                self.assertEqual(detail_text["en"].count(marker), 1)
 
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertLess(readme.index("## 你可以做什么"), readme.index("## 技能架构图"))
@@ -165,13 +191,17 @@ class CatalogTests(unittest.TestCase):
             readme.index("## 不想本地安装？直接使用链邻科研 AI 平台"),
         )
         self.assertIn("./assets/brand/skill-architecture-map.svg", readme)
+        for slug in stage_slugs:
+            self.assertIn(f"./assets/brand/skill-architecture/{slug}.zh-CN.svg", readme)
 
         readme_en = (ROOT / "README.en.md").read_text(encoding="utf-8")
         self.assertLess(
             readme_en.index("## What you can do"),
             readme_en.index("## Skill Architecture Map"),
         )
-        self.assertIn("./assets/brand/skill-architecture-map.svg", readme_en)
+        self.assertIn("./assets/brand/skill-architecture-map.en.svg", readme_en)
+        for slug in stage_slugs:
+            self.assertIn(f"./assets/brand/skill-architecture/{slug}.en.svg", readme_en)
 
     def test_chinese_installation_is_detailed_and_follows_the_skill_catalog(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

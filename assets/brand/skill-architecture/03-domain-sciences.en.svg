@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1803" viewBox="0 0 1800 1803" role="img" aria-labelledby="title desc">
+<title id="title">03 Cross-domain Scientific Computing</title>
+<desc id="desc">30 skills in stage 3 of the LL-AcademicSkillsHub research workflow.</desc>
+
+<defs>
+  <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F8FAFF"/>
+    <stop offset="1" stop-color="#F4F7FB"/>
+  </linearGradient>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+    <path d="M48 0H0V48" fill="none" stroke="#0F172A" stroke-opacity=".035"/>
+  </pattern>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity=".10"/>
+  </filter>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0 0L12 6L0 12Z" fill="#64748B"/>
+  </marker>
+  <marker id="feedback" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0 0L12 6L0 12Z" fill="#0F9F8F"/>
+  </marker>
+  <style>
+    text { font-family: Inter, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; }
+    .eyebrow { font-size: 17px; font-weight: 800; letter-spacing: 3px; fill: #64748B; }
+    .page-title { font-size: 44px; font-weight: 900; fill: #0F172A; }
+    .page-subtitle { font-size: 20px; fill: #475569; }
+    .stage-title { font-size: 24px; font-weight: 900; fill: #0F172A; }
+    .stage-goal { font-size: 16px; fill: #475569; }
+    .count { font-size: 15px; font-weight: 800; }
+    .category-title { font-size: 23px; font-weight: 900; fill: #0F172A; }
+    .category-purpose { font-size: 16px; fill: #64748B; }
+    .skill-title { font-size: 17px; font-weight: 700; fill: #172033; }
+    .skill-id { font-size: 11px; font-weight: 600; fill: #64748B; letter-spacing: .25px; }
+    .label { font-size: 13px; font-weight: 900; letter-spacing: 1px; fill: #64748B; }
+    .flow-value { font-size: 18px; font-weight: 800; fill: #172033; }
+    .footer { font-size: 15px; fill: #64748B; }
+  </style>
+</defs>
+
+<rect width="1800" height="1803" fill="url(#page)"/>
+<rect width="1800" height="1803" fill="url(#grid)"/>
+<circle cx="1650" cy="70" r="290" fill="#2563EB" opacity=".035"/>
+<circle cx="80" cy="900" r="240" fill="#0F9F8F" opacity=".035"/>
+<rect x="0" y="0" width="18" height="1803" fill="#D97706"/>
+<text x="70" y="66" class="eyebrow">LL-ACADEMICSKILLSHUB · SKILL ARCHITECTURE</text>
+<rect x="70" y="94" width="94" height="54" rx="19" fill="#FFF4DF"/>
+<text x="117" y="130" text-anchor="middle" font-size="24" font-weight="900" fill="#D97706">03</text>
+<text x="188" y="134" class="page-title">Cross-domain Scientific Computing</text>
+<text x="70" y="184" class="page-subtitle">Connect molecular, materials, finance, and spatial data for domain research</text>
+<rect x="1460" y="82" width="270" height="82" rx="24" fill="#D97706"/>
+<text x="1595" y="119" text-anchor="middle" font-size="32" font-weight="900" fill="#FFFFFF">30</text>
+<text x="1595" y="146" text-anchor="middle" font-size="13" font-weight="900" fill="#FFFFFF" opacity=".9">STAGE SKILLS</text>
+<rect x="70" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="230" width="8" height="108" rx="4" fill="#D97706"/>
+<text x="98" y="264" class="label">INPUT</text>
+<rect x="96" y="279" width="326" height="42" rx="13" fill="#FFF4DF"/>
+<text x="113" y="297" font-size="15" font-weight="800" fill="#172033">Structural, physical, market,</text>
+<text x="113" y="315" font-size="15" font-weight="800" fill="#172033">and spatial data</text>
+<path d="M456 284 H488" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="500" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="500" y="230" width="8" height="108" rx="4" fill="#D97706"/>
+<text x="528" y="264" class="label">STAGE GOAL</text>
+<rect x="526" y="279" width="326" height="42" rx="13" fill="#FFF4DF"/>
+<text x="543" y="297" font-size="15" font-weight="800" fill="#172033">Connect molecular, materials,</text>
+<text x="543" y="315" font-size="15" font-weight="800" fill="#172033">finance, and spatial data for</text>
+<path d="M886 284 H918" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="930" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="930" y="230" width="8" height="108" rx="4" fill="#D97706"/>
+<text x="958" y="264" class="label">OUTPUT</text>
+<rect x="956" y="279" width="326" height="42" rx="13" fill="#FFF4DF"/>
+<text x="973" y="297" font-size="15" font-weight="800" fill="#172033">Predictions, simulations, and</text>
+<text x="973" y="315" font-size="15" font-weight="800" fill="#172033">domain findings</text>
+<path d="M1316 284 H1348" fill="none" stroke="#64748B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1360" y="230" width="376" height="108" rx="22" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="1360" y="230" width="8" height="108" rx="4" fill="#D97706"/>
+<text x="1388" y="264" class="label">NEXT</text>
+<rect x="1386" y="279" width="326" height="42" rx="13" fill="#FFF4DF"/>
+<text x="1403" y="297" font-size="15" font-weight="800" fill="#172033">Feed data modeling and</text>
+<text x="1403" y="315" font-size="15" font-weight="800" fill="#172033">validation</text>
+<text x="70" y="405" class="label">STAGE CAPABILITY MAP</text>
+<text x="70" y="444" font-size="28" font-weight="900" fill="#0F172A">Every skill belongs to an explicit research task</text>
+<rect x="70" y="480" width="1660" height="360" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="480" width="12" height="360" rx="6" fill="#D97706"/>
+<rect x="104" y="505" width="62" height="38" rx="15" fill="#FFF4DF"/>
+<text x="135" y="531" text-anchor="middle" class="count" fill="#D97706">07</text>
+<text x="188" y="533" class="category-title">Cheminformatics &amp; Drug Discovery</text>
+<text x="1692" y="532" text-anchor="end" class="count" fill="#D97706">12 SKILLS</text>
+<text x="105" y="566" class="category-purpose">Molecular structures, property prediction, virtual screening, and drug discovery</text>
+<rect x="105" y="584" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="602" r="5" fill="#D97706"/>
+<text x="139" y="606" class="skill-title"><title>Datamol</title>Datamol</text>
+<text x="139" y="624" class="skill-id">datamol</text>
+<rect x="105" y="646" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="664" r="5" fill="#D97706"/>
+<text x="139" y="668" class="skill-title"><title>Deepchem</title>Deepchem</text>
+<text x="139" y="686" class="skill-id">deepchem</text>
+<rect x="105" y="708" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="726" r="5" fill="#D97706"/>
+<text x="139" y="730" class="skill-title"><title>Diffdock</title>Diffdock</text>
+<text x="139" y="748" class="skill-id">diffdock</text>
+<rect x="105" y="770" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="788" r="5" fill="#D97706"/>
+<text x="139" y="792" class="skill-title"><title>Matchms</title>Matchms</text>
+<text x="139" y="810" class="skill-id">matchms</text>
+<rect x="644" y="584" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="602" r="5" fill="#D97706"/>
+<text x="678" y="606" class="skill-title"><title>Medchem</title>Medchem</text>
+<text x="678" y="624" class="skill-id">medchem</text>
+<rect x="644" y="646" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="664" r="5" fill="#D97706"/>
+<text x="678" y="668" class="skill-title"><title>Molecular Dynamics</title>Molecular Dynamics</text>
+<text x="678" y="686" class="skill-id">molecular-dynamics</text>
+<rect x="644" y="708" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="726" r="5" fill="#D97706"/>
+<text x="678" y="730" class="skill-title"><title>Molfeat</title>Molfeat</text>
+<text x="678" y="748" class="skill-id">molfeat</text>
+<rect x="644" y="770" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="788" r="5" fill="#D97706"/>
+<text x="678" y="792" class="skill-title"><title>Pyopenms</title>Pyopenms</text>
+<text x="678" y="810" class="skill-id">pyopenms</text>
+<rect x="1183" y="584" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="602" r="5" fill="#D97706"/>
+<text x="1217" y="606" class="skill-title"><title>Pytdc</title>Pytdc</text>
+<text x="1217" y="624" class="skill-id">pytdc</text>
+<rect x="1183" y="646" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="664" r="5" fill="#D97706"/>
+<text x="1217" y="668" class="skill-title"><title>Rdkit</title>Rdkit</text>
+<text x="1217" y="686" class="skill-id">rdkit</text>
+<rect x="1183" y="708" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="726" r="5" fill="#D97706"/>
+<text x="1217" y="730" class="skill-title"><title>Rowan</title>Rowan</text>
+<text x="1217" y="748" class="skill-id">rowan</text>
+<rect x="1183" y="770" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="788" r="5" fill="#D97706"/>
+<text x="1217" y="792" class="skill-title"><title>Torchdrug</title>Torchdrug</text>
+<text x="1217" y="810" class="skill-id">torchdrug</text>
+<rect x="70" y="866" width="1660" height="360" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="866" width="12" height="360" rx="6" fill="#D97706"/>
+<rect x="104" y="891" width="62" height="38" rx="15" fill="#FFF4DF"/>
+<text x="135" y="917" text-anchor="middle" class="count" fill="#D97706">11</text>
+<text x="188" y="919" class="category-title">Materials Science &amp; Computational Physics</text>
+<text x="1692" y="918" text-anchor="end" class="count" fill="#D97706">10 SKILLS</text>
+<text x="105" y="952" class="category-purpose">Materials simulation, quantum computing, physical modeling, and computation</text>
+<rect x="105" y="970" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="988" r="5" fill="#D97706"/>
+<text x="139" y="992" class="skill-title"><title>Astropy</title>Astropy</text>
+<text x="139" y="1010" class="skill-id">astropy</text>
+<rect x="105" y="1032" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1050" r="5" fill="#D97706"/>
+<text x="139" y="1054" class="skill-title"><title>Cirq</title>Cirq</text>
+<text x="139" y="1072" class="skill-id">cirq</text>
+<rect x="105" y="1094" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1112" r="5" fill="#D97706"/>
+<text x="139" y="1116" class="skill-title"><title>Cobrapy</title>Cobrapy</text>
+<text x="139" y="1134" class="skill-id">cobrapy</text>
+<rect x="105" y="1156" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1174" r="5" fill="#D97706"/>
+<text x="139" y="1178" class="skill-title"><title>Fluidsim</title>Fluidsim</text>
+<text x="139" y="1196" class="skill-id">fluidsim</text>
+<rect x="644" y="970" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="988" r="5" fill="#D97706"/>
+<text x="678" y="992" class="skill-title"><title>Matlab</title>Matlab</text>
+<text x="678" y="1010" class="skill-id">matlab</text>
+<rect x="644" y="1032" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1050" r="5" fill="#D97706"/>
+<text x="678" y="1054" class="skill-title"><title>Pennylane</title>Pennylane</text>
+<text x="678" y="1072" class="skill-id">pennylane</text>
+<rect x="644" y="1094" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1112" r="5" fill="#D97706"/>
+<text x="678" y="1116" class="skill-title"><title>Pymatgen</title>Pymatgen</text>
+<text x="678" y="1134" class="skill-id">pymatgen</text>
+<rect x="644" y="1156" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1174" r="5" fill="#D97706"/>
+<text x="678" y="1178" class="skill-title"><title>Qiskit</title>Qiskit</text>
+<text x="678" y="1196" class="skill-id">qiskit</text>
+<rect x="1183" y="970" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="988" r="5" fill="#D97706"/>
+<text x="1217" y="992" class="skill-title"><title>Qutip</title>Qutip</text>
+<text x="1217" y="1010" class="skill-id">qutip</text>
+<rect x="1183" y="1032" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="1050" r="5" fill="#D97706"/>
+<text x="1217" y="1054" class="skill-title"><title>Simpy</title>Simpy</text>
+<text x="1217" y="1072" class="skill-id">simpy</text>
+<rect x="70" y="1252" width="1660" height="236" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="1252" width="12" height="236" rx="6" fill="#D97706"/>
+<rect x="104" y="1277" width="62" height="38" rx="15" fill="#FFF4DF"/>
+<text x="135" y="1303" text-anchor="middle" class="count" fill="#D97706">16</text>
+<text x="188" y="1305" class="category-title">Finance &amp; Economics Data</text>
+<text x="1692" y="1304" text-anchor="end" class="count" fill="#D97706">6 SKILLS</text>
+<text x="105" y="1338" class="category-purpose">Financial markets, company data, and macroeconomic research</text>
+<rect x="105" y="1356" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1374" r="5" fill="#D97706"/>
+<text x="139" y="1378" class="skill-title"><title>Alpha Vantage</title>Alpha Vantage</text>
+<text x="139" y="1396" class="skill-id">alpha-vantage</text>
+<rect x="105" y="1418" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1436" r="5" fill="#D97706"/>
+<text x="139" y="1440" class="skill-title"><title>Edgartools</title>Edgartools</text>
+<text x="139" y="1458" class="skill-id">edgartools</text>
+<rect x="644" y="1356" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1374" r="5" fill="#D97706"/>
+<text x="678" y="1378" class="skill-title"><title>Fred Economic Data</title>Fred Economic Data</text>
+<text x="678" y="1396" class="skill-id">fred-economic-data</text>
+<rect x="644" y="1418" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1436" r="5" fill="#D97706"/>
+<text x="678" y="1440" class="skill-title"><title>Hedgefundmonitor</title>Hedgefundmonitor</text>
+<text x="678" y="1458" class="skill-id">hedgefundmonitor</text>
+<rect x="1183" y="1356" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="1374" r="5" fill="#D97706"/>
+<text x="1217" y="1378" class="skill-title"><title>Market Research Reports</title>Market Research Reports</text>
+<text x="1217" y="1396" class="skill-id">market-research-reports</text>
+<rect x="1183" y="1418" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="1203" cy="1436" r="5" fill="#D97706"/>
+<text x="1217" y="1440" class="skill-title"><title>Usfiscaldata</title>Usfiscaldata</text>
+<text x="1217" y="1458" class="skill-id">usfiscaldata</text>
+<rect x="70" y="1514" width="1660" height="174" rx="26" fill="#FFFFFF" stroke="#D9E2EE" filter="url(#shadow)"/>
+<rect x="70" y="1514" width="12" height="174" rx="6" fill="#D97706"/>
+<rect x="104" y="1539" width="62" height="38" rx="15" fill="#FFF4DF"/>
+<text x="135" y="1565" text-anchor="middle" class="count" fill="#D97706">17</text>
+<text x="188" y="1567" class="category-title">Geospatial &amp; Remote Sensing</text>
+<text x="1692" y="1566" text-anchor="end" class="count" fill="#D97706">2 SKILLS</text>
+<text x="105" y="1600" class="category-purpose">GIS, remote sensing, spatial computation, and earth observation</text>
+<rect x="105" y="1618" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="125" cy="1636" r="5" fill="#D97706"/>
+<text x="139" y="1640" class="skill-title"><title>Geomaster</title>Geomaster</text>
+<text x="139" y="1658" class="skill-id">geomaster</text>
+<rect x="644" y="1618" width="515" height="48" rx="14" fill="#FFF4DF" stroke="#D97706" stroke-opacity=".16"/>
+<circle cx="664" cy="1636" r="5" fill="#D97706"/>
+<text x="678" y="1640" class="skill-title"><title>Geopandas</title>Geopandas</text>
+<text x="678" y="1658" class="skill-id">geopandas</text>
+<line x1="70" y1="1733" x2="1730" y2="1733" stroke="#CBD5E1"/>
+<text x="70" y="1768" class="footer">← Life Science &amp; Health Research</text>
+<text x="900" y="1768" text-anchor="middle" class="footer">Stages 02 and 03 are parallel domain-research branches</text>
+<text x="1730" y="1768" text-anchor="end" class="footer">Experiments, Data &amp; Intelligent Computing →</text>
+</svg>
