@@ -89,8 +89,8 @@ def skills_markdown(categories: list[dict], skills: list[dict], lang: str) -> st
     zh = lang == "zh-CN"
     title = "# 全部技能与功能" if zh else "# All Skills and Functions"
     intro = (
-        "本页由 `catalog/skills.seed.json` 自动生成。质量状态是证据等级，不是营销标签；"
-        "`cataloged` 表示已收录并完成结构检查，不能理解为运行时已验证。"
+        "本页由 `catalog/skills.seed.json` 自动生成，按科研任务分类展示全部技能及其功能。"
+        "点击技能名称可查看对应的中文详细用法。"
         if zh else
         "This page is generated from `catalog/skills.seed.json`. Quality status is an evidence level, not a marketing label; "
         "`cataloged` means indexed and structurally checked, not runtime-verified."
@@ -100,18 +100,19 @@ def skills_markdown(categories: list[dict], skills: list[dict], lang: str) -> st
         entries = [item for item in skills if item["category"] == category["id"]]
         heading = category["zh" if zh else "en"]
         lines.extend([f"## {category['order']:02d}. {heading} ({len(entries)})", ""])
-        lines.append("| 技能 | 功能 | 来源 | 状态 |" if zh else "| Skill | Function | Source | Status |")
-        lines.append("|---|---|---|---|")
+        lines.append("| 技能 | 功能 |" if zh else "| Skill | Function | Source | Status |")
+        lines.append("|---|---|" if zh else "|---|---|---|---|")
         for item in entries:
             display = item["title"][lang]
             summary = item["summary"][lang].replace("|", "\\|").replace("\n", " ")
+            link = f"../{item['paths'][lang]}"
+            if zh:
+                lines.append(f"| [{display}]({link}) | {summary} |")
+                continue
             source = (
-                "链邻原创" if zh and item["source"]["kind"] == "lianlin-first-party"
-                else "固定第三方" if zh
-                else "Lianlin first-party" if item["source"]["kind"] == "lianlin-first-party"
+                "Lianlin first-party" if item["source"]["kind"] == "lianlin-first-party"
                 else "Pinned third-party"
             )
-            link = f"../{item['paths'][lang]}"
             lines.append(f"| [{display}]({link}) | {summary} | {source} | `{item['quality']['status']}` |")
         lines.append("")
     return "\n".join(lines)

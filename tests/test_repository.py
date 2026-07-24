@@ -104,6 +104,18 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"./{skill['paths']['zh-CN']}", readme)
 
+    def test_chinese_skill_catalog_hides_source_and_status_columns(self):
+        catalog = (ROOT / "docs" / "skills.zh-CN.md").read_text(encoding="utf-8")
+        self.assertNotIn("| 技能 | 功能 | 来源 | 状态 |", catalog)
+        self.assertNotIn("| 链邻原创 |", catalog)
+        self.assertNotIn("| 固定第三方 |", catalog)
+        self.assertNotIn("| `beta` |", catalog)
+        self.assertNotIn("| `cataloged` |", catalog)
+        self.assertEqual(catalog.count("| 技能 | 功能 |"), len(self.categories))
+        for skill in self.skills:
+            with self.subTest(skill=skill["id"]):
+                self.assertIn(f"../{skill['paths']['zh-CN']}", catalog)
+
     def test_chinese_installation_is_detailed_and_follows_the_skill_catalog(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("## 立即开始", readme)
