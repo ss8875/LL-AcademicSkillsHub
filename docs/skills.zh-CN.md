@@ -2,7 +2,22 @@
 
 本页由 `catalog/skills.seed.json` 自动生成。质量状态是证据等级，不是营销标签；`cataloged` 表示已收录并完成结构检查，不能理解为运行时已验证。
 
-## 01. 论文检索与文献管理 (10)
+## 01. 学术核心能力 (10)
+
+| 技能 | 功能 | 来源 | 状态 |
+|---|---|---|---|
+| [链邻双语全文证据精读](../skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md) | 跨中英文全文进行术语对齐、逐项证据定位、方法比较与不确定性标注。 | 链邻原创 | `beta` |
+| [链邻学术引用审计](../skills/academic-core/ll-citation-audit/locales/zh-CN.md) | 核验 DOI、作者、期刊、年份、卷期页码及正文引文与参考文献的一致性。 | 链邻原创 | `beta` |
+| [链邻实验笔记与材料追溯](../skills/academic-core/ll-experiment-notebook/locales/zh-CN.md) | 把实验目的、材料批次、协议偏差、原始数据、环境与结果连接成不可含混的追溯记录。 | 链邻原创 | `beta` |
+| [链邻合法全文获取](../skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md) | 通过开放获取、机构权限、作者存档与馆际服务等合规路径定位论文全文。 | 链邻原创 | `beta` |
+| [链邻论文证据分析](../skills/academic-core/ll-paper-analysis/locales/zh-CN.md) | 从研究问题、理论、方法、数据、结果、创新与限制形成可追溯的论文阅读卡。 | 链邻原创 | `beta` |
+| [链邻学术论文润色](../skills/academic-core/ll-paper-polish/locales/zh-CN.md) | 在不改变事实、数据和学术含义的前提下优化逻辑、术语、语气、衔接与语言表达。 | 链邻原创 | `beta` |
+| [链邻可复现论文检索](../skills/academic-core/ll-paper-search/locales/zh-CN.md) | 设计并执行可复现的多来源论文检索、去重、筛选与证据留存流程。 | 链邻原创 | `beta` |
+| [链邻研究数据可用性与 FAIR](../skills/academic-core/ll-research-data-availability/locales/zh-CN.md) | 审查研究数据的可发现、可访问、可互操作、可复用状态并起草数据可用性声明。 | 链邻原创 | `beta` |
+| [链邻科研成果到专利分析](../skills/academic-core/ll-research-to-patent/locales/zh-CN.md) | 将科研成果拆分为技术特征，开展先前技术检索并形成发明披露与风险清单。 | 链邻原创 | `beta` |
+| [链邻学术选题分析](../skills/academic-core/ll-topic-analysis/locales/zh-CN.md) | 以可追溯文献证据评估研究趋势、缺口、创新性、理论价值、实践价值与可行性。 | 链邻原创 | `beta` |
+
+## 02. 论文检索与文献管理 (10)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -17,7 +32,7 @@
 | [Pyzotero](../skills/literature-management/pyzotero/locales/zh-CN.md) | 用于“论文检索与文献管理”场景的 Pyzotero 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Research Lookup](../skills/literature-management/research-lookup/locales/zh-CN.md) | 用于“论文检索与文献管理”场景的 Research Lookup 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 02. 科学写作与学术交流 (6)
+## 03. 科学写作与学术交流 (6)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -28,7 +43,7 @@
 | [Scientific Writing](../skills/scientific-communication/scientific-writing/locales/zh-CN.md) | 用于“科学写作与学术交流”场景的 Scientific Writing 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Venue Templates](../skills/scientific-communication/venue-templates/locales/zh-CN.md) | 用于“科学写作与学术交流”场景的 Venue Templates 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 03. 学术演示与可视化 (9)
+## 04. 学术演示与可视化 (9)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -42,7 +57,7 @@
 | [Scientific Slides](../skills/presentation-visualization/scientific-slides/locales/zh-CN.md) | 用于“学术演示与可视化”场景的 Scientific Slides 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Scientific Visualization](../skills/presentation-visualization/scientific-visualization/locales/zh-CN.md) | 用于“学术演示与可视化”场景的 Scientific Visualization 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 04. 研究方法与科学思维 (10)
+## 05. 研究方法与科学思维 (10)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -57,7 +72,7 @@
 | [Scientific Critical Thinking](../skills/research-methods/scientific-critical-thinking/locales/zh-CN.md) | 用于“研究方法与科学思维”场景的 Scientific Critical Thinking 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [What If Oracle](../skills/research-methods/what-if-oracle/locales/zh-CN.md) | 用于“研究方法与科学思维”场景的 What If Oracle 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 05. 生物信息与基因组学 (21)
+## 06. 生物信息与基因组学 (21)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -83,7 +98,7 @@
 | [Tiledbvcf](../skills/bioinformatics-genomics/tiledbvcf/locales/zh-CN.md) | 用于“生物信息与基因组学”场景的 Tiledbvcf 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Zarr Python](../skills/bioinformatics-genomics/zarr-python/locales/zh-CN.md) | 用于“生物信息与基因组学”场景的 Zarr Python 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 06. 化学信息与药物发现 (12)
+## 07. 化学信息与药物发现 (12)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -100,7 +115,7 @@
 | [Rowan](../skills/cheminformatics-drug-discovery/rowan/locales/zh-CN.md) | 用于“化学信息与药物发现”场景的 Rowan 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Torchdrug](../skills/cheminformatics-drug-discovery/torchdrug/locales/zh-CN.md) | 用于“化学信息与药物发现”场景的 Torchdrug 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 07. 临床医学与精准医疗 (18)
+## 08. 临床医学与精准医疗 (18)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -123,7 +138,7 @@
 | [Pyhealth](../skills/clinical-precision-medicine/pyhealth/locales/zh-CN.md) | 用于“临床医学与精准医疗”场景的 Pyhealth 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Treatment Plans](../skills/clinical-precision-medicine/treatment-plans/locales/zh-CN.md) | 用于“临床医学与精准医疗”场景的 Treatment Plans 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 08. 蛋白质工程与结构生物学 (7)
+## 09. 蛋白质工程与结构生物学 (7)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -135,7 +150,7 @@
 | [Pdb Database](../skills/protein-structural-biology/pdb-database/locales/zh-CN.md) | 用于“蛋白质工程与结构生物学”场景的 Pdb Database 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Uniprot Database](../skills/protein-structural-biology/uniprot-database/locales/zh-CN.md) | 用于“蛋白质工程与结构生物学”场景的 Uniprot Database 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 09. 机器学习与人工智能 (14)
+## 10. 机器学习与人工智能 (14)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -154,7 +169,7 @@
 | [Transformers](../skills/machine-learning-ai/transformers/locales/zh-CN.md) | 用于“机器学习与人工智能”场景的 Transformers 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Umap Learn](../skills/machine-learning-ai/umap-learn/locales/zh-CN.md) | 用于“机器学习与人工智能”场景的 Umap Learn 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 10. 材料科学与物理计算 (10)
+## 11. 材料科学与物理计算 (10)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -169,7 +184,7 @@
 | [Qutip](../skills/materials-physics/qutip/locales/zh-CN.md) | 用于“材料科学与物理计算”场景的 Qutip 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Simpy](../skills/materials-physics/simpy/locales/zh-CN.md) | 用于“材料科学与物理计算”场景的 Simpy 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 11. 数据分析与统计建模 (11)
+## 12. 数据分析与统计建模 (11)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -185,7 +200,7 @@
 | [Sympy](../skills/data-analysis-statistics/sympy/locales/zh-CN.md) | 用于“数据分析与统计建模”场景的 Sympy 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Vaex](../skills/data-analysis-statistics/vaex/locales/zh-CN.md) | 用于“数据分析与统计建模”场景的 Vaex 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 12. 科学数据库 (22)
+## 13. 科学数据库 (22)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -212,7 +227,7 @@
 | [Uspto Database](../skills/scientific-databases/uspto-database/locales/zh-CN.md) | 用于“科学数据库”场景的 Uspto Database 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Zinc Database](../skills/scientific-databases/zinc-database/locales/zh-CN.md) | 用于“科学数据库”场景的 Zinc Database 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 13. 实验室自动化与集成 (9)
+## 14. 实验室自动化与集成 (9)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -226,7 +241,7 @@
 | [Protocolsio Integration](../skills/lab-automation/protocolsio-integration/locales/zh-CN.md) | 用于“实验室自动化与集成”场景的 Protocolsio Integration 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Pylabrobot](../skills/lab-automation/pylabrobot/locales/zh-CN.md) | 用于“实验室自动化与集成”场景的 Pylabrobot 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 14. 文档处理与数据工具 (7)
+## 15. 文档处理与数据工具 (7)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -238,7 +253,7 @@
 | [Pptx](../skills/document-data-tools/pptx/locales/zh-CN.md) | 用于“文档处理与数据工具”场景的 Pptx 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Xlsx](../skills/document-data-tools/xlsx/locales/zh-CN.md) | 用于“文档处理与数据工具”场景的 Xlsx 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 15. 金融与经济数据 (6)
+## 16. 金融与经济数据 (6)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
@@ -249,32 +264,17 @@
 | [Market Research Reports](../skills/finance-economics/market-research-reports/locales/zh-CN.md) | 用于“金融与经济数据”场景的 Market Research Reports 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Usfiscaldata](../skills/finance-economics/usfiscaldata/locales/zh-CN.md) | 用于“金融与经济数据”场景的 Usfiscaldata 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 16. 地理空间与遥感 (2)
+## 17. 地理空间与遥感 (2)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
 | [Geomaster](../skills/geospatial-remote-sensing/geomaster/locales/zh-CN.md) | 用于“地理空间与遥感”场景的 Geomaster 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Geopandas](../skills/geospatial-remote-sensing/geopandas/locales/zh-CN.md) | 用于“地理空间与遥感”场景的 Geopandas 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 
-## 17. 平台与基础设施 (3)
+## 18. 平台与基础设施 (3)
 
 | 技能 | 功能 | 来源 | 状态 |
 |---|---|---|---|
 | [Get Available Resources](../skills/platform-infrastructure/get-available-resources/locales/zh-CN.md) | 用于“平台与基础设施”场景的 Get Available Resources 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Iso 13485 Certification](../skills/platform-infrastructure/iso-13485-certification/locales/zh-CN.md) | 用于“平台与基础设施”场景的 Iso 13485 Certification 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
 | [Modal](../skills/platform-infrastructure/modal/locales/zh-CN.md) | 用于“平台与基础设施”场景的 Modal 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。 | 固定第三方 | `cataloged` |
-
-## 18. 链邻学术核心能力 (10)
-
-| 技能 | 功能 | 来源 | 状态 |
-|---|---|---|---|
-| [链邻双语全文证据精读](../skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md) | 跨中英文全文进行术语对齐、逐项证据定位、方法比较与不确定性标注。 | 链邻原创 | `beta` |
-| [链邻学术引用审计](../skills/academic-core/ll-citation-audit/locales/zh-CN.md) | 核验 DOI、作者、期刊、年份、卷期页码及正文引文与参考文献的一致性。 | 链邻原创 | `beta` |
-| [链邻实验笔记与材料追溯](../skills/academic-core/ll-experiment-notebook/locales/zh-CN.md) | 把实验目的、材料批次、协议偏差、原始数据、环境与结果连接成不可含混的追溯记录。 | 链邻原创 | `beta` |
-| [链邻合法全文获取](../skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md) | 通过开放获取、机构权限、作者存档与馆际服务等合规路径定位论文全文。 | 链邻原创 | `beta` |
-| [链邻论文证据分析](../skills/academic-core/ll-paper-analysis/locales/zh-CN.md) | 从研究问题、理论、方法、数据、结果、创新与限制形成可追溯的论文阅读卡。 | 链邻原创 | `beta` |
-| [链邻学术论文润色](../skills/academic-core/ll-paper-polish/locales/zh-CN.md) | 在不改变事实、数据和学术含义的前提下优化逻辑、术语、语气、衔接与语言表达。 | 链邻原创 | `beta` |
-| [链邻可复现论文检索](../skills/academic-core/ll-paper-search/locales/zh-CN.md) | 设计并执行可复现的多来源论文检索、去重、筛选与证据留存流程。 | 链邻原创 | `beta` |
-| [链邻研究数据可用性与 FAIR](../skills/academic-core/ll-research-data-availability/locales/zh-CN.md) | 审查研究数据的可发现、可访问、可互操作、可复用状态并起草数据可用性声明。 | 链邻原创 | `beta` |
-| [链邻科研成果到专利分析](../skills/academic-core/ll-research-to-patent/locales/zh-CN.md) | 将科研成果拆分为技术特征，开展先前技术检索并形成发明披露与风险清单。 | 链邻原创 | `beta` |
-| [链邻学术选题分析](../skills/academic-core/ll-topic-analysis/locales/zh-CN.md) | 以可追溯文献证据评估研究趋势、缺口、创新性、理论价值、实践价值与可行性。 | 链邻原创 | `beta` |

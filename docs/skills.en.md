@@ -2,7 +2,22 @@
 
 This page is generated from `catalog/skills.seed.json`. Quality status is an evidence level, not a marketing label; `cataloged` means indexed and structurally checked, not runtime-verified.
 
-## 01. Literature Search & Management (10)
+## 01. Academic Core (10)
+
+| Skill | Function | Source | Status |
+|---|---|---|---|
+| [Lianlin Bilingual Full-Text Evidence Reader](../skills/academic-core/ll-bilingual-evidence-reader/locales/en.md) | Align terminology across Chinese and English full texts, anchor evidence, compare methods, and label uncertainty. | Lianlin first-party | `beta` |
+| [Lianlin Scholarly Citation Audit](../skills/academic-core/ll-citation-audit/locales/en.md) | Verify DOI, authors, venue, year, volume, issue, pages, and consistency between in-text citations and references. | Lianlin first-party | `beta` |
+| [Lianlin Experiment Notebook & Material Traceability](../skills/academic-core/ll-experiment-notebook/locales/en.md) | Connect aims, material lots, protocol deviations, raw data, environment, and results into an unambiguous traceability record. | Lianlin first-party | `beta` |
+| [Lianlin Lawful Full-Text Acquisition](../skills/academic-core/ll-lawful-fulltext-acquisition/locales/en.md) | Locate paper full text through compliant routes such as open access, institutional access, author deposits, and library services. | Lianlin first-party | `beta` |
+| [Lianlin Paper Evidence Analysis](../skills/academic-core/ll-paper-analysis/locales/en.md) | Build a traceable paper evidence card spanning question, theory, methods, data, results, novelty, and limitations. | Lianlin first-party | `beta` |
+| [Lianlin Academic Manuscript Polish](../skills/academic-core/ll-paper-polish/locales/en.md) | Improve logic, terminology, tone, cohesion, and language without changing facts, data, or scholarly meaning. | Lianlin first-party | `beta` |
+| [Lianlin Reproducible Paper Search](../skills/academic-core/ll-paper-search/locales/en.md) | Design and execute reproducible multi-source paper search, deduplication, screening, and evidence capture. | Lianlin first-party | `beta` |
+| [Lianlin Research Data Availability & FAIR](../skills/academic-core/ll-research-data-availability/locales/en.md) | Review research data for findability, accessibility, interoperability, and reuse, then draft a data-availability statement. | Lianlin first-party | `beta` |
+| [Lianlin Research-to-Patent Analysis](../skills/academic-core/ll-research-to-patent/locales/en.md) | Decompose research outputs into technical features, search prior art, and produce an invention disclosure and risk register. | Lianlin first-party | `beta` |
+| [Lianlin Research Topic Analysis](../skills/academic-core/ll-topic-analysis/locales/en.md) | Evaluate trends, gaps, novelty, theoretical value, practical value, and feasibility with traceable literature evidence. | Lianlin first-party | `beta` |
+
+## 02. Literature Search & Management (10)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -17,7 +32,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Pyzotero](../skills/literature-management/pyzotero/locales/en.md) | Interact with Zotero reference management libraries using the pyzotero Python client. Retrieve, create, update, and delete items, collections, tags, and attachments via the Zotero Web API v3. Use this skill when working with Zotero libraries programmatically, managing bibliographic references, exporting citations, searching library contents, uploading PDF attachments, or building research automation workflows that integrate with Zotero. | Pinned third-party | `cataloged` |
 | [Research Lookup](../skills/literature-management/research-lookup/locales/en.md) | Look up current research information using the Parallel Chat API (primary) or Perplexity sonar-pro-search (academic paper searches). Automatically routes queries to the best backend. Use for finding papers, gathering research data, and verifying scientific information. | Pinned third-party | `cataloged` |
 
-## 02. Scientific Writing & Communication (6)
+## 03. Scientific Writing & Communication (6)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -28,7 +43,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Scientific Writing](../skills/scientific-communication/scientific-writing/locales/en.md) | Core skill for the deep research and writing tool. Write scientific manuscripts in full paragraphs (never bullet points). Use two-stage process with (1) section outlines with key points using research-lookup then (2) convert to flowing prose. IMRAD structure, citations (APA/AMA/Vancouver), figures/tables, reporting guidelines (CONSORT/STROBE/PRISMA), for research papers and journal submissions. | Pinned third-party | `cataloged` |
 | [Venue Templates](../skills/scientific-communication/venue-templates/locales/en.md) | Access comprehensive LaTeX templates, formatting requirements, and submission guidelines for major scientific publication venues (Nature, Science, PLOS, IEEE, ACM), academic conferences (NeurIPS, ICML, CVPR, CHI), research posters, and grant proposals (NSF, NIH, DOE, DARPA). This skill should be used when preparing manuscripts for journal submission, conference papers, research posters, or grant proposals and need venue-specific formatting requirements and templates. | Pinned third-party | `cataloged` |
 
-## 03. Academic Presentation & Visualization (9)
+## 04. Academic Presentation & Visualization (9)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -42,7 +57,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Scientific Slides](../skills/presentation-visualization/scientific-slides/locales/en.md) | Build slide decks and presentations for research talks. Use this for making PowerPoint slides, conference presentations, seminar talks, research presentations, thesis defense slides, or any scientific talk. Provides slide structure, design templates, timing guidance, and visual validation. Works with PowerPoint and LaTeX Beamer. | Pinned third-party | `cataloged` |
 | [Scientific Visualization](../skills/presentation-visualization/scientific-visualization/locales/en.md) | Meta-skill for publication-ready figures. Use when creating journal submission figures requiring multi-panel layouts, significance annotations, error bars, colorblind-safe palettes, and specific journal formatting (Nature, Science, Cell). Orchestrates matplotlib/seaborn/plotly with publication styles. For quick exploration use seaborn or plotly directly. | Pinned third-party | `cataloged` |
 
-## 04. Research Methods & Scientific Reasoning (10)
+## 05. Research Methods & Scientific Reasoning (10)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -57,7 +72,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Scientific Critical Thinking](../skills/research-methods/scientific-critical-thinking/locales/en.md) | Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and confounders, applying evidence grading frameworks (GRADE, Cochrane Risk of Bias), or teaching critical analysis. Best for understanding evidence quality, identifying flaws. For formal peer review writing use peer-review. | Pinned third-party | `cataloged` |
 | [What If Oracle](../skills/research-methods/what-if-oracle/locales/en.md) | Run structured What-If scenario analysis with multi-branch possibility exploration. Use this skill when the user asks speculative questions like "what if...", "what would happen if...", "what are the possibilities", "explore scenarios", "scenario analysis", "possibility space", "what could go wrong", "best case / worst case", "risk analysis", "contingency planning", "strategic options", or any question about uncertain futures. Also trigger when the user faces a fork-in-the-road decision, wants to stress-test an idea, or needs to think through consequences before committing. | Pinned third-party | `cataloged` |
 
-## 05. Bioinformatics & Genomics (21)
+## 06. Bioinformatics & Genomics (21)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -83,7 +98,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Tiledbvcf](../skills/bioinformatics-genomics/tiledbvcf/locales/en.md) | Efficient storage and retrieval of genomic variant data using TileDB. Scalable VCF/BCF ingestion, incremental sample addition, compressed storage, parallel queries, and export capabilities for population genomics. | Pinned third-party | `cataloged` |
 | [Zarr Python](../skills/bioinformatics-genomics/zarr-python/locales/en.md) | Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, S3/GCS integration, NumPy/Dask/Xarray compatible, for large-scale scientific computing pipelines. | Pinned third-party | `cataloged` |
 
-## 06. Cheminformatics & Drug Discovery (12)
+## 07. Cheminformatics & Drug Discovery (12)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -100,7 +115,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Rowan](../skills/cheminformatics-drug-discovery/rowan/locales/en.md) | Cloud-based quantum chemistry platform with Python API. Preferred for computational chemistry workflows including pKa prediction, geometry optimization, conformer searching, molecular property calculations, protein-ligand docking (AutoDock Vina), and AI protein cofolding (Chai-1, Boltz-1/2). Use when tasks involve quantum chemistry calculations, molecular property prediction, DFT or semiempirical methods, neural network potentials (AIMNet2), protein-ligand binding predictions, or automated computational chemistry pipelines. Provides cloud compute resources with no local setup required. | Pinned third-party | `cataloged` |
 | [Torchdrug](../skills/cheminformatics-drug-discovery/torchdrug/locales/en.md) | PyTorch-native graph neural networks for molecules and proteins. Use when building custom GNN architectures for drug discovery, protein modeling, or knowledge graph reasoning. Best for custom model development, protein property prediction, retrosynthesis. For pre-trained models and diverse featurizers use deepchem; for benchmark datasets use pytdc. | Pinned third-party | `cataloged` |
 
-## 07. Clinical & Precision Medicine (18)
+## 08. Clinical & Precision Medicine (18)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -123,7 +138,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Pyhealth](../skills/clinical-precision-medicine/pyhealth/locales/en.md) | Comprehensive healthcare AI toolkit for developing, testing, and deploying machine learning models with clinical data. This skill should be used when working with electronic health records (EHR), clinical prediction tasks (mortality, readmission, drug recommendation), medical coding systems (ICD, NDC, ATC), physiological signals (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep learning models for healthcare applications (RETAIN, SafeDrug, Transformer, GNN). | Pinned third-party | `cataloged` |
 | [Treatment Plans](../skills/clinical-precision-medicine/treatment-plans/locales/en.md) | Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format for all clinical specialties. Supports general medical treatment, rehabilitation therapy, mental health care, chronic disease management, perioperative care, and pain management. Includes SMART goal frameworks, evidence-based interventions with minimal text citations, regulatory compliance (HIPAA), and professional formatting. Prioritizes brevity and clinical actionability. | Pinned third-party | `cataloged` |
 
-## 08. Protein Engineering & Structural Biology (7)
+## 09. Protein Engineering & Structural Biology (7)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -135,7 +150,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Pdb Database](../skills/protein-structural-biology/pdb-database/locales/en.md) | Access RCSB PDB for 3D protein/nucleic acid structures. Search by text/sequence/structure, download coordinates (PDB/mmCIF), retrieve metadata, for structural biology and drug discovery. | Pinned third-party | `cataloged` |
 | [Uniprot Database](../skills/protein-structural-biology/uniprot-database/locales/en.md) | Direct REST API access to UniProt. Protein searches, FASTA retrieval, ID mapping, Swiss-Prot/TrEMBL. For Python workflows with multiple databases, prefer bioservices (unified interface to 40+ services). Use this for direct HTTP/REST work or UniProt-specific control. | Pinned third-party | `cataloged` |
 
-## 09. Machine Learning & AI (14)
+## 10. Machine Learning & AI (14)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -154,7 +169,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Transformers](../skills/machine-learning-ai/transformers/locales/en.md) | This skill should be used when working with pre-trained transformer models for natural language processing, computer vision, audio, or multimodal tasks. Use for text generation, classification, question answering, translation, summarization, image classification, object detection, speech recognition, and fine-tuning models on custom datasets. | Pinned third-party | `cataloged` |
 | [Umap Learn](../skills/machine-learning-ai/umap-learn/locales/en.md) | UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D visualization, clustering preprocessing (HDBSCAN), supervised/parametric UMAP, for high-dimensional data. | Pinned third-party | `cataloged` |
 
-## 10. Materials Science & Computational Physics (10)
+## 11. Materials Science & Computational Physics (10)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -169,7 +184,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Qutip](../skills/materials-physics/qutip/locales/en.md) | Quantum physics simulation library for open quantum systems. Use when studying master equations, Lindblad dynamics, decoherence, quantum optics, or cavity QED. Best for physics research, open system dynamics, and educational simulations. NOT for circuit-based quantum computing—use qiskit, cirq, or pennylane for quantum algorithms and hardware execution. | Pinned third-party | `cataloged` |
 | [Simpy](../skills/materials-physics/simpy/locales/en.md) | Process-based discrete-event simulation framework in Python. Use this skill when building simulations of systems with processes, queues, resources, and time-based events such as manufacturing systems, service operations, network traffic, logistics, or any system where entities interact with shared resources over time. | Pinned third-party | `cataloged` |
 
-## 11. Data Analysis & Statistical Modeling (11)
+## 12. Data Analysis & Statistical Modeling (11)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -185,7 +200,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Sympy](../skills/data-analysis-statistics/sympy/locales/en.md) | Use this skill when working with symbolic mathematics in Python. This skill should be used for symbolic computation tasks including solving equations algebraically, performing calculus operations (derivatives, integrals, limits), manipulating algebraic expressions, working with matrices symbolically, physics calculations, number theory problems, geometry computations, and generating executable code from mathematical expressions. Apply this skill when the user needs exact symbolic results rather than numerical approximations, or when working with mathematical formulas that contain variables and parameters. | Pinned third-party | `cataloged` |
 | [Vaex](../skills/data-analysis-statistics/vaex/locales/en.md) | Use this skill for processing and analyzing large tabular datasets (billions of rows) that exceed available RAM. Vaex excels at out-of-core DataFrame operations, lazy evaluation, fast aggregations, efficient visualization of big data, and machine learning on large datasets. Apply when users need to work with large CSV/HDF5/Arrow/Parquet files, perform fast statistics on massive datasets, create visualizations of big data, or build ML pipelines that do not fit in memory. | Pinned third-party | `cataloged` |
 
-## 12. Scientific Databases (22)
+## 13. Scientific Databases (22)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -212,7 +227,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Uspto Database](../skills/scientific-databases/uspto-database/locales/en.md) | Access USPTO APIs for patent/trademark searches, examination history (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior art searches. | Pinned third-party | `cataloged` |
 | [Zinc Database](../skills/scientific-databases/zinc-database/locales/en.md) | Access ZINC (230M+ purchasable compounds). Search by ZINC ID/SMILES, similarity searches, 3D-ready structures for docking, analog discovery, for virtual screening and drug discovery. | Pinned third-party | `cataloged` |
 
-## 13. Laboratory Automation & Integration (9)
+## 14. Laboratory Automation & Integration (9)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -226,7 +241,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Protocolsio Integration](../skills/lab-automation/protocolsio-integration/locales/en.md) | Integration with protocols.io API for managing scientific protocols. This skill should be used when working with protocols.io to search, create, update, or publish protocols; manage protocol steps and materials; handle discussions and comments; organize workspaces; upload and manage files; or integrate protocols.io functionality into workflows. Applicable for protocol discovery, collaborative protocol development, experiment tracking, lab protocol management, and scientific documentation. | Pinned third-party | `cataloged` |
 | [Pylabrobot](../skills/lab-automation/pylabrobot/locales/en.md) | Vendor-agnostic lab automation framework. Use when controlling multiple equipment types (Hamilton, Tecan, Opentrons, plate readers, pumps) or needing unified programming across different vendors. Best for complex workflows, multi-vendor setups, simulation. For Opentrons-only protocols with official API, opentrons-integration may be simpler. | Pinned third-party | `cataloged` |
 
-## 14. Document Processing & Data Tools (7)
+## 15. Document Processing & Data Tools (7)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -238,7 +253,7 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Pptx](../skills/document-data-tools/pptx/locales/en.md) | Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill. | Pinned third-party | `cataloged` |
 | [Xlsx](../skills/document-data-tools/xlsx/locales/en.md) | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API int | Pinned third-party | `cataloged` |
 
-## 15. Finance & Economics Data (6)
+## 16. Finance & Economics Data (6)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
@@ -249,32 +264,17 @@ This page is generated from `catalog/skills.seed.json`. Quality status is an evi
 | [Market Research Reports](../skills/finance-economics/market-research-reports/locales/en.md) | Generate comprehensive market research reports (50+ pages) in the style of top consulting firms (McKinsey, BCG, Gartner). Features professional LaTeX formatting, extensive visual generation with scientific-schematics and generate-image, deep integration with research-lookup for data gathering, and multi-framework strategic analysis including Porter Five Forces, PESTLE, SWOT, TAM/SAM/SOM, and BCG Matrix. | Pinned third-party | `cataloged` |
 | [Usfiscaldata](../skills/finance-economics/usfiscaldata/locales/en.md) | Query the U.S. Treasury Fiscal Data API for federal financial data including national debt, government spending, revenue, interest rates, exchange rates, and savings bonds. Access 54 datasets and 182 data tables with no API key required. Use when working with U.S. federal fiscal data, national debt tracking (Debt to the Penny), Daily Treasury Statements, Monthly Treasury Statements, Treasury securities auctions, interest rates on Treasury securities, foreign exchange rates, savings bonds, or any U.S. government financial statistics. | Pinned third-party | `cataloged` |
 
-## 16. Geospatial & Remote Sensing (2)
+## 17. Geospatial & Remote Sensing (2)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
 | [Geomaster](../skills/geospatial-remote-sensing/geomaster/locales/en.md) | Comprehensive geospatial science skill covering remote sensing, GIS, spatial analysis, machine learning for earth observation, and 30+ scientific domains. Supports satellite imagery processing (Sentinel, Landsat, MODIS, SAR, hyperspectral), vector and raster data operations, spatial statistics, point cloud processing, network analysis, cloud-native workflows (STAC, COG, Planetary Computer), and 8 programming languages (Python, R, Julia, JavaScript, C++, Java, Go, Rust) with 500+ code examples. Use for remote sensing workflows, GIS analysis, spatial ML, Earth observation data processing, terrain analysis, hydrological modeling, marine spatial analysis, atmospheric science, and any geospatial computation task. | Pinned third-party | `cataloged` |
 | [Geopandas](../skills/geospatial-remote-sensing/geopandas/locales/en.md) | Python library for working with geospatial vector data including shapefiles, GeoJSON, and GeoPackage files. Use when working with geographic data for spatial analysis, geometric operations, coordinate transformations, spatial joins, overlay operations, choropleth mapping, or any task involving reading/writing/analyzing vector geographic data. Supports PostGIS databases, interactive maps, and integration with matplotlib/folium/cartopy. Use for tasks like buffer analysis, spatial joins between datasets, dissolving boundaries, clipping data, calculating areas/distances, reprojecting coordinate systems, creating maps, or converting between spatial file formats. | Pinned third-party | `cataloged` |
 
-## 17. Platform & Infrastructure (3)
+## 18. Platform & Infrastructure (3)
 
 | Skill | Function | Source | Status |
 |---|---|---|---|
 | [Get Available Resources](../skills/platform-infrastructure/get-available-resources/locales/en.md) | This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter. | Pinned third-party | `cataloged` |
 | [Iso 13485 Certification](../skills/platform-infrastructure/iso-13485-certification/locales/en.md) | Comprehensive toolkit for preparing ISO 13485 certification documentation for medical device Quality Management Systems. Use when users need help with ISO 13485 QMS documentation, including (1) conducting gap analysis of existing documentation, (2) creating Quality Manuals, (3) developing required procedures and work instructions, (4) preparing Medical Device Files, (5) understanding ISO 13485 requirements, or (6) identifying missing documentation for medical device certification. Also use when users mention medical device regulations, QMS certification, FDA QMSR, EU MDR, or need help with quality system documentation. | Pinned third-party | `cataloged` |
 | [Modal](../skills/platform-infrastructure/modal/locales/en.md) | Run Python code in the cloud with serverless containers, GPUs, and autoscaling. Use when deploying ML models, running batch processing jobs, scheduling compute-intensive tasks, or serving APIs that require GPU acceleration or dynamic scaling. | Pinned third-party | `cataloged` |
-
-## 18. Lianlin Academic Core (10)
-
-| Skill | Function | Source | Status |
-|---|---|---|---|
-| [Lianlin Bilingual Full-Text Evidence Reader](../skills/academic-core/ll-bilingual-evidence-reader/locales/en.md) | Align terminology across Chinese and English full texts, anchor evidence, compare methods, and label uncertainty. | Lianlin first-party | `beta` |
-| [Lianlin Scholarly Citation Audit](../skills/academic-core/ll-citation-audit/locales/en.md) | Verify DOI, authors, venue, year, volume, issue, pages, and consistency between in-text citations and references. | Lianlin first-party | `beta` |
-| [Lianlin Experiment Notebook & Material Traceability](../skills/academic-core/ll-experiment-notebook/locales/en.md) | Connect aims, material lots, protocol deviations, raw data, environment, and results into an unambiguous traceability record. | Lianlin first-party | `beta` |
-| [Lianlin Lawful Full-Text Acquisition](../skills/academic-core/ll-lawful-fulltext-acquisition/locales/en.md) | Locate paper full text through compliant routes such as open access, institutional access, author deposits, and library services. | Lianlin first-party | `beta` |
-| [Lianlin Paper Evidence Analysis](../skills/academic-core/ll-paper-analysis/locales/en.md) | Build a traceable paper evidence card spanning question, theory, methods, data, results, novelty, and limitations. | Lianlin first-party | `beta` |
-| [Lianlin Academic Manuscript Polish](../skills/academic-core/ll-paper-polish/locales/en.md) | Improve logic, terminology, tone, cohesion, and language without changing facts, data, or scholarly meaning. | Lianlin first-party | `beta` |
-| [Lianlin Reproducible Paper Search](../skills/academic-core/ll-paper-search/locales/en.md) | Design and execute reproducible multi-source paper search, deduplication, screening, and evidence capture. | Lianlin first-party | `beta` |
-| [Lianlin Research Data Availability & FAIR](../skills/academic-core/ll-research-data-availability/locales/en.md) | Review research data for findability, accessibility, interoperability, and reuse, then draft a data-availability statement. | Lianlin first-party | `beta` |
-| [Lianlin Research-to-Patent Analysis](../skills/academic-core/ll-research-to-patent/locales/en.md) | Decompose research outputs into technical features, search prior art, and produce an invention disclosure and risk register. | Lianlin first-party | `beta` |
-| [Lianlin Research Topic Analysis](../skills/academic-core/ll-topic-analysis/locales/en.md) | Evaluate trends, gaps, novelty, theoretical value, practical value, and feasibility with traceable literature evidence. | Lianlin first-party | `beta` |

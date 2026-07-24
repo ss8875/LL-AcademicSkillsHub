@@ -45,28 +45,49 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 | # | 分类 | 技能数 | 覆盖任务 |
 |---:|---|---:|---|
-| 01 | [论文检索与文献管理](#category-literature-management) | **10** | 论文检索、筛选、引用管理与证据综述 |
-| 02 | [科学写作与学术交流](#category-scientific-communication) | **6** | 论文写作、基金申请、同行评审与学术表达 |
-| 03 | [学术演示与可视化](#category-presentation-visualization) | **9** | 科研图表、海报、幻灯片与出版级可视化 |
-| 04 | [研究方法与科学思维](#category-research-methods) | **10** | 研究问题、实验设计、批判思维与可复现性 |
-| 05 | [生物信息与基因组学](#category-bioinformatics-genomics) | **21** | 序列、组学、单细胞与基因组分析 |
-| 06 | [化学信息与药物发现](#category-cheminformatics-drug-discovery) | **12** | 分子结构、性质预测、虚拟筛选与药物发现 |
-| 07 | [临床医学与精准医疗](#category-clinical-precision-medicine) | **18** | 临床证据、医学影像与精准医疗分析 |
-| 08 | [蛋白质工程与结构生物学](#category-protein-structural-biology) | **7** | 蛋白结构、功能注释、设计与工程 |
-| 09 | [机器学习与人工智能](#category-machine-learning-ai) | **14** | 机器学习建模、训练、推理、优化与解释 |
-| 10 | [材料科学与物理计算](#category-materials-physics) | **10** | 材料模拟、量子计算、物理建模与科学计算 |
-| 11 | [数据分析与统计建模](#category-data-analysis-statistics) | **11** | 数据清理、统计推断、建模与分析报告 |
-| 12 | [科学数据库](#category-scientific-databases) | **22** | 专业科学数据库检索、整合与规范化 |
-| 13 | [实验室自动化与集成](#category-lab-automation) | **9** | 实验协议、仪器控制、液体处理与自动化 |
-| 14 | [文档处理与数据工具](#category-document-data-tools) | **7** | PDF、文档、表格、演示文件与结构化转换 |
-| 15 | [金融与经济数据](#category-finance-economics) | **6** | 金融市场、企业数据与宏观经济研究 |
-| 16 | [地理空间与遥感](#category-geospatial-remote-sensing) | **2** | GIS、遥感影像、空间计算与地球观测 |
-| 17 | [平台与基础设施](#category-platform-infrastructure) | **3** | 计算环境、云资源、任务编排与科研基础设施 |
-| 18 | [链邻学术核心能力](#category-academic-core) | **10** | 链邻原创的检索、精读、写作、审稿与证据治理工作流 |
+| 01 | [学术核心能力](#category-academic-core) | **10** | 检索、精读、写作、审稿与证据治理工作流 |
+| 02 | [论文检索与文献管理](#category-literature-management) | **10** | 论文检索、筛选、引用管理与证据综述 |
+| 03 | [科学写作与学术交流](#category-scientific-communication) | **6** | 论文写作、基金申请、同行评审与学术表达 |
+| 04 | [学术演示与可视化](#category-presentation-visualization) | **9** | 科研图表、海报、幻灯片与出版级可视化 |
+| 05 | [研究方法与科学思维](#category-research-methods) | **10** | 研究问题、实验设计、批判思维与可复现性 |
+| 06 | [生物信息与基因组学](#category-bioinformatics-genomics) | **21** | 序列、组学、单细胞与基因组分析 |
+| 07 | [化学信息与药物发现](#category-cheminformatics-drug-discovery) | **12** | 分子结构、性质预测、虚拟筛选与药物发现 |
+| 08 | [临床医学与精准医疗](#category-clinical-precision-medicine) | **18** | 临床证据、医学影像与精准医疗分析 |
+| 09 | [蛋白质工程与结构生物学](#category-protein-structural-biology) | **7** | 蛋白结构、功能注释、设计与工程 |
+| 10 | [机器学习与人工智能](#category-machine-learning-ai) | **14** | 机器学习建模、训练、推理、优化与解释 |
+| 11 | [材料科学与物理计算](#category-materials-physics) | **10** | 材料模拟、量子计算、物理建模与科学计算 |
+| 12 | [数据分析与统计建模](#category-data-analysis-statistics) | **11** | 数据清理、统计推断、建模与分析报告 |
+| 13 | [科学数据库](#category-scientific-databases) | **22** | 专业科学数据库检索、整合与规范化 |
+| 14 | [实验室自动化与集成](#category-lab-automation) | **9** | 实验协议、仪器控制、液体处理与自动化 |
+| 15 | [文档处理与数据工具](#category-document-data-tools) | **7** | PDF、文档、表格、演示文件与结构化转换 |
+| 16 | [金融与经济数据](#category-finance-economics) | **6** | 金融市场、企业数据与宏观经济研究 |
+| 17 | [地理空间与遥感](#category-geospatial-remote-sensing) | **2** | GIS、遥感影像、空间计算与地球观测 |
+| 18 | [平台与基础设施](#category-platform-infrastructure) | **3** | 计算环境、云资源、任务编排与科研基础设施 |
+
+<a id="category-academic-core"></a>
+
+#### 01. 学术核心能力 · 10 项
+
+> 检索、精读、写作、审稿与证据治理工作流
+
+| 技能 | 能做什么 | 怎么使用 |
+|---|---|---|
+| **[链邻双语全文证据精读](./skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 跨中英文全文进行术语对齐、逐项证据定位、方法比较与不确定性标注。<br>**核心能力：**确认文本版本、语言和可用范围；建立中英文术语对照表并保留原词；按问题、方法、数据、结果和限制抽取证据；为事实与引文记录页码或结构定位；区分直译、意译、领域约定与不可等价术语；输出双语证据矩阵和差异说明 | [详细用法](./skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md) |
+| **[链邻学术引用审计](./skills/academic-core/ll-citation-audit/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 核验 DOI、作者、期刊、年份、卷期页码及正文引文与参考文献的一致性。<br>**核心能力：**解析正文引文与参考文献列表；按 DOI、题名和作者匹配权威元数据；区分已核验、部分匹配、冲突和无法核验；检查漏引、多引、重复、顺序及格式规则；不为无法确认的条目补造字段；输出逐条审计表、修复建议和未决项 | [详细用法](./skills/academic-core/ll-citation-audit/locales/zh-CN.md) |
+| **[链邻实验笔记与材料追溯](./skills/academic-core/ll-experiment-notebook/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 把实验目的、材料批次、协议偏差、原始数据、环境与结果连接成不可含混的追溯记录。<br>**核心能力：**分配实验、样本、材料和文件的稳定标识；实验前冻结目的、假设、协议与判定标准；记录批次、仪器、校准、环境、操作者和时间；把偏差、失败和异常与原始数据一起保留；以校验和或版本号连接原始、处理与分析产物；生成可复现实验包和交接摘要 | [详细用法](./skills/academic-core/ll-experiment-notebook/locales/zh-CN.md) |
+| **[链邻合法全文获取](./skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 通过开放获取、机构权限、作者存档与馆际服务等合规路径定位论文全文。<br>**核心能力：**规范 DOI、题名、作者和版本信息；优先检索出版社开放版本和可信开放仓储；区分已发表版、作者接收稿、预印本和补充材料；记录许可证、访问日期、版本和稳定链接；遇到付费墙时转向机构图书馆、馆际互借或联系作者；不绕过访问控制、不抓取盗版源、不传播受限全文 | [详细用法](./skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md) |
+| **[链邻论文证据分析](./skills/academic-core/ll-paper-analysis/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 从研究问题、理论、方法、数据、结果、创新与限制形成可追溯的论文阅读卡。<br>**核心能力：**记录论文身份、版本与获取方式；分离作者陈述、论文证据与分析者推断；抽取研究设计、样本、变量、方法和主要结果；将每项关键结论定位到页码、图表或章节；评估内部效度、外部效度、统计与报告风险；生成一页阅读卡和跨论文可比较字段 | [详细用法](./skills/academic-core/ll-paper-analysis/locales/zh-CN.md) |
+| **[链邻学术论文润色](./skills/academic-core/ll-paper-polish/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 在不改变事实、数据和学术含义的前提下优化逻辑、术语、语气、衔接与语言表达。<br>**核心能力：**确认期刊、读者、语言变体与允许改动范围；锁定数字、单位、引文、专名和关键结论；先处理论证结构与段落功能，再处理句子；标注可能改变含义或需要作者确认的修改；核对术语一致性、时态、语态与缩写；输出修订稿、修改说明和待确认问题 | [详细用法](./skills/academic-core/ll-paper-polish/locales/zh-CN.md) |
+| **[链邻可复现论文检索](./skills/academic-core/ll-paper-search/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 设计并执行可复现的多来源论文检索、去重、筛选与证据留存流程。<br>**核心能力：**把研究问题拆为概念块与同义词；选择适配学科的数据库并注明覆盖差异；保存完整检索式、日期、过滤条件与命中数；按 DOI、标题、作者和年份分层去重；以预先定义的纳排标准筛选；输出 PRISMA 风格流转统计与可复现查询记录 | [详细用法](./skills/academic-core/ll-paper-search/locales/zh-CN.md) |
+| **[链邻研究数据可用性与 FAIR](./skills/academic-core/ll-research-data-availability/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 审查研究数据的可发现、可访问、可互操作、可复用状态并起草数据可用性声明。<br>**核心能力：**盘点数据集、代码、材料和派生结果；确认隐私、伦理、合同、知识产权和禁运限制；选择领域仓储并规划持久标识符和版本；检查元数据、格式、字典、许可证与复现说明；按 FAIR 原则给出差距和优先修复项；起草与实际访问条件一致的数据可用性声明 | [详细用法](./skills/academic-core/ll-research-data-availability/locales/zh-CN.md) |
+| **[链邻科研成果到专利分析](./skills/academic-core/ll-research-to-patent/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 将科研成果拆分为技术特征，开展先前技术检索并形成发明披露与风险清单。<br>**核心能力：**在公开前确认保密状态、作者贡献与时间线；把技术方案拆成必要特征、可选特征和效果；构造关键词、分类号、申请人和引证检索策略；将文献逐项映射到技术特征并标注公开日期；区分新颖性线索、创造性线索、实施支持和权属问题；输出发明披露草案并建议由专利专业人士复核 | [详细用法](./skills/academic-core/ll-research-to-patent/locales/zh-CN.md) |
+| **[链邻学术选题分析](./skills/academic-core/ll-topic-analysis/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 以可追溯文献证据评估研究趋势、缺口、创新性、理论价值、实践价值与可行性。<br>**核心能力：**明确研究对象、范围、时间窗与判定标准；构造多组同义词和排除词并记录检索式；建立代表性文献与近年文献证据表；区分“尚未发现”与“证据证明不存在”；按新颖性、价值、数据、方法、伦理和资源评分；输出候选题目、证据、不确定性与下一步验证 | [详细用法](./skills/academic-core/ll-topic-analysis/locales/zh-CN.md) |
+
+[↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)
 
 <a id="category-literature-management"></a>
 
-#### 01. 论文检索与文献管理 · 10 项
+#### 02. 论文检索与文献管理 · 10 项
 
 > 论文检索、筛选、引用管理与证据综述
 
@@ -87,7 +108,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-scientific-communication"></a>
 
-#### 02. 科学写作与学术交流 · 6 项
+#### 03. 科学写作与学术交流 · 6 项
 
 > 论文写作、基金申请、同行评审与学术表达
 
@@ -104,7 +125,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-presentation-visualization"></a>
 
-#### 03. 学术演示与可视化 · 9 项
+#### 04. 学术演示与可视化 · 9 项
 
 > 科研图表、海报、幻灯片与出版级可视化
 
@@ -124,7 +145,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-research-methods"></a>
 
-#### 04. 研究方法与科学思维 · 10 项
+#### 05. 研究方法与科学思维 · 10 项
 
 > 研究问题、实验设计、批判思维与可复现性
 
@@ -145,7 +166,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-bioinformatics-genomics"></a>
 
-#### 05. 生物信息与基因组学 · 21 项
+#### 06. 生物信息与基因组学 · 21 项
 
 > 序列、组学、单细胞与基因组分析
 
@@ -177,7 +198,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-cheminformatics-drug-discovery"></a>
 
-#### 06. 化学信息与药物发现 · 12 项
+#### 07. 化学信息与药物发现 · 12 项
 
 > 分子结构、性质预测、虚拟筛选与药物发现
 
@@ -200,7 +221,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-clinical-precision-medicine"></a>
 
-#### 07. 临床医学与精准医疗 · 18 项
+#### 08. 临床医学与精准医疗 · 18 项
 
 > 临床证据、医学影像与精准医疗分析
 
@@ -229,7 +250,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-protein-structural-biology"></a>
 
-#### 08. 蛋白质工程与结构生物学 · 7 项
+#### 09. 蛋白质工程与结构生物学 · 7 项
 
 > 蛋白结构、功能注释、设计与工程
 
@@ -247,7 +268,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-machine-learning-ai"></a>
 
-#### 09. 机器学习与人工智能 · 14 项
+#### 10. 机器学习与人工智能 · 14 项
 
 > 机器学习建模、训练、推理、优化与解释
 
@@ -272,7 +293,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-materials-physics"></a>
 
-#### 10. 材料科学与物理计算 · 10 项
+#### 11. 材料科学与物理计算 · 10 项
 
 > 材料模拟、量子计算、物理建模与科学计算
 
@@ -293,7 +314,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-data-analysis-statistics"></a>
 
-#### 11. 数据分析与统计建模 · 11 项
+#### 12. 数据分析与统计建模 · 11 项
 
 > 数据清理、统计推断、建模与分析报告
 
@@ -315,7 +336,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-scientific-databases"></a>
 
-#### 12. 科学数据库 · 22 项
+#### 13. 科学数据库 · 22 项
 
 > 专业科学数据库检索、整合与规范化
 
@@ -348,7 +369,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-lab-automation"></a>
 
-#### 13. 实验室自动化与集成 · 9 项
+#### 14. 实验室自动化与集成 · 9 项
 
 > 实验协议、仪器控制、液体处理与自动化
 
@@ -368,7 +389,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-document-data-tools"></a>
 
-#### 14. 文档处理与数据工具 · 7 项
+#### 15. 文档处理与数据工具 · 7 项
 
 > PDF、文档、表格、演示文件与结构化转换
 
@@ -386,7 +407,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-finance-economics"></a>
 
-#### 15. 金融与经济数据 · 6 项
+#### 16. 金融与经济数据 · 6 项
 
 > 金融市场、企业数据与宏观经济研究
 
@@ -403,7 +424,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-geospatial-remote-sensing"></a>
 
-#### 16. 地理空间与遥感 · 2 项
+#### 17. 地理空间与遥感 · 2 项
 
 > GIS、遥感影像、空间计算与地球观测
 
@@ -416,7 +437,7 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 <a id="category-platform-infrastructure"></a>
 
-#### 17. 平台与基础设施 · 3 项
+#### 18. 平台与基础设施 · 3 项
 
 > 计算环境、云资源、任务编排与科研基础设施
 
@@ -425,27 +446,6 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 | **[Get Available Resources](./skills/platform-infrastructure/get-available-resources/locales/zh-CN.md)** | **核心能力：**检查运行资源与依赖；组织计算和平台配置；记录环境限制与可复现条件<br><strong>能力说明：</strong>这项技能应在任何计算密集型科学任务开始时使用，以检测和报告可用的系统资源（ CPU内核、GPU、内存、磁盘空间）。它创建了一个JSON文件，其中包含资源信息和战略建议，为计算方法决策提供信息，例如是否使用并行处理（ joblib ，多处理） ，核心外计算（ Dask ， Zarr ） ， GPU加速（ PyTorch ， JAX ） ， 或内存效率策略。在运行分析、训练模型、处理大型数据集或任何资源限制重要的任务之前，请使用此技能。 | [详细用法](./skills/platform-infrastructure/get-available-resources/locales/zh-CN.md) |
 | **[Iso 13485 Certification](./skills/platform-infrastructure/iso-13485-certification/locales/zh-CN.md)** | **核心能力：**检查运行资源与依赖；组织计算和平台配置；记录环境限制与可复现条件<br><strong>能力说明：</strong>用于编制医疗器械质量管理体系ISO 13485认证文件的综合工具包。在用户需要ISO 13485 QMS文档方面的帮助时使用，包括（ 1 ）对现有文档进行差距分析， （ 2 ）创建质量手册， （ 3 ）制定所需的程序和工作说明， （ 4 ）准备医疗器械文件， （ 5 ）了解ISO 13485要求， 或（ 6 ）识别医疗器械认证缺失的文件。当用户提及医疗器械法规、QMS认证、FDA QMSR、EU MDR或在质量体系文档方面需要帮助时，也可使用。 | [详细用法](./skills/platform-infrastructure/iso-13485-certification/locales/zh-CN.md) |
 | **[Modal](./skills/platform-infrastructure/modal/locales/zh-CN.md)** | **核心能力：**检查运行资源与依赖；组织计算和平台配置；记录环境限制与可复现条件<br><strong>能力说明：</strong>使用无服务器容器、GPU和自动缩放在云中运行Python代码。在部署ML模型、运行批处理作业、调度计算密集型任务或为需要GPU加速或动态缩放的API提供服务时使用。 | [详细用法](./skills/platform-infrastructure/modal/locales/zh-CN.md) |
-
-[↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)
-
-<a id="category-academic-core"></a>
-
-#### 18. 链邻学术核心能力 · 10 项
-
-> 链邻原创的检索、精读、写作、审稿与证据治理工作流
-
-| 技能 | 能做什么 | 怎么使用 |
-|---|---|---|
-| **[链邻双语全文证据精读](./skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 跨中英文全文进行术语对齐、逐项证据定位、方法比较与不确定性标注。<br>**核心能力：**确认文本版本、语言和可用范围；建立中英文术语对照表并保留原词；按问题、方法、数据、结果和限制抽取证据；为事实与引文记录页码或结构定位；区分直译、意译、领域约定与不可等价术语；输出双语证据矩阵和差异说明 | [详细用法](./skills/academic-core/ll-bilingual-evidence-reader/locales/zh-CN.md) |
-| **[链邻学术引用审计](./skills/academic-core/ll-citation-audit/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 核验 DOI、作者、期刊、年份、卷期页码及正文引文与参考文献的一致性。<br>**核心能力：**解析正文引文与参考文献列表；按 DOI、题名和作者匹配权威元数据；区分已核验、部分匹配、冲突和无法核验；检查漏引、多引、重复、顺序及格式规则；不为无法确认的条目补造字段；输出逐条审计表、修复建议和未决项 | [详细用法](./skills/academic-core/ll-citation-audit/locales/zh-CN.md) |
-| **[链邻实验笔记与材料追溯](./skills/academic-core/ll-experiment-notebook/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 把实验目的、材料批次、协议偏差、原始数据、环境与结果连接成不可含混的追溯记录。<br>**核心能力：**分配实验、样本、材料和文件的稳定标识；实验前冻结目的、假设、协议与判定标准；记录批次、仪器、校准、环境、操作者和时间；把偏差、失败和异常与原始数据一起保留；以校验和或版本号连接原始、处理与分析产物；生成可复现实验包和交接摘要 | [详细用法](./skills/academic-core/ll-experiment-notebook/locales/zh-CN.md) |
-| **[链邻合法全文获取](./skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 通过开放获取、机构权限、作者存档与馆际服务等合规路径定位论文全文。<br>**核心能力：**规范 DOI、题名、作者和版本信息；优先检索出版社开放版本和可信开放仓储；区分已发表版、作者接收稿、预印本和补充材料；记录许可证、访问日期、版本和稳定链接；遇到付费墙时转向机构图书馆、馆际互借或联系作者；不绕过访问控制、不抓取盗版源、不传播受限全文 | [详细用法](./skills/academic-core/ll-lawful-fulltext-acquisition/locales/zh-CN.md) |
-| **[链邻论文证据分析](./skills/academic-core/ll-paper-analysis/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 从研究问题、理论、方法、数据、结果、创新与限制形成可追溯的论文阅读卡。<br>**核心能力：**记录论文身份、版本与获取方式；分离作者陈述、论文证据与分析者推断；抽取研究设计、样本、变量、方法和主要结果；将每项关键结论定位到页码、图表或章节；评估内部效度、外部效度、统计与报告风险；生成一页阅读卡和跨论文可比较字段 | [详细用法](./skills/academic-core/ll-paper-analysis/locales/zh-CN.md) |
-| **[链邻学术论文润色](./skills/academic-core/ll-paper-polish/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 在不改变事实、数据和学术含义的前提下优化逻辑、术语、语气、衔接与语言表达。<br>**核心能力：**确认期刊、读者、语言变体与允许改动范围；锁定数字、单位、引文、专名和关键结论；先处理论证结构与段落功能，再处理句子；标注可能改变含义或需要作者确认的修改；核对术语一致性、时态、语态与缩写；输出修订稿、修改说明和待确认问题 | [详细用法](./skills/academic-core/ll-paper-polish/locales/zh-CN.md) |
-| **[链邻可复现论文检索](./skills/academic-core/ll-paper-search/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 设计并执行可复现的多来源论文检索、去重、筛选与证据留存流程。<br>**核心能力：**把研究问题拆为概念块与同义词；选择适配学科的数据库并注明覆盖差异；保存完整检索式、日期、过滤条件与命中数；按 DOI、标题、作者和年份分层去重；以预先定义的纳排标准筛选；输出 PRISMA 风格流转统计与可复现查询记录 | [详细用法](./skills/academic-core/ll-paper-search/locales/zh-CN.md) |
-| **[链邻研究数据可用性与 FAIR](./skills/academic-core/ll-research-data-availability/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 审查研究数据的可发现、可访问、可互操作、可复用状态并起草数据可用性声明。<br>**核心能力：**盘点数据集、代码、材料和派生结果；确认隐私、伦理、合同、知识产权和禁运限制；选择领域仓储并规划持久标识符和版本；检查元数据、格式、字典、许可证与复现说明；按 FAIR 原则给出差距和优先修复项；起草与实际访问条件一致的数据可用性声明 | [详细用法](./skills/academic-core/ll-research-data-availability/locales/zh-CN.md) |
-| **[链邻科研成果到专利分析](./skills/academic-core/ll-research-to-patent/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 将科研成果拆分为技术特征，开展先前技术检索并形成发明披露与风险清单。<br>**核心能力：**在公开前确认保密状态、作者贡献与时间线；把技术方案拆成必要特征、可选特征和效果；构造关键词、分类号、申请人和引证检索策略；将文献逐项映射到技术特征并标注公开日期；区分新颖性线索、创造性线索、实施支持和权属问题；输出发明披露草案并建议由专利专业人士复核 | [详细用法](./skills/academic-core/ll-research-to-patent/locales/zh-CN.md) |
-| **[链邻学术选题分析](./skills/academic-core/ll-topic-analysis/locales/zh-CN.md)**<br><sub>链邻原创</sub> | 以可追溯文献证据评估研究趋势、缺口、创新性、理论价值、实践价值与可行性。<br>**核心能力：**明确研究对象、范围、时间窗与判定标准；构造多组同义词和排除词并记录检索式；建立代表性文献与近年文献证据表；区分“尚未发现”与“证据证明不存在”；按新颖性、价值、数据、方法、伦理和资源评分；输出候选题目、证据、不确定性与下一步验证 | [详细用法](./skills/academic-core/ll-topic-analysis/locales/zh-CN.md) |
 
 [↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)
 

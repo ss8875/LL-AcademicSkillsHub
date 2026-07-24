@@ -29,6 +29,15 @@ class CatalogTests(unittest.TestCase):
         third = sum(s["source"]["kind"] == "pinned-third-party" for s in self.skills)
         self.assertEqual((len(self.skills), len(self.categories), first, third), (187, 18, 10, 177))
 
+    def test_academic_core_is_the_first_category(self):
+        self.assertEqual(
+            [category["order"] for category in self.categories],
+            list(range(1, 19)),
+        )
+        self.assertEqual(self.categories[0]["id"], "academic-core")
+        self.assertEqual(self.categories[0]["zh"], "学术核心能力")
+        self.assertEqual(self.categories[0]["en"], "Academic Core")
+
     def test_ids_and_paths_are_unique_and_present(self):
         ids = [s["id"] for s in self.skills]
         self.assertEqual(len(ids), len(set(ids)))
@@ -76,6 +85,15 @@ class CatalogTests(unittest.TestCase):
         self.assertNotIn("**准备：**", readme)
         self.assertNotIn("**执行：**", readme)
         self.assertNotIn("**获得：**", readme)
+        self.assertIn(
+            "| 01 | [学术核心能力](#category-academic-core) | **10** | "
+            "检索、精读、写作、审稿与证据治理工作流 |",
+            readme,
+        )
+        self.assertLess(
+            readme.index('<a id="category-academic-core"></a>'),
+            readme.index('<a id="category-literature-management"></a>'),
+        )
         third_party = [skill for skill in self.skills if skill["source"]["kind"] == "pinned-third-party"]
         self.assertEqual(set(self.showcase_descriptions), {skill["id"] for skill in third_party})
         self.assertEqual(readme.count("<strong>能力说明：</strong>"), len(third_party))

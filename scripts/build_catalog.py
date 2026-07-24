@@ -35,7 +35,7 @@ CATEGORY_TASKS_ZH = {
     "finance-economics": "金融市场、企业数据与宏观经济研究",
     "geospatial-remote-sensing": "GIS、遥感影像、空间计算与地球观测",
     "platform-infrastructure": "计算环境、云资源、任务编排与科研基础设施",
-    "academic-core": "链邻原创的检索、精读、写作、审稿与证据治理工作流",
+    "academic-core": "检索、精读、写作、审稿与证据治理工作流",
 }
 
 
@@ -144,7 +144,7 @@ def categories_markdown(categories: list[dict], skills: list[dict], lang: str) -
         "finance-economics":"金融、市场与宏观经济数据",
         "geospatial-remote-sensing":"GIS、遥感与空间分析",
         "platform-infrastructure":"计算资源、环境与基础设施",
-        "academic-core":"链邻证据工作流与科研治理",
+        "academic-core":"检索、精读、写作、审稿与证据治理工作流",
     }
     examples_en = {
         "literature-management":"Search, screening, citation, and review",
@@ -164,7 +164,7 @@ def categories_markdown(categories: list[dict], skills: list[dict], lang: str) -
         "finance-economics":"Finance, market, and macroeconomic data",
         "geospatial-remote-sensing":"GIS, remote sensing, and spatial analysis",
         "platform-infrastructure":"Compute resources, environments, and infrastructure",
-        "academic-core":"Lianlin evidence workflows and research governance",
+        "academic-core":"Search, close reading, writing, peer review, and evidence governance",
     }
     for category in categories:
         count = sum(item["category"] == category["id"] for item in skills)
