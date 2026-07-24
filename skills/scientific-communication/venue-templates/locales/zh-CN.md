@@ -1,23 +1,135 @@
 # Venue Templates
 
-用于“科学写作与学术交流”场景的 Venue Templates 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。
+[返回技能总览](../../../../README.md) · [English](en.md) · [查看原始 SKILL](../SKILL.md)
 
-## 主要功能
+## 1. 技能简介
+
+提供 Nature、Science、PLOS、IEEE、ACM 等期刊，NeurIPS、ICML、CVPR、CHI 等会议，以及研究海报和 NSF、NIH、DOE、DARPA 基金申请所需的 LaTeX 模板、格式要求与投稿指南。适合准备期刊论文、会议论文、研究海报或基金申请材料时使用。
+
+它属于“科学写作与学术交流”类别，核心定位是：把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达。本说明把原始技能的技术内容整理为中文使用契约；涉及具体命令、参数或版本时，仍以[原始 `SKILL.md`](../SKILL.md)及随附文件为准。
+
+## 2. 适合用它做什么
 
 - 组织学术论证
 - 改善科学表达
 - 按受众和体裁调整内容
+- 当你已有“研究材料、目标体裁、读者要求”，并希望得到“学术文本或交流材料”时使用。
+- 当任务需要围绕“把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达”形成可复核、可继续加工的中间产物时使用。
 
-## 输入
+不建议仅因为技能名称相近就直接调用；先确认研究对象、输入格式和预期产出与本页描述一致。
 
-- 研究材料、目标体裁、读者要求
+## 3. 工作方式
 
-## 输出
+本技能按“输入契约 → 执行 → 验证 → 交付”工作。原始指令的重点阅读路径为：`能力概览` → `适用场景` → `专题说明` → `核心能力与原则` → `工作流程` → `与其他技能集成` → `脚本与接口` → `最佳实践`。
 
-- 学术文本或交流材料
+1. **明确文稿类型、目标读者、期刊或资助机构要求。** 本技能至少需要：研究材料、目标体裁、读者要求。
+2. **锁定事实、数据、术语、引用和不可改动的学术含义。** 保留关键选择、参数、筛选条件和中间结果，便于复核。
+3. **先搭建论证结构，再逐段完成写作、审阅或语言优化。** 执行重点包括：组织学术论证；改善科学表达；按受众和体裁调整内容。
+4. **核对主张与证据、格式规范、术语一致性和修改痕迹。** 最终交付：学术文本或交流材料。
+5. **交付前复核。** 检查结果是否回答原始问题，是否区分事实、推断和不确定性，是否留下足够的复现与交接信息。
 
-## 本地使用说明
+## 4. 请求说明
 
-先阅读根目录 `SKILL.md` 及其引用文件，再检查目录记录中的运行环境、凭据、网络、风险与许可证状态。第三方技能的本页说明不替代上游指令。
+你可以直接用自然语言提出任务。一个高质量请求最好同时写清目标、输入、约束、产出格式和验收标准。
 
-质量状态：`cataloged`；来源类型：`pinned-third-party`。
+### 推荐请求模板
+
+> 请使用“Venue Templates”处理【研究材料、目标体裁、读者要求】。目标是【写明研究目标】；请遵守【时间范围、对象范围、格式或方法约束】，输出【学术文本或交流材料】，并列出关键步骤、证据来源、不确定性和需要人工确认的事项。
+
+### 可直接改写的请求
+
+- “请用 Venue Templates 完成组织学术论证。我的材料是【研究材料、目标体裁、读者要求】，结果请整理为【学术文本或交流材料】。”
+- “请先检查我提供的【研究材料、目标体裁、读者要求】是否足够，再用 Venue Templates 执行按受众和体裁调整内容；不要补造缺失信息。”
+- “请把 Venue Templates 的处理过程做成可复核记录，交付【学术文本或交流材料】，同时标出假设、限制和下一步建议。”
+
+## 5. 示例预览
+
+| 环节 | 示例内容 |
+|---|---|
+| 任务目标 | 使用 **Venue Templates** 完成“组织学术论证” |
+| 输入材料 | 研究材料、目标体裁、读者要求 |
+| 处理重点 | 组织学术论证；改善科学表达；按受众和体裁调整内容 |
+| 预期产出 | 学术文本或交流材料 |
+| 验收重点 | 结果可追溯、关键假设明确、与“把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达”的目标一致 |
+
+示例只展示交付形态，不替代真实任务中的数据、参数、伦理审批、领域判断或人工复核。
+
+## 6. 你需要提供
+
+- **必需输入：**研究材料、目标体裁、读者要求。
+- **任务目标：**要回答的问题、使用场景和完成标准。
+- **范围限制：**研究对象、时间范围、排除条件、语言、格式或目标期刊等。
+- **已有材料：**原始数据、文献、代码、图表、协议或草稿；请说明版本及允许使用的范围。
+- **交付偏好：**文件格式、字段结构、是否需要脚本、是否保留中间结果与审计记录。
+
+如果上述信息不全，应先列出缺口并向用户确认；不能把猜测当作用户已提供的事实。
+
+## 7. 产出
+
+- 学术文本或交流材料。
+- 一份简明的方法与参数说明，记录关键选择、版本、过滤或排除规则。
+- 一份质量检查与未决问题清单，标出不能自动确认、需要领域专家复核的部分。
+- 如任务产生文件，优先保留可编辑源文件，并将派生产物与用户原始材料分开。
+
+## 8. 内置参考
+
+- [原始 `SKILL.md`](../SKILL.md)：权威执行指令与完整技术细节。
+- 随技能打包 **24** 个文件，按用途完整列出如下。
+
+### 参考资料（11）
+
+- [`references/cell_press_style.md`](../references/cell_press_style.md)：方法、规范或领域约束参考。
+- [`references/conferences_formatting.md`](../references/conferences_formatting.md)：方法、规范或领域约束参考。
+- [`references/cs_conference_style.md`](../references/cs_conference_style.md)：方法、规范或领域约束参考。
+- [`references/grants_requirements.md`](../references/grants_requirements.md)：方法、规范或领域约束参考。
+- [`references/journals_formatting.md`](../references/journals_formatting.md)：方法、规范或领域约束参考。
+- [`references/medical_journal_styles.md`](../references/medical_journal_styles.md)：方法、规范或领域约束参考。
+- [`references/ml_conference_style.md`](../references/ml_conference_style.md)：方法、规范或领域约束参考。
+- [`references/nature_science_style.md`](../references/nature_science_style.md)：方法、规范或领域约束参考。
+- [`references/posters_guidelines.md`](../references/posters_guidelines.md)：方法、规范或领域约束参考。
+- [`references/reviewer_expectations.md`](../references/reviewer_expectations.md)：方法、规范或领域约束参考。
+- [`references/venue_writing_styles.md`](../references/venue_writing_styles.md)：方法、规范或领域约束参考。
+
+### 执行脚本（3）
+
+- [`scripts/customize_template.py`](../scripts/customize_template.py)：可复用执行或验证脚本。
+- [`scripts/query_template.py`](../scripts/query_template.py)：可复用执行或验证脚本。
+- [`scripts/validate_format.py`](../scripts/validate_format.py)：可复用执行或验证脚本。
+
+### 模板与素材（10）
+
+- [`assets/examples/cell_summary_example.md`](../assets/examples/cell_summary_example.md)：可复用模板、样式或示例素材。
+- [`assets/examples/medical_structured_abstract.md`](../assets/examples/medical_structured_abstract.md)：可复用模板、样式或示例素材。
+- [`assets/examples/nature_abstract_examples.md`](../assets/examples/nature_abstract_examples.md)：可复用模板、样式或示例素材。
+- [`assets/examples/neurips_introduction_example.md`](../assets/examples/neurips_introduction_example.md)：可复用模板、样式或示例素材。
+- [`assets/grants/nih_specific_aims.tex`](../assets/grants/nih_specific_aims.tex)：可复用模板、样式或示例素材。
+- [`assets/grants/nsf_proposal_template.tex`](../assets/grants/nsf_proposal_template.tex)：可复用模板、样式或示例素材。
+- [`assets/journals/nature_article.tex`](../assets/journals/nature_article.tex)：可复用模板、样式或示例素材。
+- [`assets/journals/neurips_article.tex`](../assets/journals/neurips_article.tex)：可复用模板、样式或示例素材。
+- [`assets/journals/plos_one.tex`](../assets/journals/plos_one.tex)：可复用模板、样式或示例素材。
+- [`assets/posters/beamerposter_academic.tex`](../assets/posters/beamerposter_academic.tex)：可复用模板、样式或示例素材。
+
+仅在相关步骤需要时读取相应参考或脚本；运行脚本前应检查参数、输入路径、输出路径及是否会修改文件。
+
+## 9. 边界
+
+- 不为增强说服力而虚构结果、引用、审稿意见或研究贡献。
+- 语言润色不能替代方法学、统计学和领域专家审查。
+- 涉及署名、利益冲突、伦理和投稿承诺时，以真实记录为准。
+- 本技能的职责是“把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达”，不能替代与任务相关的伦理、临床、法律、安全或领域专家审查。
+- 外部数据、接口和模型的内容可能变化；重要结论应保存来源、访问时间和稳定标识。
+
+## 10. 相关技能
+
+- [Paper 2 Web](../../paper-2-web/locales/zh-CN.md)：将学术论文转换为宣传和演示格式（包括交互式网站 (Paper2Web)、演示视频 (Paper2Video) 和会议海报 (Paper2Poster) 时，应使用此技能。使用此技能来完成涉及论文传播、会议准备、创建可探索的学术主页、生成视频摘要或从 LaTeX 或 PDF 源生成可打印海报的任务。
+- [Scientific Writing](../../scientific-writing/locales/zh-CN.md)：深度研究和写作工具的核心技能。用完整的段落撰写科学手稿（不要要点）。使用两阶段过程：(1) 使用研究查找列出带有要点的章节大纲，然后 (2) 转换为流畅的散文。 IMRAD 结构、引文（APA/AMA/温哥华）、图表、报告指南（CONSORT/STROBE/PRISMA），用于研究论文和期刊提交。
+- [Medical Imaging Review](../../medical-imaging-review/locales/zh-CN.md)：为医学影像人工智能研究撰写综合文献综述。适用于 CT、MRI、X 射线、超声、病理成像等方向的综述论文、系统综述和文献分析，尤其适合深度学习在分割、检测、分类等医学影像任务中的研究梳理。
+
+这些技能与本技能处于相近任务域。组合使用前先划分每个技能的输入、输出和责任边界，避免重复处理或相互覆盖。
+
+## 11. 与其他技能的关系
+
+- **上游准备：**[Literature Review](../../../literature-management/literature-review/locales/zh-CN.md)可用于准备或核对本技能所需的“研究材料、目标体裁、读者要求”。
+- **本技能职责：**Venue Templates 聚焦于“把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达”，负责完成“组织学术论证；改善科学表达；按受众和体裁调整内容”。
+- **下游承接：**[Scientific Slides](../../../presentation-visualization/scientific-slides/locales/zh-CN.md)可继续使用本技能产生的“学术文本或交流材料”开展后续分析、表达或交付。
+- **分工原则：**若任务重点已经从“把证据、方法和结论组织为清楚、准确、适配目标读者的学术表达”转移到其他领域，应把本技能的可追溯产出作为交接材料，而不是让一个技能包办全部科研流程。

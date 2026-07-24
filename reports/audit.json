@@ -37,13 +37,13 @@
       "generatedArtifacts": 9
     },
     "codeSyntax": {
-      "pythonFiles": 234,
+      "pythonFiles": 235,
       "pythonWarnings": 0,
       "jsFiles": 1,
       "jsFailures": 0
     },
     "securityStaticScan": {
-      "files": 1601,
+      "files": 1602,
       "findings": {
         "dynamic-python": 15,
         "shell-pipe-exec": 2,

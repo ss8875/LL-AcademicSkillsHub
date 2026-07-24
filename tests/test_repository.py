@@ -72,7 +72,10 @@ class CatalogTests(unittest.TestCase):
         self.assertNotIn("上游能力说明", readme)
         self.assertNotIn("<sub>环境：", readme)
         self.assertEqual(readme.count('<a id="category-'), len(self.categories))
-        self.assertEqual(readme.count("**准备：**"), len(self.skills))
+        self.assertEqual(readme.count("| [详细用法]("), len(self.skills))
+        self.assertNotIn("**准备：**", readme)
+        self.assertNotIn("**执行：**", readme)
+        self.assertNotIn("**获得：**", readme)
         third_party = [skill for skill in self.skills if skill["source"]["kind"] == "pinned-third-party"]
         self.assertEqual(set(self.showcase_descriptions), {skill["id"] for skill in third_party})
         self.assertEqual(readme.count("<strong>能力说明：</strong>"), len(third_party))
@@ -82,7 +85,46 @@ class CatalogTests(unittest.TestCase):
         for skill in self.skills:
             with self.subTest(skill=skill["id"]):
                 self.assertIn(f"./{skill['paths']['zh-CN']}", readme)
-                self.assertIn(f"./{skill['paths']['skill']}", readme)
+
+    def test_chinese_skill_guides_are_complete_and_unique(self):
+        required_headings = [
+            "## 1. 技能简介",
+            "## 2. 适合用它做什么",
+            "## 3. 工作方式",
+            "## 4. 请求说明",
+            "## 5. 示例预览",
+            "## 6. 你需要提供",
+            "## 7. 产出",
+            "## 8. 内置参考",
+            "## 9. 边界",
+            "## 10. 相关技能",
+            "## 11. 与其他技能的关系",
+        ]
+        documents = set()
+        for skill in self.skills:
+            path = ROOT / skill["paths"]["zh-CN"]
+            text = path.read_text(encoding="utf-8")
+            with self.subTest(skill=skill["id"]):
+                self.assertTrue(text.startswith(f"# {skill['title']['zh-CN']}\n"))
+                self.assertGreater(len(text), 1800)
+                self.assertIn("[查看原始 SKILL](../SKILL.md)", text)
+                self.assertNotIn("质量状态：", text)
+                self.assertNotIn("来源类型：", text)
+                outline = text.split("原始指令的重点阅读路径为：", 1)[1].split("。", 1)[0]
+                self.assertNotRegex(outline, r"[A-Za-z]{4,}")
+                for heading in required_headings:
+                    self.assertEqual(text.count(heading), 1)
+                skill_root = (ROOT / skill["paths"]["skill"]).parent
+                for bundled in skill_root.rglob("*"):
+                    if (
+                        bundled.is_file()
+                        and bundled.name != "SKILL.md"
+                        and "locales" not in bundled.parts
+                    ):
+                        relative = bundled.relative_to(skill_root).as_posix()
+                        self.assertIn(f"[`{relative}`](", text)
+            documents.add(text)
+        self.assertEqual(len(documents), len(self.skills))
 
 
 class LocalServerSecurityTests(unittest.TestCase):

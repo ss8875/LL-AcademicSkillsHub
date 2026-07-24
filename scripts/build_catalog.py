@@ -11,6 +11,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from build_skill_guides import build_all_skill_guides
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_URL = "https://github.com/ss8875/LL-AcademicSkillsHub"
@@ -221,7 +223,6 @@ def zh_skill_showcase(
         for item in entries:
             title = markdown_cell(item["title"]["zh-CN"])
             locale_link = f"./{item['paths']['zh-CN']}"
-            skill_link = f"./{item['paths']['skill']}"
             capabilities = "；".join(markdown_cell(value) for value in item["capabilities"]["zh-CN"])
             summary_zh = markdown_cell(item["summary"]["zh-CN"])
             if item["source"]["kind"] == "lianlin-first-party":
@@ -237,14 +238,7 @@ def zh_skill_showcase(
                 )
                 skill_label = f"**[{title}]({locale_link})**"
 
-            inputs = "；".join(markdown_cell(value) for value in item["inputs"]["zh-CN"])
-            outputs = "；".join(markdown_cell(value) for value in item["outputs"]["zh-CN"])
-            usage = (
-                f"**准备：**{inputs}<br>"
-                f"**执行：**阅读[中文说明]({locale_link})与[原始 SKILL]({skill_link})，"
-                f"按说明配置后运行<br>"
-                f"**获得：**{outputs}"
-            )
+            usage = f"[详细用法]({locale_link})"
             lines.append(f"| {skill_label} | {function_text} | {usage} |")
         lines.extend(["", "[↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)", ""])
 
@@ -374,6 +368,7 @@ def main() -> None:
     if platform_url and not re.fullmatch(r"https://[^\s]+", platform_url):
         raise SystemExit("LIANLIN_PLATFORM_DOWNLOAD_URL must be blank or an https:// URL")
     write_json(ROOT / "site" / "config.json", {"platformDownloadUrl": platform_url or None})
+    guide_summary = build_all_skill_guides(categories, skills, showcase_descriptions)
     (ROOT / "docs" / "skills.zh-CN.md").write_text(skills_markdown(categories, skills, "zh-CN"), encoding="utf-8")
     (ROOT / "docs" / "skills.en.md").write_text(skills_markdown(categories, skills, "en"), encoding="utf-8")
     (ROOT / "docs" / "categories.zh-CN.md").write_text(categories_markdown(categories, skills, "zh-CN"), encoding="utf-8")
@@ -383,7 +378,17 @@ def main() -> None:
         encoding="utf-8",
     )
     (ROOT / "README.en.md").write_text(readme("en", payload), encoding="utf-8")
-    print(json.dumps({"builtOn": date.today().isoformat(), **payload["summary"]}, ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            {
+                "builtOn": date.today().isoformat(),
+                **payload["summary"],
+                **guide_summary,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

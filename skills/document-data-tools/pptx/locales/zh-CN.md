@@ -1,23 +1,166 @@
 # Pptx
 
-用于“文档处理与数据工具”场景的 Pptx 技能。具体能力以原始 SKILL.md 为准；使用前应核对运行环境、外部服务与许可证状态。
+[返回技能总览](../../../../README.md) · [English](en.md) · [查看原始 SKILL](../SKILL.md)
 
-## 主要功能
+## 1. 技能简介
+
+无论何时以任何方式涉及.pptx文件（作为输入、输出或两者兼而有之） ，都可以使用此技能。这包括：创建幻灯片、幻灯片或演示文稿；从任何.pptx文件中读取、解析或提取文本（即使提取的内容将在其他地方使用，如在电子邮件或摘要中使用） ；编辑、修改或更新现有演示文稿；合并或拆分幻灯片文件；使用模板、布局、演讲者备注， 或注释。每当用户提到“幻灯片”、“幻灯片”、“演示文稿”或引用.pptx文件名时，无论他们计划在之后对内容做什么，都会触发。如果需要打开、创建或触摸.pptx文件，请使用此技能。
+
+它属于“文档处理与数据工具”类别，核心定位是：读取、生成、转换和检查科研文档、表格、演示与结构化文件。本说明把原始技能的技术内容整理为中文使用契约；涉及具体命令、参数或版本时，仍以[原始 `SKILL.md`](../SKILL.md)及随附文件为准。
+
+## 2. 适合用它做什么
 
 - 读取与转换科研文档
 - 提取结构化内容
 - 保持版式、字段与来源可追溯
+- 当你已有“文档、表格或数据文件”，并希望得到“转换文件、结构化数据或校验报告”时使用。
+- 当任务需要围绕“读取、生成、转换和检查科研文档、表格、演示与结构化文件”形成可复核、可继续加工的中间产物时使用。
 
-## 输入
+不建议仅因为技能名称相近就直接调用；先确认研究对象、输入格式和预期产出与本页描述一致。
 
-- 文档、表格或数据文件
+## 3. 工作方式
 
-## 输出
+本技能按“输入契约 → 执行 → 验证 → 交付”工作。原始指令的重点阅读路径为：`参考资料` → `专题说明` → `工作流程` → `依赖`。
 
-- 转换文件、结构化数据或校验报告
+1. **确认源文件、目标格式、版式要求和需保留的结构元素。** 本技能至少需要：文档、表格或数据文件。
+2. **解析内容与样式，选择无损编辑或受控转换路径。** 保留关键选择、参数、筛选条件和中间结果，便于复核。
+3. **生成新文件并保留原件、版本和中间产物。** 执行重点包括：读取与转换科研文档；提取结构化内容；保持版式、字段与来源可追溯。
+4. **渲染或重新读取结果，检查内容、公式、链接和版式。** 最终交付：转换文件、结构化数据或校验报告。
+5. **交付前复核。** 检查结果是否回答原始问题，是否区分事实、推断和不确定性，是否留下足够的复现与交接信息。
 
-## 本地使用说明
+## 4. 请求说明
 
-先阅读根目录 `SKILL.md` 及其引用文件，再检查目录记录中的运行环境、凭据、网络、风险与许可证状态。第三方技能的本页说明不替代上游指令。
+你可以直接用自然语言提出任务。一个高质量请求最好同时写清目标、输入、约束、产出格式和验收标准。
 
-质量状态：`cataloged`；来源类型：`pinned-third-party`。
+### 推荐请求模板
+
+> 请使用“Pptx”处理【文档、表格或数据文件】。目标是【写明研究目标】；请遵守【时间范围、对象范围、格式或方法约束】，输出【转换文件、结构化数据或校验报告】，并列出关键步骤、证据来源、不确定性和需要人工确认的事项。
+
+### 可直接改写的请求
+
+- “请用 Pptx 完成读取与转换科研文档。我的材料是【文档、表格或数据文件】，结果请整理为【转换文件、结构化数据或校验报告】。”
+- “请先检查我提供的【文档、表格或数据文件】是否足够，再用 Pptx 执行保持版式、字段与来源可追溯；不要补造缺失信息。”
+- “请把 Pptx 的处理过程做成可复核记录，交付【转换文件、结构化数据或校验报告】，同时标出假设、限制和下一步建议。”
+
+## 5. 示例预览
+
+| 环节 | 示例内容 |
+|---|---|
+| 任务目标 | 使用 **Pptx** 完成“读取与转换科研文档” |
+| 输入材料 | 文档、表格或数据文件 |
+| 处理重点 | 读取与转换科研文档；提取结构化内容；保持版式、字段与来源可追溯 |
+| 预期产出 | 转换文件、结构化数据或校验报告 |
+| 验收重点 | 结果可追溯、关键假设明确、与“读取、生成、转换和检查科研文档、表格、演示与结构化文件”的目标一致 |
+
+示例只展示交付形态，不替代真实任务中的数据、参数、伦理审批、领域判断或人工复核。
+
+## 6. 你需要提供
+
+- **必需输入：**文档、表格或数据文件。
+- **任务目标：**要回答的问题、使用场景和完成标准。
+- **范围限制：**研究对象、时间范围、排除条件、语言、格式或目标期刊等。
+- **已有材料：**原始数据、文献、代码、图表、协议或草稿；请说明版本及允许使用的范围。
+- **交付偏好：**文件格式、字段结构、是否需要脚本、是否保留中间结果与审计记录。
+
+如果上述信息不全，应先列出缺口并向用户确认；不能把猜测当作用户已提供的事实。
+
+## 7. 产出
+
+- 转换文件、结构化数据或校验报告。
+- 一份简明的方法与参数说明，记录关键选择、版本、过滤或排除规则。
+- 一份质量检查与未决问题清单，标出不能自动确认、需要领域专家复核的部分。
+- 如任务产生文件，优先保留可编辑源文件，并将派生产物与用户原始材料分开。
+
+## 8. 内置参考
+
+- [原始 `SKILL.md`](../SKILL.md)：权威执行指令与完整技术细节。
+- 随技能打包 **58** 个文件，按用途完整列出如下。
+
+### 执行脚本（55）
+
+- [`scripts/__init__.py`](../scripts/__init__.py)：可复用执行或验证脚本。
+- [`scripts/add_slide.py`](../scripts/add_slide.py)：可复用执行或验证脚本。
+- [`scripts/clean.py`](../scripts/clean.py)：可复用执行或验证脚本。
+- [`scripts/office/helpers/__init__.py`](../scripts/office/helpers/__init__.py)：可复用执行或验证脚本。
+- [`scripts/office/helpers/merge_runs.py`](../scripts/office/helpers/merge_runs.py)：可复用执行或验证脚本。
+- [`scripts/office/helpers/simplify_redlines.py`](../scripts/office/helpers/simplify_redlines.py)：可复用执行或验证脚本。
+- [`scripts/office/pack.py`](../scripts/office/pack.py)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd`](../scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd`](../scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd`](../scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd`](../scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd`](../scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/mce/mc.xsd`](../scripts/office/schemas/mce/mc.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-2010.xsd`](../scripts/office/schemas/microsoft/wml-2010.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-2012.xsd`](../scripts/office/schemas/microsoft/wml-2012.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-2018.xsd`](../scripts/office/schemas/microsoft/wml-2018.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-cex-2018.xsd`](../scripts/office/schemas/microsoft/wml-cex-2018.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-cid-2016.xsd`](../scripts/office/schemas/microsoft/wml-cid-2016.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd`](../scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd)：可复用执行或验证脚本。
+- [`scripts/office/schemas/microsoft/wml-symex-2015.xsd`](../scripts/office/schemas/microsoft/wml-symex-2015.xsd)：可复用执行或验证脚本。
+- [`scripts/office/soffice.py`](../scripts/office/soffice.py)：可复用执行或验证脚本。
+- [`scripts/office/unpack.py`](../scripts/office/unpack.py)：可复用执行或验证脚本。
+- [`scripts/office/validate.py`](../scripts/office/validate.py)：可复用执行或验证脚本。
+- [`scripts/office/validators/__init__.py`](../scripts/office/validators/__init__.py)：可复用执行或验证脚本。
+- [`scripts/office/validators/base.py`](../scripts/office/validators/base.py)：可复用执行或验证脚本。
+- [`scripts/office/validators/docx.py`](../scripts/office/validators/docx.py)：可复用执行或验证脚本。
+- [`scripts/office/validators/pptx.py`](../scripts/office/validators/pptx.py)：可复用执行或验证脚本。
+- [`scripts/office/validators/redlining.py`](../scripts/office/validators/redlining.py)：可复用执行或验证脚本。
+- [`scripts/thumbnail.py`](../scripts/thumbnail.py)：可复用执行或验证脚本。
+
+### 其他随附文件（3）
+
+- [`editing.md`](../editing.md)：技能运行或说明所需的随附文件。
+- [`LICENSE.txt`](../LICENSE.txt)：技能运行或说明所需的随附文件。
+- [`pptxgenjs.md`](../pptxgenjs.md)：技能运行或说明所需的随附文件。
+
+仅在相关步骤需要时读取相应参考或脚本；运行脚本前应检查参数、输入路径、输出路径及是否会修改文件。
+
+## 9. 边界
+
+- 格式转换可能丢失批注、公式、字体或布局，必须进行回读验证。
+- 不覆盖用户原始文件，除非任务明确要求并已留存可恢复副本。
+- 受密码、权限或数字签名保护的文档不得绕过访问控制。
+- 本技能的职责是“读取、生成、转换和检查科研文档、表格、演示与结构化文件”，不能替代与任务相关的伦理、临床、法律、安全或领域专家审查。
+- 外部数据、接口和模型的内容可能变化；重要结论应保存来源、访问时间和稳定标识。
+
+## 10. 相关技能
+
+- [Pdf](../../pdf/locales/zh-CN.md)：每当用户想对PDF文件进行任何操作时，请使用此技能。这包括从PDF中读取或提取文本/表格，将多个PDF合并为一个，拆分PDF ，旋转页面，添加水印，创建新PDF ，填写PDF表单，加密/解密PDF ，提取图像以及扫描PDF上的OCR以使其可搜索。如果用户提到.pdf文件或要求生成一个文件，请使用此技能。
+- [Xlsx](../../xlsx/locales/zh-CN.md)：当电子表格是主要输入或输出时使用此技能。支持打开、读取、编辑或修复 .xlsx、.xlsm、.csv、.tsv 文件，包括新增列、计算公式、格式化、制图和清理混乱数据；也可从零创建电子表格、从其他数据源生成工作簿，或在表格格式之间转换。适合按文件名或路径处理电子表格，以及将错位标题、异常行或垃圾数据重构为规范工作簿。最终交付物应为电子表格；如果主要产物是 Word 文档、HTML 报告、独立 Python 脚本、数据库管道或 Google Sheets API 集成，则不使用本技能。
+- [Docx](../../docx/locales/zh-CN.md)：每当用户想要创建、读取、编辑或操作Word文档（ .docx文件）时，请使用此技能。触发器包括：任何提及“Word文档”、“Word文档”、“.docx”或要求生成具有目录、标题、页码或信笺抬头等格式的专业文档。也可用于从.docx文件中提取或重新组织内容，在文档中插入或替换图像， 在Word文件中执行查找和替换，处理跟踪的更改或注释，或将内容转换为精美的Word文档。如果用户要求提供“报告”、“备忘录”、“信件”、“模板”或类似的Word或.docx文件，请使用此技能。请勿用于PDF、电子表格、Google文档或与文档生成无关的一般编码任务。
+
+这些技能与本技能处于相近任务域。组合使用前先划分每个技能的输入、输出和责任边界，避免重复处理或相互覆盖。
+
+## 11. 与其他技能的关系
+
+- **上游准备：**[Get Available Resources](../../../platform-infrastructure/get-available-resources/locales/zh-CN.md)可用于准备或核对本技能所需的“文档、表格或数据文件”。
+- **本技能职责：**Pptx 聚焦于“读取、生成、转换和检查科研文档、表格、演示与结构化文件”，负责完成“读取与转换科研文档；提取结构化内容；保持版式、字段与来源可追溯”。
+- **下游承接：**[Scientific Writing](../../../scientific-communication/scientific-writing/locales/zh-CN.md)可继续使用本技能产生的“转换文件、结构化数据或校验报告”开展后续分析、表达或交付。
+- **分工原则：**若任务重点已经从“读取、生成、转换和检查科研文档、表格、演示与结构化文件”转移到其他领域，应把本技能的可追溯产出作为交接材料，而不是让一个技能包办全部科研流程。
