@@ -5,7 +5,7 @@
 <p align="center">
   <strong>本地优先、中英双语、分级审计的学术 AI 技能仓库</strong><br>
   <a href="./README.en.md">English</a> ·
-  <a href="./docs/skills.zh-CN.md">全部技能</a> ·
+  <a href="#18-大分类--187-项技能完整能力清单">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">下载科研 AI 平台</a> ·
   <a href="./docs/quality-model.zh-CN.md">质量模型</a> ·

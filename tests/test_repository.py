@@ -104,6 +104,14 @@ class CatalogTests(unittest.TestCase):
 
     def test_chinese_readme_showcase_is_complete(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn(
+            '<a href="#18-大分类--187-项技能完整能力清单">全部技能</a>',
+            readme,
+        )
+        self.assertNotIn(
+            '<a href="./docs/skills.zh-CN.md">全部技能</a>',
+            readme,
+        )
         self.assertNotIn("首期明确只支持", readme)
         self.assertNotIn("固定第三方", readme)
         self.assertNotIn("上游能力说明", readme)
