@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import html
 from collections import Counter
 from datetime import date
 from pathlib import Path
@@ -13,6 +14,27 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY_URL = "https://github.com/ss8875/LL-AcademicSkillsHub"
+
+CATEGORY_TASKS_ZH = {
+    "literature-management": "论文检索、筛选、引用管理与证据综述",
+    "scientific-communication": "论文写作、基金申请、同行评审与学术表达",
+    "presentation-visualization": "科研图表、海报、幻灯片与出版级可视化",
+    "research-methods": "研究问题、实验设计、批判思维与可复现性",
+    "bioinformatics-genomics": "序列、组学、单细胞与基因组分析",
+    "cheminformatics-drug-discovery": "分子结构、性质预测、虚拟筛选与药物发现",
+    "clinical-precision-medicine": "临床证据、医学影像与精准医疗分析",
+    "protein-structural-biology": "蛋白结构、功能注释、设计与工程",
+    "machine-learning-ai": "机器学习建模、训练、推理、优化与解释",
+    "materials-physics": "材料模拟、量子计算、物理建模与科学计算",
+    "data-analysis-statistics": "数据清理、统计推断、建模与分析报告",
+    "scientific-databases": "专业科学数据库检索、整合与规范化",
+    "lab-automation": "实验协议、仪器控制、液体处理与自动化",
+    "document-data-tools": "PDF、文档、表格、演示文件与结构化转换",
+    "finance-economics": "金融市场、企业数据与宏观经济研究",
+    "geospatial-remote-sensing": "GIS、遥感影像、空间计算与地球观测",
+    "platform-infrastructure": "计算环境、云资源、任务编排与科研基础设施",
+    "academic-core": "链邻原创的检索、精读、写作、审稿与证据治理工作流",
+}
 
 
 def load_json(path: Path):
@@ -151,10 +173,107 @@ def categories_markdown(categories: list[dict], skills: list[dict], lang: str) -
     return "\n".join(lines)
 
 
+def markdown_cell(value: str) -> str:
+    return html.escape(value, quote=False).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
+
+
+def zh_skill_showcase(categories: list[dict], skills: list[dict]) -> str:
+    """Render the complete Chinese README capability panorama from catalog facts."""
+    lines = [
+        "### 18 大分类 · 187 项技能完整能力清单",
+        "",
+        "从选题、检索、精读、实验与数据分析，到论文写作、审稿、可视化和成果传播，"
+        "下面按科研任务完整展示仓库当前收录的全部技能。每一项都提供功能说明、输入输出、"
+        "使用入口及运行条件。",
+        "",
+        "<p align=\"center\"><strong>如果这份科研能力地图对你有帮助，欢迎点击右上角 ⭐ Star 收藏，方便随时回来检索，也让更多研究者发现它。</strong></p>",
+        "",
+        "| # | 分类 | 技能数 | 覆盖任务 |",
+        "|---:|---|---:|---|",
+    ]
+
+    for category in categories:
+        entries = [item for item in skills if item["category"] == category["id"]]
+        task = CATEGORY_TASKS_ZH[category["id"]]
+        lines.append(
+            f"| {category['order']:02d} | [{category['zh']}](#category-{category['id']}) | "
+            f"**{len(entries)}** | {task} |"
+        )
+
+    lines.append("")
+    for category in categories:
+        entries = [item for item in skills if item["category"] == category["id"]]
+        task = CATEGORY_TASKS_ZH[category["id"]]
+        lines.extend([
+            f'<a id="category-{category["id"]}"></a>',
+            "",
+            f"#### {category['order']:02d}. {category['zh']} · {len(entries)} 项",
+            "",
+            f"> {task}",
+            "",
+            "| 技能 | 能做什么 | 怎么使用 |",
+            "|---|---|---|",
+        ])
+        for item in entries:
+            title = markdown_cell(item["title"]["zh-CN"])
+            locale_link = f"./{item['paths']['zh-CN']}"
+            skill_link = f"./{item['paths']['skill']}"
+            source = "链邻原创" if item["source"]["kind"] == "lianlin-first-party" else "固定第三方"
+            capabilities = "；".join(markdown_cell(value) for value in item["capabilities"]["zh-CN"])
+            summary_zh = markdown_cell(item["summary"]["zh-CN"])
+            upstream_detail = markdown_cell(item["summary"]["en"])
+            if item["source"]["kind"] == "lianlin-first-party":
+                function_text = f"{summary_zh}<br>**核心能力：**{capabilities}"
+            else:
+                function_text = (
+                    f"**核心能力：**{capabilities}<br>"
+                    f"<sub><strong>上游能力说明：</strong>{upstream_detail}</sub>"
+                )
+
+            inputs = "；".join(markdown_cell(value) for value in item["inputs"]["zh-CN"])
+            outputs = "；".join(markdown_cell(value) for value in item["outputs"]["zh-CN"])
+            runtime_labels = {
+                "agent skill instructions": "Agent Skill 指令",
+                "POSIX shell": "POSIX 命令行",
+                "Python": "Python",
+                "Node.js": "Node.js",
+            }
+            runtime = "、".join(
+                runtime_labels.get(value, markdown_cell(value))
+                for value in item["environment"]["runtime"]
+            ) or "按技能说明"
+            network = {
+                "required": "需要联网",
+                "optional": "可选联网",
+                "none": "可离线",
+                "unknown": "按技能说明确认网络条件",
+            }.get(item["environment"]["network"], markdown_cell(item["environment"]["network"]))
+            credentials = item["environment"]["credentials"]
+            credential_text = (
+                "、".join(markdown_cell(value) for value in credentials)
+                if credentials else "无预置凭据"
+            )
+            usage = (
+                f"**准备：**{inputs}<br>"
+                f"**执行：**阅读[中文说明]({locale_link})与[原始 SKILL]({skill_link})，"
+                f"按说明配置后运行<br>"
+                f"**获得：**{outputs}<br>"
+                f"<sub>环境：{runtime}；{network}；{credential_text}；"
+                f"来源：{source}；状态：`{item['quality']['status']}`</sub>"
+            )
+            lines.append(
+                f"| **[{title}]({locale_link})**<br><sub>{source}</sub> | {function_text} | {usage} |"
+            )
+        lines.extend(["", "[↑ 返回分类总览](#18-大分类--187-项技能完整能力清单)", ""])
+
+    return "\n".join(lines).rstrip()
+
+
 def readme(lang: str, payload: dict) -> str:
     zh = lang == "zh-CN"
     summary = payload["summary"]
     if zh:
+        showcase = zh_skill_showcase(payload["categories"], payload["skills"])
         return f"""<p align="center">
   <img src="./assets/brand/hero-bilingual.svg" alt="LL-AcademicSkillsHub 链邻学术技能仓库" width="100%">
 </p>
@@ -188,13 +307,13 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
 
 浏览器打开 `http://127.0.0.1:8765/`。也可运行 `scripts\\setup.bat` 和 `scripts\\start.bat`。
 
-> 首期明确只支持“本地部署”或“下载链邻科研 AI 平台”两条路径，不承诺特定 Agent 客户端兼容。技能中的第三方依赖、API 凭据和数据权限仍需按功能卡配置。
-
-## 不想本地安装？
+## 不想本地安装？直接使用链邻科研 AI 平台
 
 <p align="center">
   <img src="./assets/brand/platform-promo/platform-wechat-banner.png" alt="下载链邻科研 AI 平台或添加微信客服" width="100%">
 </p>
+
+{showcase}
 
 ## 品牌与推广边界
 
@@ -240,8 +359,6 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 ```
 
 Open `http://127.0.0.1:8765/`. Windows users may also run `scripts\\setup.bat` and `scripts\\start.bat`.
-
-> The first release deliberately supports only local deployment or the Lianlin Research AI Platform download route. It does not promise compatibility with a particular agent client. Third-party runtimes, API credentials, and data permissions still follow each function card.
 
 ## Brand and promotion boundary
 

@@ -64,6 +64,16 @@ class CatalogTests(unittest.TestCase):
                 self.assertIn(f"name: {skill['id']}", header)
                 self.assertIn("## Workflow", text)
 
+    def test_chinese_readme_showcase_is_complete(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertNotIn("首期明确只支持", readme)
+        self.assertEqual(readme.count('<a id="category-'), len(self.categories))
+        self.assertEqual(readme.count("**准备：**"), len(self.skills))
+        for skill in self.skills:
+            with self.subTest(skill=skill["id"]):
+                self.assertIn(f"./{skill['paths']['zh-CN']}", readme)
+                self.assertIn(f"./{skill['paths']['skill']}", readme)
+
 
 class LocalServerSecurityTests(unittest.TestCase):
     @classmethod

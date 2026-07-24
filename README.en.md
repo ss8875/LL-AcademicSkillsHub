@@ -31,8 +31,6 @@ LL-AcademicSkillsHub organizes research skills into a searchable, installable, a
 
 Open `http://127.0.0.1:8765/`. Windows users may also run `scripts\setup.bat` and `scripts\start.bat`.
 
-> The first release deliberately supports only local deployment or the Lianlin Research AI Platform download route. It does not promise compatibility with a particular agent client. Third-party runtimes, API credentials, and data permissions still follow each function card.
-
 ## Brand and promotion boundary
 
 Lianlin Research AI Platform appears only on explicit surfaces such as the README, documentation site, download page, and release notes. It is not an always-running skill and never interrupts research workflows. Until an official URL is supplied, the site states that it is unconfigured instead of inventing a link or QR code.
