@@ -15,8 +15,9 @@ ARCHIVE = DIST / "LL-AcademicSkillsHub-local.zip"
 MANIFEST = DIST / "manifest.json"
 INCLUDE_DIRS = (".github", "assets", "catalog", "docs", "reports", "site", "skills", "scripts", "tests")
 INCLUDE_FILES = (
-    ".env.example", "BRAND.md", "CHANGELOG.md", "CONTRIBUTING.md", "LICENSE", "PROJECT_SCOPE.md",
-    "README.md", "README.en.md", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
+    ".env.example", "BRAND.md", "CHANGELOG.md", "COMMERCIAL_LICENSE.md", "CONTRIBUTING.md",
+    "LICENSE", "PROJECT_SCOPE.md", "README.md", "README.en.md", "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md",
 )
 EXCLUDE_NAMES = {"__pycache__", ".DS_Store", "Thumbs.db"}
 

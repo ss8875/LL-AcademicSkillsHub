@@ -17,6 +17,8 @@
 
 LL-AcademicSkillsHub organizes research skills into a searchable, installable, and auditable bilingual catalog. The first release contains **187 skills** across **18 categories**: **10 Lianlin first-party core skills** and **177 pinned third-party skills**.
 
+> **License notice:** Lianlin first-party materials are limited to permitted noncommercial use. Commercialization and any other direct or indirect commercial use require prior written authorization from the applicable copyright holder. Third-party materials remain under their upstream terms. See [Commercial Licensing](./COMMERCIAL_LICENSE.md).
+
 ## What you can do
 
 - Find capabilities by research task in the [complete skill and function catalog](./docs/skills.en.md).
@@ -311,4 +313,6 @@ See the [local deployment document](./docs/deployment.en.md) for the compact sys
 
 ## License
 
-Lianlin first-party code and original documentation are Apache-2.0. Third-party skills remain under their upstream terms and do not become Apache-2.0 merely by inclusion.
+Effective July 26, 2026, Lianlin first-party code, first-party skills, original documentation, catalog metadata, website code, and original brand assets are offered under the [PolyForm Noncommercial License 1.0.0](./LICENSE). Noncommercial research, study, teaching, and evaluation are permitted within the license scope. **Sale, paid services, SaaS, paid training or consulting, commercial product integration, enterprise commercial R&D, and any other direct or indirect commercial use require prior written authorization from the applicable copyright holder.** See [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md) for commercial licensing and the historical-version notice.
+
+Third-party skills, code, models, datasets, APIs, fonts, trademarks, and runtime dependencies remain under their upstream terms and are not relicensed by inclusion. A Lianlin commercial authorization does not replace third-party clearance. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).

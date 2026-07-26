@@ -37,3 +37,11 @@ Public-facing architecture begins with LL-AcademicSkillsHub itself. Source disco
 - First-party Lianlin core skills require full bilingual instructions.
 - Pinned third-party skills retain their source instructions and receive bilingual catalog metadata and local usage profiles.
 - Translation parity is validated automatically.
+
+## Licensing policy
+
+- First-party Lianlin code, skills, documentation, catalog metadata, website code, and original brand assets are source-available under PolyForm Noncommercial License 1.0.0 from 2026-07-26.
+- Commercial use is not granted by default and requires separate prior written authorization from the applicable copyright holder.
+- Third-party materials remain under their upstream terms and are never relicensed merely by inclusion.
+- A Lianlin commercial authorization does not clear third-party rights.
+- Historical first-party versions already received under Apache-2.0 remain governed by that prior grant; the current license change is prospective, not retroactive.

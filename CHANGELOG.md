@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-07-26
+
+- Changed the license for current and future Lianlin first-party materials from Apache-2.0 to PolyForm Noncommercial License 1.0.0.
+- Added an explicit requirement for prior written authorization before commercial use.
+- Added bilingual commercial-licensing guidance, contribution licensing terms, third-party boundaries, and a non-retroactive historical-license notice.
+
 ## 0.1.0 — 2026-07-23
 
 - Established the LL-AcademicSkillsHub / 链邻学术技能仓库 brand and local-first scope.

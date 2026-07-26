@@ -60,6 +60,35 @@ class CatalogTests(unittest.TestCase):
     def test_forced_ad_skill_is_absent(self):
         self.assertNotIn("offer-k-dense-web", {s["id"] for s in self.skills})
 
+    def test_first_party_license_is_noncommercial_and_preserves_third_party_boundaries(self):
+        license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+        commercial = (ROOT / "COMMERCIAL_LICENSE.md").read_text(encoding="utf-8")
+        third_party = (ROOT / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8")
+        readme_zh = (ROOT / "README.md").read_text(encoding="utf-8")
+        readme_en = (ROOT / "README.en.md").read_text(encoding="utf-8")
+
+        self.assertIn("PolyForm Noncommercial License 1.0.0", license_text)
+        self.assertIn("Commercial use is not granted", license_text)
+        self.assertIn("未经适用著作权人事先书面授权", commercial)
+        self.assertIn("prior written authorization", commercial)
+        self.assertIn("does not clear any third-party", third_party)
+        self.assertIn("PolyForm Noncommercial License 1.0.0", readme_zh)
+        self.assertIn("未经适用著作权人事先书面授权", readme_zh)
+        self.assertIn("PolyForm Noncommercial License 1.0.0", readme_en)
+        self.assertIn("require prior written authorization", readme_en)
+        self.assertNotIn(
+            "链邻原创代码与文档采用 Apache-2.0",
+            readme_zh,
+        )
+        self.assertNotIn(
+            "Lianlin first-party code and original documentation are Apache-2.0",
+            readme_en,
+        )
+        package_script = (ROOT / "scripts" / "package_release.py").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn('"COMMERCIAL_LICENSE.md"', package_script)
+
     def test_site_catalog_matches_canonical(self):
         site = load("site/data/catalog.json")
         self.assertEqual(site["summary"]["skillCount"], len(self.skills))

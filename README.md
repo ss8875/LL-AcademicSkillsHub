@@ -8,6 +8,7 @@
   <a href="https://ky.ec51.com/">官方网站</a> ·
   <a href="#18-大分类--187-项技能完整能力清单">全部技能</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
+  <a href="./docs/github-publishing-guide.zh-CN.md">GitHub 发布手册</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">下载科研 AI 平台</a> ·
   <a href="./docs/quality-model.zh-CN.md">质量模型</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/actions">质量流水线</a>
@@ -16,6 +17,8 @@
 # 链邻学术技能仓库
 
 LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完成科研论文创作，共**187 项技能**、**18 个类别**。
+
+> **许可提示：**链邻原创部分仅限许可范围内的非商业使用；未经适用著作权人事先书面授权，不得进行商业化或用于其他直接、间接商业用途。第三方内容仍适用各自上游条款。详见[商业授权说明](./COMMERCIAL_LICENSE.md)。
 
 ## 你可以做什么
 
@@ -734,4 +737,6 @@ npx skills update --global --yes
 
 ## 许可证
 
-链邻原创代码与文档采用 Apache-2.0。第三方技能继续适用其上游条款，不能因进入本仓库而被自动视为 Apache-2.0。
+自 2026 年 7 月 26 日起，链邻原创代码、原创技能、原创文档、目录元数据、网站代码与原创品牌资产采用 [PolyForm Noncommercial License 1.0.0](./LICENSE)。允许许可范围内的非商业研究、学习、教学和评估；**未经适用著作权人事先书面授权，不得用于销售、收费服务、SaaS、付费培训或咨询、商业产品集成、企业商业研发及其他直接或间接商业用途。** 商业授权与历史版本说明见 [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md)。
+
+第三方技能、代码、模型、数据、API、字体、商标和运行依赖继续适用各自上游条款，不能因进入本仓库而被重新许可；链邻商业授权也不替代第三方授权。详见 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md)。
