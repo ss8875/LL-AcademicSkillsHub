@@ -4,6 +4,7 @@ import functools
 import html
 import importlib.util
 import json
+import struct
 import threading
 import unittest
 import urllib.error
@@ -251,6 +252,95 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("./assets/brand/skill-architecture-map.en.svg", readme_en)
         for slug in stage_slugs:
             self.assertIn(f"./assets/brand/skill-architecture/{slug}.en.svg", readme_en)
+
+    def test_skill_combination_maps_cover_all_187_skills(self):
+        combinations = load("catalog/skill-combinations.json")
+        self.assertEqual(len(combinations), 50)
+        self.assertEqual(len({item["id"] for item in combinations}), 50)
+        used = []
+        gallery = (ROOT / "docs" / "skill-combinations.zh-CN.md").read_text(
+            encoding="utf-8"
+        )
+        for item in combinations:
+            with self.subTest(combination=item["id"]):
+                self.assertGreaterEqual(len(item["skills"]), 3)
+                self.assertLessEqual(len(item["skills"]), 6)
+                node_ids = [node["id"] for node in item["skills"]]
+                self.assertEqual(len(node_ids), len(set(node_ids)))
+                self.assertTrue(item["input"])
+                self.assertTrue(item["output"])
+                self.assertTrue(item["gain"])
+                self.assertTrue(item["quality"])
+                for node in item["skills"]:
+                    self.assertTrue(node["role"])
+                    self.assertTrue(node["handoff"])
+                used.extend(node_ids)
+
+                svg_path = (
+                    ROOT
+                    / "assets"
+                    / "brand"
+                    / "skill-combinations"
+                    / f"{item['id']}.svg"
+                )
+                png_path = (
+                    ROOT
+                    / "assets"
+                    / "brand"
+                    / "skill-combinations"
+                    / "png"
+                    / f"{item['id']}.png"
+                )
+                ET.parse(svg_path)
+                with png_path.open("rb") as handle:
+                    self.assertEqual(handle.read(8), b"\x89PNG\r\n\x1a\n")
+                    length = struct.unpack(">I", handle.read(4))[0]
+                    self.assertEqual(handle.read(4), b"IHDR")
+                    width, height = struct.unpack(">II", handle.read(8))
+                    self.assertGreaterEqual(length, 13)
+                    self.assertEqual((width, height), (1920, 1080))
+                self.assertIn(f'id="{item["id"]}"', gallery)
+
+        self.assertEqual(set(used), {skill["id"] for skill in self.skills})
+        self.assertEqual(len(used), 245)
+        self.assertEqual(
+            len(
+                list(
+                    (ROOT / "assets" / "brand" / "skill-combinations").glob(
+                        "[0-9][0-9]-*.svg"
+                    )
+                )
+            ),
+            50,
+        )
+        self.assertEqual(
+            len(
+                list(
+                    (
+                        ROOT
+                        / "assets"
+                        / "brand"
+                        / "skill-combinations"
+                        / "png"
+                    ).glob("[0-9][0-9]-*.png")
+                )
+            ),
+            50,
+        )
+        ET.parse(ROOT / "assets" / "brand" / "skill-combinations" / "index.svg")
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("## 技能组合使用举例", readme)
+        self.assertIn("./assets/brand/skill-combinations/index.svg", readme)
+        self.assertIn("./docs/skill-combinations.zh-CN.md", readme)
+        self.assertEqual(
+            readme.count("./assets/brand/skill-combinations/index.svg"),
+            1,
+        )
+        self.assertLess(
+            readme.index("## 技能组合使用举例"),
+            readme.index("### 18 大分类 · 187 项技能完整能力清单"),
+        )
+        self.assertEqual(gallery.count("**组合使用方式：**"), 50)
 
     def test_chinese_installation_is_detailed_and_follows_the_skill_catalog(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

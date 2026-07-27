@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "combinationCount": 50,
+  "skillCatalogCount": 187,
+  "uniqueSkillsCovered": 187,
+  "coveragePercent": 100.0,
+  "totalSkillSlots": 245,
+  "reusedSkillCount": 45,
+  "categorySlots": {
+    "academic-core": 15,
+    "bioinformatics-genomics": 21,
+    "cheminformatics-drug-discovery": 13,
+    "clinical-precision-medicine": 22,
+    "data-analysis-statistics": 26,
+    "document-data-tools": 7,
+    "finance-economics": 7,
+    "geospatial-remote-sensing": 2,
+    "lab-automation": 11,
+    "literature-management": 12,
+    "machine-learning-ai": 18,
+    "materials-physics": 12,
+    "platform-infrastructure": 5,
+    "presentation-visualization": 15,
+    "protein-structural-biology": 9,
+    "research-methods": 14,
+    "scientific-communication": 9,
+    "scientific-databases": 27
+  },
+  "errors": [],
+  "warnings": []
+}

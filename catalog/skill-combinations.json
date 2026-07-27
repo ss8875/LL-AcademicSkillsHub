@@ -1,0 +1,897 @@
+[
+  {
+    "id": "01-frontier-radar",
+    "chapter": "研究发现与证据治理",
+    "title": "研究前沿雷达：从趋势信号到可检验选题",
+    "goal": "把分散的新文献、引文网络和跨学科观点收束为有证据支撑的研究机会。",
+    "input": "研究领域、时间窗口、目标人群或技术边界",
+    "output": "前沿主题簇、研究空白、候选问题与反证清单",
+    "gain": "趋势、创意与多视角质疑同步发生，避免只追热点或只凭直觉选题。",
+    "quality": "区分增长趋势与真实空白；保存检索日期、查询条件和反方证据。",
+    "pattern": "radar",
+    "skills": [
+      {"id": "openalex-database", "role": "扫描产出、作者与引文网络", "handoff": "主题簇与时间趋势"},
+      {"id": "parallel-web", "role": "补充实时政策与产业信号", "handoff": "带来源的外部信号"},
+      {"id": "scientific-brainstorming", "role": "生成跨学科问题连接", "handoff": "候选研究方向"},
+      {"id": "consciousness-council", "role": "引入多角色专业质疑", "handoff": "争议点与替代解释"},
+      {"id": "ll-topic-analysis", "role": "综合新颖性、价值与可行性", "handoff": "可追溯选题报告"}
+    ]
+  },
+  {
+    "id": "02-reproducible-search",
+    "chapter": "研究发现与证据治理",
+    "title": "可复现系统检索：从概念块到可审计文献池",
+    "goal": "把研究问题转化为跨数据库可复查、可去重、可筛选的检索流水线。",
+    "input": "PICO/研究问题、同义词、纳排标准、日期范围",
+    "output": "完整检索式、去重文献池、筛选日志与 PRISMA 流转统计",
+    "gain": "数据库覆盖与检索决策被完整记录，后续综述可重跑、可解释。",
+    "quality": "保留每库命中数、查询式和日期；数据库未检出不得表述为证据不存在。",
+    "pattern": "pipeline",
+    "skills": [
+      {"id": "ll-paper-search", "role": "设计概念块与可复现检索协议", "handoff": "查询式与纳排口径"},
+      {"id": "pubmed-database", "role": "执行医学 MeSH 与布尔检索", "handoff": "医学题录记录"},
+      {"id": "biorxiv-database", "role": "补充生命科学预印本", "handoff": "前沿预印本记录"},
+      {"id": "research-lookup", "role": "路由其他学科与实时来源", "handoff": "跨库补充记录"}
+    ]
+  },
+  {
+    "id": "03-fulltext-evidence-reading",
+    "chapter": "研究发现与证据治理",
+    "title": "合法全文精读：从论文定位到双语证据卡",
+    "goal": "合法获得全文，完成中英文术语对齐和可定位的证据抽取。",
+    "input": "题录、DOI、研究问题与需要核验的主张",
+    "output": "全文来源记录、双语术语表、论文证据卡与可复用笔记",
+    "gain": "从“读过摘要”升级为对方法、数据、结果和限制都有锚点的全文证据。",
+    "quality": "不绕过访问控制；页码、图表和原文位置必须可回查；推断与原文分开。",
+    "pattern": "evidence-chain",
+    "skills": [
+      {"id": "ll-lawful-fulltext-acquisition", "role": "通过合规路径定位全文", "handoff": "合法全文与获取记录"},
+      {"id": "pdf", "role": "提取正文、表格与页码锚点", "handoff": "结构化全文内容"},
+      {"id": "markitdown", "role": "转换为可检索 Markdown", "handoff": "保留标题层级的文本"},
+      {"id": "bgpt-paper-search", "role": "补充全文实验字段", "handoff": "方法与样本结构数据"},
+      {"id": "ll-bilingual-evidence-reader", "role": "对齐中英文术语与证据", "handoff": "双语证据锚点"},
+      {"id": "ll-paper-analysis", "role": "形成问题—方法—结论证据卡", "handoff": "可追溯论文分析"}
+    ]
+  },
+  {
+    "id": "04-review-citation-loop",
+    "chapter": "研究发现与证据治理",
+    "title": "综述与引用闭环：从证据综合到零断链参考文献",
+    "goal": "把系统检索结果组织为主题证据，并保证正文引文与参考文献逐项一致。",
+    "input": "去重文献池、证据卡、目标综述范围与引用格式",
+    "output": "证据矩阵、综述初稿、Zotero 文库与引用审计报告",
+    "gain": "证据综合、文献资产管理和引用核验不再是三个割裂步骤。",
+    "quality": "DOI、作者、年份和页码必须核验；不得用二手引文替代原始来源。",
+    "pattern": "closed-loop",
+    "skills": [
+      {"id": "open-notebook", "role": "组织全文、笔记与主题材料", "handoff": "可检索研究知识库"},
+      {"id": "literature-review", "role": "综合主题、方法与证据差异", "handoff": "证据矩阵与综述结构"},
+      {"id": "citation-management", "role": "核对题录并生成规范引用", "handoff": "标准化 BibTeX"},
+      {"id": "pyzotero", "role": "同步集合、标签与附件", "handoff": "可维护文献库"},
+      {"id": "ll-citation-audit", "role": "校验正文与参考文献一致性", "handoff": "缺失、错配与修复清单"}
+    ]
+  },
+  {
+    "id": "05-live-evidence-verification",
+    "chapter": "研究发现与证据治理",
+    "title": "实时证据核验：把最新信息变成可用而不过度外推的结论",
+    "goal": "对快速变化的科研信息进行实时查找、交叉核验和情景压力测试。",
+    "input": "待核验主张、时间边界、证据强度要求与决策场景",
+    "output": "来源对照表、证据等级、冲突解释与条件化结论",
+    "gain": "速度由实时搜索提供，可信度由批判评估和情景分析兜底。",
+    "quality": "至少交叉核验关键主张；标注访问日期；相关性不得写成因果。",
+    "pattern": "verification-loop",
+    "skills": [
+      {"id": "perplexity-search", "role": "捕获最新研究与公开信息", "handoff": "带引文的实时答案"},
+      {"id": "research-lookup", "role": "切换学术检索后端复核", "handoff": "独立来源与论文记录"},
+      {"id": "scientific-critical-thinking", "role": "评估偏倚、设计与证据等级", "handoff": "可信度与缺陷清单"},
+      {"id": "what-if-oracle", "role": "测试边界条件和替代情景", "handoff": "条件分支与失效场景"}
+    ]
+  },
+  {
+    "id": "06-hypothesis-to-study-plan",
+    "chapter": "研究设计与项目治理",
+    "title": "假设到研究方案：让好想法真正可检验",
+    "goal": "把观察或创意转化为机制假设、可证伪预测、分析计划和正式方案。",
+    "input": "研究观察、已有证据、目标变量、资源限制",
+    "output": "假设树、实验或观察设计、统计分析计划与研究方案",
+    "gain": "把“想研究什么”贯通到“怎样被数据支持或推翻”。",
+    "quality": "预先定义终点、排除和判定规则；禁止看到结果后静默改写假设。",
+    "pattern": "design-funnel",
+    "skills": [
+      {"id": "hypothesis-generation", "role": "构建机制假设与可证伪预测", "handoff": "假设树与预测"},
+      {"id": "scientific-critical-thinking", "role": "识别混杂、偏倚和替代解释", "handoff": "威胁清单"},
+      {"id": "statistical-analysis", "role": "定义效应、样本和分析策略", "handoff": "预分析计划"},
+      {"id": "denario", "role": "编排数据分析到论文的研究链", "handoff": "可执行研究工作流"},
+      {"id": "research-proposal", "role": "组织为规范研究方案", "handoff": "完整 proposal"}
+    ]
+  },
+  {
+    "id": "07-nsfc-proposal-engine",
+    "chapter": "研究设计与项目治理",
+    "title": "国家自然科学基金：证据、创新链与评审逻辑协同",
+    "goal": "把科学问题、前期基础、技术路线和申请规范整合为可审查的 NSFC 申请。",
+    "input": "申报类型、研究基础、科学问题、团队条件与预算边界",
+    "output": "立项依据、研究内容、技术路线、创新点与自查报告",
+    "gain": "申请写作不再从空白文档开始，而由证据检索、创新论证和评审标准共同驱动。",
+    "quality": "引用真实可查；创新点与已有工作明确区分；满足当年模板和伦理要求。",
+    "pattern": "proposal-stack",
+    "skills": [
+      {"id": "ll-paper-search", "role": "构建可复核国内外证据底座", "handoff": "检索记录与关键文献"},
+      {"id": "research-grants", "role": "提炼资助逻辑和评审关注点", "handoff": "价值主张与风险表"},
+      {"id": "nsfc-proposal", "role": "按 NSFC 模块组织申请书", "handoff": "完整申请草稿"},
+      {"id": "ll-citation-audit", "role": "核验关键引用与元数据", "handoff": "引用修复清单"}
+    ]
+  },
+  {
+    "id": "08-nssfc-humanities-engine",
+    "chapter": "研究设计与项目治理",
+    "title": "国家社科基金：从社会事实到理论问题与规范活页",
+    "goal": "连接公共统计、文本认知模式和社科文献，形成理论清楚、材料可靠的 NSSFC 方案。",
+    "input": "社科主题、理论框架、研究对象、资料来源与项目类型",
+    "output": "选题说明、理论框架、研究内容、创新点与匿名活页",
+    "gain": "宏观事实、文本深描和文献谱系共同支撑选题，避免只有口号没有材料。",
+    "quality": "统计口径和来源可追溯；文本解释保留语境；匿名活页满足格式要求。",
+    "pattern": "triangulation",
+    "skills": [
+      {"id": "datacommons-client", "role": "获取人口、经济与社会统计", "handoff": "可追溯公共指标"},
+      {"id": "dhdna-profiler", "role": "提取文本认知与论证模式", "handoff": "结构化文本特征"},
+      {"id": "literature-review", "role": "梳理理论谱系与研究争议", "handoff": "主题证据矩阵"},
+      {"id": "nssfc-proposal", "role": "按社科基金规范形成申请", "handoff": "申请书与匿名活页"}
+    ]
+  },
+  {
+    "id": "09-research-to-patent",
+    "chapter": "研究设计与项目治理",
+    "title": "科研成果到专利：从技术特征到可防守权利边界",
+    "goal": "把论文或实验成果拆解为技术特征，检索现有技术并评估转化路径。",
+    "input": "研究成果、实验数据、技术方案、拟保护市场",
+    "output": "发明披露、现有技术对照、风险登记与权利要求素材",
+    "gain": "科研新颖性、专利新颖性和市场价值被分开评估后再综合决策。",
+    "quality": "不把检索结果当法律意见；保密披露顺序和申请时点必须由专业人员复核。",
+    "pattern": "decision-gate",
+    "skills": [
+      {"id": "ll-research-to-patent", "role": "拆解技术特征与潜在保护点", "handoff": "技术特征矩阵"},
+      {"id": "uspto-database", "role": "检索专利、引用和审查历史", "handoff": "现有技术证据"},
+      {"id": "market-research-reports", "role": "分析市场、竞品和应用空间", "handoff": "商业场景与竞争格局"},
+      {"id": "what-if-oracle", "role": "测试规避设计和失败情景", "handoff": "风险分支与应对策略"}
+    ]
+  },
+  {
+    "id": "10-manuscript-quality-loop",
+    "chapter": "研究设计与项目治理",
+    "title": "投稿质量闭环：从证据写作到模拟审稿与格式落地",
+    "goal": "让论文在逻辑、语言、证据、评审和投稿格式五个层面连续过关。",
+    "input": "研究结果、证据表、图表、目标期刊与论文草稿",
+    "output": "投稿版论文、审稿问题清单、修订记录与格式合规包",
+    "gain": "写作、润色、评审和格式不再互相覆盖职责，修改原因清楚可追踪。",
+    "quality": "不改写事实和数据；每个主张有证据；修改痕迹和未解决问题保留。",
+    "pattern": "review-loop",
+    "skills": [
+      {"id": "scientific-writing", "role": "按 IMRAD 与证据结构起草正文", "handoff": "完整论文草稿"},
+      {"id": "ll-paper-polish", "role": "优化逻辑、术语和语言连贯性", "handoff": "保真润色稿"},
+      {"id": "peer-review", "role": "模拟方法、统计和报告审查", "handoff": "结构化审稿意见"},
+      {"id": "scholar-evaluation", "role": "量化研究质量维度与缺口", "handoff": "评分与改进优先级"},
+      {"id": "venue-templates", "role": "应用目标期刊模板与规范", "handoff": "格式合规稿"},
+      {"id": "docx", "role": "生成可追踪修改的投稿文档", "handoff": "可编辑 Word 交付件"}
+    ]
+  },
+  {
+    "id": "11-fair-experiment-record",
+    "chapter": "研究设计与项目治理",
+    "title": "实验记录与 FAIR：让每个结果都能追到材料、协议和原始数据",
+    "goal": "把实验目标、材料批次、协议偏差、原始数据和数据可用性连成审计链。",
+    "input": "实验计划、材料清单、协议、运行记录与数据文件",
+    "output": "可追溯实验记录、结构化数据表、偏差日志与数据可用性声明",
+    "gain": "实验记录从个人笔记升级为可交接、可复现、可发布的研究资产。",
+    "quality": "材料批次、时间、版本和偏差必须记录；敏感数据按权限分级。",
+    "pattern": "traceability-chain",
+    "skills": [
+      {"id": "protocolsio-integration", "role": "管理标准协议与步骤版本", "handoff": "版本化实验协议"},
+      {"id": "ll-experiment-notebook", "role": "连接材料、偏差、数据与结果", "handoff": "实验追溯记录"},
+      {"id": "labarchive-integration", "role": "同步条目、附件与备份", "handoff": "电子实验笔记资产"},
+      {"id": "xlsx", "role": "结构化样本、批次与测量数据", "handoff": "可校验数据表"},
+      {"id": "ll-research-data-availability", "role": "评估 FAIR 与共享边界", "handoff": "数据可用性声明"}
+    ]
+  },
+  {
+    "id": "12-conference-dissemination",
+    "chapter": "学术表达与成果传播",
+    "title": "会议传播矩阵：一篇论文衍生六种专业表达",
+    "goal": "把论文核心结论转化为演讲、海报、幻灯片和在线传播材料。",
+    "input": "论文、关键图表、会议尺寸、受众与演讲时长",
+    "output": "学术网站、演示文稿、两类海报、信息图与可编辑 PPTX",
+    "gain": "同一证据主线适配不同媒介，避免每种材料重新解释或相互矛盾。",
+    "quality": "所有数字与论文一致；图像来源清楚；版式在实际尺寸下可读。",
+    "pattern": "fan-out",
+    "skills": [
+      {"id": "paper-2-web", "role": "生成论文网站与视频摘要", "handoff": "在线传播入口"},
+      {"id": "paper-slide-deck", "role": "提炼叙事并生成逐页画面", "handoff": "会议幻灯片图像"},
+      {"id": "latex-posters", "role": "制作出版级 LaTeX 海报", "handoff": "印刷海报"},
+      {"id": "pptx-posters", "role": "制作可编辑 PowerPoint 海报", "handoff": "可编辑海报"},
+      {"id": "infographics", "role": "浓缩方法与结论关系", "handoff": "专业信息图"},
+      {"id": "pptx", "role": "组装、检查并交付演示文件", "handoff": "最终 PPTX"}
+    ]
+  },
+  {
+    "id": "13-scientific-visual-system",
+    "chapter": "学术表达与成果传播",
+    "title": "科研视觉系统：数据图、机制图、流程图与演讲统一叙事",
+    "goal": "根据证据类型选择正确视觉媒介，并保持论文、答辩和传播版本一致。",
+    "input": "数据、方法流程、机制假设、视觉规范与目标媒介",
+    "output": "统计图、技术示意图、文本流程图、概念视觉与科学演示",
+    "gain": "数据图不冒充示意图，AI 图不冒充实验图，所有视觉各司其职又共享叙事。",
+    "quality": "数据—图形一致；色觉友好；生成图明确标注；保留可编辑源文件。",
+    "pattern": "visual-orchestra",
+    "skills": [
+      {"id": "scientific-visualization", "role": "生成出版级统计图和多面板图", "handoff": "可复核数据图"},
+      {"id": "scientific-schematics", "role": "绘制机制、系统与技术示意图", "handoff": "科学示意图"},
+      {"id": "markdown-mermaid-writing", "role": "记录可版本控制的流程关系", "handoff": "文本化图解"},
+      {"id": "generate-image", "role": "生成非技术概念视觉素材", "handoff": "传播用视觉资产"},
+      {"id": "scientific-slides", "role": "把视觉组织为科学叙事", "handoff": "演讲结构与幻灯片"}
+    ]
+  },
+  {
+    "id": "14-sequence-data-foundation",
+    "chapter": "组学与生命科学",
+    "title": "序列数据基础链：从公共归档到可复现批处理",
+    "goal": "可靠获取 DNA/RNA 数据，解析格式、核对标识并形成批量分析输入。",
+    "input": "项目 accession、物种、参考版本与目标序列范围",
+    "output": "标准化序列、比对文件索引、元数据与可复现下载日志",
+    "gain": "公共库检索、格式处理和跨库注释在同一版本契约下衔接。",
+    "quality": "记录参考版本、校验和与下载日期；物种、样本和链方向必须核对。",
+    "pattern": "data-foundation",
+    "skills": [
+      {"id": "ena-database", "role": "检索并下载序列与原始 reads", "handoff": "FASTQ/FASTA 与元数据"},
+      {"id": "biopython", "role": "解析序列格式并批量处理", "handoff": "规范化序列对象"},
+      {"id": "pysam", "role": "读写 BAM/VCF 并建立索引", "handoff": "可查询比对与变异文件"},
+      {"id": "gget", "role": "快速核对基因与序列注释", "handoff": "基因标识与注释"},
+      {"id": "bioservices", "role": "统一调用多种生物数据库", "handoff": "跨库映射结果"}
+    ]
+  },
+  {
+    "id": "15-single-cell-atlas",
+    "chapter": "组学与生命科学",
+    "title": "单细胞图谱：从参考细胞库到批次校正与细胞状态",
+    "goal": "把公共参考图谱和自有单细胞数据统一到可解释的细胞状态空间。",
+    "input": "单细胞表达矩阵、样本元数据、组织与疾病范围",
+    "output": "质控 AnnData、整合潜空间、细胞注释与差异表达结果",
+    "gain": "数据结构、标准流程、概率模型和参考图谱形成连续而非重复的分析链。",
+    "quality": "记录过滤阈值和批次；防止同一供体泄漏；注释需标置信心与证据。",
+    "pattern": "atlas-loop",
+    "skills": [
+      {"id": "cellxgene-census", "role": "查询大规模参考细胞群", "handoff": "参考表达与元数据"},
+      {"id": "anndata", "role": "统一表达矩阵和注释结构", "handoff": "标准 h5ad"},
+      {"id": "scanpy", "role": "完成 QC、聚类与差异分析", "handoff": "基础细胞图谱"},
+      {"id": "scvi-tools", "role": "概率批次校正与不确定性建模", "handoff": "整合潜空间"},
+      {"id": "umap-learn", "role": "构建可视化嵌入", "handoff": "细胞状态布局"}
+    ]
+  },
+  {
+    "id": "16-transcriptome-dynamics",
+    "chapter": "组学与生命科学",
+    "title": "表达调控动力学：从公共转录组到基因调控网络",
+    "goal": "连接差异表达、单细胞速度和调控网络，解释细胞状态如何变化。",
+    "input": "表达矩阵、剪接计数、转录因子列表与分组设计",
+    "output": "差异基因、RNA velocity、调控网络与可解释图形",
+    "gain": "静态表达差异被推进到方向性变化和候选调控机制。",
+    "quality": "批次与伪重复必须处理；网络边是统计推断而非已证实调控。",
+    "pattern": "mechanism-chain",
+    "skills": [
+      {"id": "geo-database", "role": "获取公开转录组与实验设计", "handoff": "表达数据与样本元数据"},
+      {"id": "pydeseq2", "role": "估计差异表达与效应", "handoff": "差异基因表"},
+      {"id": "scvelo", "role": "推断细胞状态变化方向", "handoff": "velocity 与潜时间"},
+      {"id": "arboreto", "role": "推断转录因子—靶基因网络", "handoff": "候选调控边"},
+      {"id": "seaborn", "role": "呈现分布、比较与网络摘要", "handoff": "分析图形"}
+    ]
+  },
+  {
+    "id": "17-epigenomic-interval-ml",
+    "chapter": "组学与生命科学",
+    "title": "表观基因组区间学习：从峰图谱到调控元件表征",
+    "goal": "对 ATAC/ChIP 区间进行质量控制、统一表示和机器学习嵌入。",
+    "input": "BED、BAM、bigWig、参考基因组与转录因子集合",
+    "output": "质控图谱、共识区间、区域嵌入与 motif 证据",
+    "gain": "原始信号、区间宇宙、嵌入表示和 motif 解释在同一坐标体系下连接。",
+    "quality": "参考基因组和染色体命名必须一致；峰宽、背景和 motif 阈值需记录。",
+    "pattern": "feature-pipeline",
+    "skills": [
+      {"id": "deeptools", "role": "执行 BAM 信号质控与覆盖图", "handoff": "标准化信号轨迹"},
+      {"id": "gtars", "role": "高性能处理基因组区间", "handoff": "统一区间集合"},
+      {"id": "geniml", "role": "学习区域嵌入与共识峰", "handoff": "区间向量表示"},
+      {"id": "jaspar-database", "role": "匹配转录因子 motif", "handoff": "候选调控因子"},
+      {"id": "zarr-python", "role": "分块保存大规模特征数组", "handoff": "可扩展分析存储"}
+    ]
+  },
+  {
+    "id": "18-phylogenomics",
+    "chapter": "组学与生命科学",
+    "title": "系统发育基因组学：从基因标识到可解释演化树",
+    "goal": "将可靠序列、分类信息和距离模型整合为可复核的演化关系。",
+    "input": "目标基因或物种、序列、分类范围与进化模型",
+    "output": "同源序列集、比对、系统树、事件注释与不确定性说明",
+    "gain": "序列选择、树构建和物种注释彼此校验，减少错误同源关系造成的假结论。",
+    "quality": "区分基因树与物种树；报告模型、bootstrap 和序列过滤规则。",
+    "pattern": "tree-building",
+    "skills": [
+      {"id": "gene-database", "role": "核对基因标识、位置与同源信息", "handoff": "基因实体集合"},
+      {"id": "scikit-bio", "role": "执行比对、距离和多样性计算", "handoff": "距离矩阵与比对"},
+      {"id": "phylogenetics", "role": "选择模型并构建系统树", "handoff": "带支持度的树"},
+      {"id": "etetoolkit", "role": "注释树、分类和演化事件", "handoff": "可视化演化树"}
+    ]
+  },
+  {
+    "id": "19-population-variant-interpretation",
+    "chapter": "组学与生命科学",
+    "title": "群体变异解释：从大规模 VCF 到组织机制和临床证据",
+    "goal": "在群体频率、基因组注释、组织表达和 GWAS 证据之间解释候选变异。",
+    "input": "VCF、目标性状、基因组版本、人群与组织范围",
+    "output": "变异注释表、频率证据、eQTL/GWAS 关联与解释等级",
+    "gain": "大规模计算、功能注释和群体证据共同约束变异解释，减少单库结论。",
+    "quality": "统一 genome build 和等位基因方向；关联证据不自动等于致病因果。",
+    "pattern": "evidence-fusion",
+    "skills": [
+      {"id": "tiledbvcf", "role": "查询大规模队列变异数据", "handoff": "候选变异集合"},
+      {"id": "ensembl-database", "role": "执行基因与 VEP 功能注释", "handoff": "变异后果"},
+      {"id": "gnomad-database", "role": "核对人群频率与基因约束", "handoff": "频率和约束证据"},
+      {"id": "gtex-database", "role": "连接组织表达和 eQTL", "handoff": "组织调控证据"},
+      {"id": "gwas-database", "role": "检索性状关联和效应方向", "handoff": "GWAS 证据"},
+      {"id": "clinvar-database", "role": "核对临床分类与冲突记录", "handoff": "临床解释状态"}
+    ]
+  },
+  {
+    "id": "20-omics-cloud-platform",
+    "chapter": "组学与生命科学",
+    "title": "组学云计算平台：从数据资产到可扩展工作流",
+    "goal": "管理大规模组学数据、固定数据谱系并按资源需求在云端执行。",
+    "input": "组学文件、分析工作流、计算资源、数据权限与成本上限",
+    "output": "版本化数据资产、云工作流、运行日志与资源成本报告",
+    "gain": "数据目录、工作流部署和算力扩展共享同一版本与权限边界。",
+    "quality": "先小规模验证；密钥不入仓；记录镜像、资源、费用和失败恢复路径。",
+    "pattern": "platform-stack",
+    "skills": [
+      {"id": "lamindb", "role": "管理生物数据资产与谱系", "handoff": "版本化数据目录"},
+      {"id": "dnanexus-integration", "role": "构建受控基因组云任务", "handoff": "DNAnexus 工作流"},
+      {"id": "latchbio-integration", "role": "封装并部署生信任务", "handoff": "可复用云端 pipeline"},
+      {"id": "dask", "role": "并行处理超内存数据", "handoff": "分布式计算图"},
+      {"id": "vaex", "role": "探索大规模表格与特征", "handoff": "低内存分析结果"},
+      {"id": "modal", "role": "按需提供容器与 GPU 算力", "handoff": "弹性执行环境"}
+    ]
+  },
+  {
+    "id": "21-flow-cytometry-analysis",
+    "chapter": "组学与生命科学",
+    "title": "流式细胞术分析：从 FCS 事件到可审计群体比较",
+    "goal": "解析流式数据、记录门控和批次，并完成统计比较与可视化。",
+    "input": "FCS 文件、通道面板、补偿矩阵、分组与门控策略",
+    "output": "事件矩阵、门控记录、细胞群比例、统计结果与图形",
+    "gain": "原始事件、分析选择和统计结论处于同一审计链，便于复核门控偏差。",
+    "quality": "记录补偿、变换和门控阈值；实验批次和技术重复不得忽略。",
+    "pattern": "analysis-loop",
+    "skills": [
+      {"id": "flowio", "role": "解析 FCS 事件与通道元数据", "handoff": "事件矩阵"},
+      {"id": "ll-experiment-notebook", "role": "关联面板、批次和实验偏差", "handoff": "实验上下文"},
+      {"id": "statistical-analysis", "role": "比较细胞群和效应不确定性", "handoff": "统计检验与效应量"},
+      {"id": "plotly", "role": "交互检查门控和群体分布", "handoff": "可探索流式图"}
+    ]
+  },
+  {
+    "id": "22-chemical-data-curation",
+    "chapter": "药物发现与蛋白工程",
+    "title": "化学数据治理：从公共化合物库到可计算分子集合",
+    "goal": "获取结构和活性数据，完成分子规范化、去重、药化过滤与版本记录。",
+    "input": "靶点、化合物名称/SMILES、活性阈值和筛选范围",
+    "output": "规范化分子库、描述符、活性表与药化风险标签",
+    "gain": "数据库事实、结构标准化和药化规则先统一，再进入模型或对接。",
+    "quality": "统一盐型、质子化和测定单位；同名化合物不得仅靠名称合并。",
+    "pattern": "curation-pipeline",
+    "skills": [
+      {"id": "pubchem-database", "role": "获取结构、性质和相似化合物", "handoff": "基础化合物记录"},
+      {"id": "chembl-database", "role": "获取靶点活性与测定数据", "handoff": "标准化活性记录"},
+      {"id": "rdkit", "role": "精细结构清洗与描述符计算", "handoff": "规范分子与特征"},
+      {"id": "datamol", "role": "批量标准化、聚类和构象生成", "handoff": "分析就绪分子集"},
+      {"id": "medchem", "role": "评估药化规则与结构警示", "handoff": "候选过滤标签"}
+    ]
+  },
+  {
+    "id": "23-molecular-machine-learning",
+    "chapter": "药物发现与蛋白工程",
+    "title": "分子机器学习：从表示学习到可解释候选排序",
+    "goal": "构建分子特征和预测模型，并用适用域与解释约束候选优先级。",
+    "input": "SMILES、活性标签、任务类型、数据拆分与目标指标",
+    "output": "特征矩阵、基线/深度模型、外部验证和候选排序",
+    "gain": "数据集、分子表示、模型和解释模块明确分工，降低高分模型不可用风险。",
+    "quality": "按骨架或时间拆分防泄漏；报告适用域、校准和外部验证。",
+    "pattern": "model-stack",
+    "skills": [
+      {"id": "pytdc", "role": "提供标准药物发现数据与任务", "handoff": "基准数据集"},
+      {"id": "molfeat", "role": "生成指纹、描述符与预训练表示", "handoff": "分子特征矩阵"},
+      {"id": "deepchem", "role": "训练与评估分子预测模型", "handoff": "预测与性能指标"},
+      {"id": "torchdrug", "role": "构建图模型和生成式任务", "handoff": "深度分子模型"},
+      {"id": "shap", "role": "解释特征与候选预测", "handoff": "局部和全局解释"}
+    ]
+  },
+  {
+    "id": "24-structure-based-screening",
+    "chapter": "药物发现与蛋白工程",
+    "title": "结构虚拟筛选：从蛋白结构到可实验验证的结合姿势",
+    "goal": "构建可信靶点结构和配体集合，完成对接、亲和证据整合与动力学复核。",
+    "input": "靶点结构/序列、配体库、结合位点和筛选预算",
+    "output": "对接姿势、置信评分、实测亲和证据与动力学候选",
+    "gain": "计算姿势、公共亲和数据和动力学稳定性互相制约，不迷信单一 docking 分数。",
+    "quality": "检查结构质量、质子化和位点；对接分数不等于活性，必须实验验证。",
+    "pattern": "screening-funnel",
+    "skills": [
+      {"id": "pdb-database", "role": "获取实验蛋白结构与元数据", "handoff": "靶点结构"},
+      {"id": "zinc-database", "role": "准备可购 3D 分子集合", "handoff": "筛选配体库"},
+      {"id": "diffdock", "role": "预测蛋白—配体结合姿势", "handoff": "姿势与置信度"},
+      {"id": "bindingdb-database", "role": "补充实测 Ki/Kd/IC50 证据", "handoff": "亲和参照数据"},
+      {"id": "molecular-dynamics", "role": "评估构象与相互作用稳定性", "handoff": "动力学轨迹与指标"}
+    ]
+  },
+  {
+    "id": "25-metabolomics-identification",
+    "chapter": "药物发现与蛋白工程",
+    "title": "代谢组鉴定：从原始质谱峰到通路和酶动力学解释",
+    "goal": "处理质谱数据、匹配谱图、核对代谢物并连接生化反应证据。",
+    "input": "LC/GC-MS 数据、峰表、实验条件、质量误差和样本分组",
+    "output": "特征峰、谱图匹配、代谢物等级、通路与酶学解释",
+    "gain": "算法匹配、权威数据库和酶动力学形成证据梯度，避免把候选峰直接当确认物。",
+    "quality": "报告鉴定等级、质量误差和标准品状态；数据库匹配不等于结构确证。",
+    "pattern": "identification-ladder",
+    "skills": [
+      {"id": "pyopenms", "role": "提取、对齐并定量质谱特征", "handoff": "峰与特征表"},
+      {"id": "matchms", "role": "清洗谱图并计算相似性", "handoff": "谱图匹配候选"},
+      {"id": "hmdb-database", "role": "核对人类代谢物与生物标志物", "handoff": "代谢物注释"},
+      {"id": "metabolomics-workbench-database", "role": "对照公开研究和 RefMet", "handoff": "研究与命名证据"},
+      {"id": "brenda-database", "role": "补充酶反应与动力学参数", "handoff": "生化机制证据"}
+    ]
+  },
+  {
+    "id": "26-quantum-chemistry-to-material",
+    "chapter": "药物发现与蛋白工程",
+    "title": "量子化学到材料结构：从分子计算任务到可比较性质",
+    "goal": "在受控计算环境中执行量子化学任务，并把结果映射到结构—性质比较。",
+    "input": "分子/晶体结构、计算方法、基组、边界条件与目标性质",
+    "output": "计算输入、收敛日志、能量/性质结果与结构比较",
+    "gain": "云端量子计算、材料结构工具和可视化共享单位、版本与收敛标准。",
+    "quality": "先小体系验证；记录方法、单位和收敛阈值；模拟结果只在假设范围内成立。",
+    "pattern": "compute-stack",
+    "skills": [
+      {"id": "rowan", "role": "提交和管理云量子化学计算", "handoff": "量化计算结果"},
+      {"id": "pymatgen", "role": "解析结构并计算材料描述", "handoff": "结构—性质表"},
+      {"id": "qutip", "role": "检查量子态与动力学模型", "handoff": "量子系统结果"},
+      {"id": "scientific-visualization", "role": "比较能量、结构和不确定性", "handoff": "可发表结果图"}
+    ]
+  },
+  {
+    "id": "27-target-pathway-prioritization",
+    "chapter": "药物发现与蛋白工程",
+    "title": "靶点—通路优先级：从疾病证据到可干预网络",
+    "goal": "融合遗传、组学、药物和网络证据，形成可解释的治疗靶点排序。",
+    "input": "疾病、候选基因/蛋白、人群范围和证据阈值",
+    "output": "靶点证据矩阵、通路网络、已知药物与安全性缺口",
+    "gain": "靶点关联、药物知识和网络机制多源汇合，降低单一组学证据的偏差。",
+    "quality": "保存数据库版本；区分关联、机制和临床验证；避免循环证据。",
+    "pattern": "network-fusion",
+    "skills": [
+      {"id": "opentargets-database", "role": "汇总靶点—疾病多组学证据", "handoff": "靶点关联评分"},
+      {"id": "drugbank-database", "role": "核对药物、靶点和相互作用", "handoff": "已知干预证据"},
+      {"id": "string-database", "role": "构建蛋白互作网络", "handoff": "互作子网"},
+      {"id": "reactome-database", "role": "执行通路映射与富集", "handoff": "机制通路"},
+      {"id": "kegg-database", "role": "补充代谢与疾病路径", "handoff": "跨库通路证据"}
+    ]
+  },
+  {
+    "id": "28-protein-structure-annotation",
+    "chapter": "药物发现与蛋白工程",
+    "title": "蛋白结构注释：从序列身份到结构域、构象与功能位点",
+    "goal": "联合序列、结构预测、结构域和实验数据库构建可验证的蛋白功能解释。",
+    "input": "蛋白序列、物种、构建体、目标功能与已知结构",
+    "output": "序列注释、结构模型、置信度、结构域与候选功能位点",
+    "gain": "预测模型不再孤立使用，而由权威注释和结构域证据校正。",
+    "quality": "明确蛋白亚型、编号和修饰；预测结构不等同于真实构象与功能。",
+    "pattern": "annotation-stack",
+    "skills": [
+      {"id": "uniprot-database", "role": "核对序列、功能与亚细胞信息", "handoff": "权威蛋白记录"},
+      {"id": "interpro-database", "role": "识别结构域、家族与功能位点", "handoff": "结构域注释"},
+      {"id": "alphafold-database", "role": "获取预测结构和置信度", "handoff": "结构模型"},
+      {"id": "pdb-database", "role": "比对实验结构与配体信息", "handoff": "实验结构证据"},
+      {"id": "esm", "role": "生成序列表示与功能预测", "handoff": "蛋白语言模型特征"}
+    ]
+  },
+  {
+    "id": "29-protein-engineering-loop",
+    "chapter": "药物发现与蛋白工程",
+    "title": "蛋白工程闭环：从设计候选到云实验反馈",
+    "goal": "生成蛋白变体、评估序列与糖基化约束，并通过自动实验反馈迭代。",
+    "input": "目标蛋白、功能指标、允许突变、表达体系和实验预算",
+    "output": "变体清单、结构/序列评分、糖基化风险与实验结果",
+    "gain": "计算设计、生产约束和实验验证构成真正的设计—构建—测试—学习回路。",
+    "quality": "设计候选不等于功能实现；生物安全、实验条件和人工审批不可省略。",
+    "pattern": "design-build-test",
+    "skills": [
+      {"id": "adaptyv", "role": "生成与筛选蛋白设计候选", "handoff": "变体优先级"},
+      {"id": "esm", "role": "评估序列表示与突变合理性", "handoff": "序列模型评分"},
+      {"id": "glycoengineering", "role": "分析糖基化位点和生产风险", "handoff": "糖工程约束"},
+      {"id": "ginkgo-cloud-lab", "role": "执行云端蛋白表达实验", "handoff": "实验测量结果"},
+      {"id": "ll-experiment-notebook", "role": "记录批次、偏差与设计迭代", "handoff": "可追溯反馈数据"}
+    ]
+  },
+  {
+    "id": "30-precision-oncology",
+    "chapter": "临床与精准医学",
+    "title": "精准肿瘤研究：从患者变异到功能依赖与候选靶点",
+    "goal": "联合癌症基因组、体细胞变异、细胞系依赖和靶点证据形成研究假设。",
+    "input": "癌种、队列、基因/变异、分子分型和研究终点",
+    "output": "分子亚型、驱动证据、依赖性结果、靶点排序与验证建议",
+    "gain": "患者队列观察与细胞功能依赖互证，提高靶点假设的可验证性。",
+    "quality": "研究结果不构成个体治疗建议；队列偏倚与外部验证必须说明。",
+    "pattern": "translational-funnel",
+    "skills": [
+      {"id": "cbioportal-database", "role": "分析癌症队列和分子事件", "handoff": "队列变异与结局"},
+      {"id": "cosmic-database", "role": "核对体细胞突变和癌症证据", "handoff": "肿瘤变异证据"},
+      {"id": "depmap", "role": "评估细胞系基因依赖性", "handoff": "功能依赖结果"},
+      {"id": "opentargets-database", "role": "整合靶点可成药性与安全性", "handoff": "靶点优先级"},
+      {"id": "clinical-decision-support", "role": "结构化证据与适用边界", "handoff": "供专家复核的证据表"}
+    ]
+  },
+  {
+    "id": "31-pharmacogenomics-rare-disease",
+    "chapter": "临床与精准医学",
+    "title": "药物基因组与罕见病：从基因型到受控治疗证据",
+    "goal": "综合药物基因组、表型、群体频率和临床分类，支持专家级病例讨论。",
+    "input": "变异、基因、表型、用药史、人群与证据版本",
+    "output": "基因—表型关联、药物反应证据、变异等级与治疗讨论框架",
+    "gain": "变异、表型和药物证据被同屏审查，减少只看单一数据库的错误外推。",
+    "quality": "不输出自动处方；冲突证据必须保留；隐私、伦理和临床复核为硬门槛。",
+    "pattern": "clinical-evidence-fusion",
+    "skills": [
+      {"id": "clinpgx-database", "role": "查询基因—药物指导证据", "handoff": "药物基因组注释"},
+      {"id": "monarch-database", "role": "连接基因、疾病与表型", "handoff": "表型匹配证据"},
+      {"id": "clinvar-database", "role": "核对临床变异分类与冲突", "handoff": "变异解释状态"},
+      {"id": "gnomad-database", "role": "评估群体频率和基因约束", "handoff": "人群背景证据"},
+      {"id": "treatment-plans", "role": "组织供临床团队讨论的方案", "handoff": "受控治疗讨论稿"}
+    ]
+  },
+  {
+    "id": "32-medical-imaging-pipeline",
+    "chapter": "临床与精准医学",
+    "title": "医学影像研究：从 DICOM/全切片到可复核综述与模型数据",
+    "goal": "获取受控影像，完成脱敏、切片/像素处理、数据管理和领域综述。",
+    "input": "DICOM 或 WSI、研究队列、标注、模态与伦理许可",
+    "output": "脱敏影像集、图块/ROI、处理记录、模型输入与综述证据",
+    "gain": "数据获取、格式处理、病理分析、存储和文献背景成为一条受控链。",
+    "quality": "患者数据脱敏和访问控制优先；训练/验证按患者划分；外部验证必需。",
+    "pattern": "imaging-stack",
+    "skills": [
+      {"id": "imaging-data-commons", "role": "获取受控癌症影像与元数据", "handoff": "研究影像队列"},
+      {"id": "pydicom", "role": "解析、脱敏和转换 DICOM", "handoff": "标准化医学影像"},
+      {"id": "histolab", "role": "提取 WSI 组织和图块", "handoff": "基础病理图块"},
+      {"id": "pathml", "role": "执行高级病理与空间分析", "handoff": "病理特征"},
+      {"id": "omero-integration", "role": "管理影像、ROI 与批处理", "handoff": "可追踪影像资产"},
+      {"id": "medical-imaging-review", "role": "综合影像 AI 方法与证据", "handoff": "领域综述与研究空白"}
+    ]
+  },
+  {
+    "id": "33-clinical-regulatory-evidence",
+    "chapter": "临床与精准医学",
+    "title": "临床证据与医疗器械合规：从试验注册到质量体系",
+    "goal": "追踪临床试验和监管信息，形成规范临床报告并接受方法与质量体系审查。",
+    "input": "产品/干预、适应证、试验阶段、监管区域与质量目标",
+    "output": "试验证据表、监管状态、临床报告、审查意见与 QMS 缺口",
+    "gain": "临床证据、监管事实、报告规范和质量体系不再各自为政。",
+    "quality": "核对试验状态与更新时间；不把注册信息等同于有效性；法规需专业确认。",
+    "pattern": "compliance-gates",
+    "skills": [
+      {"id": "clinicaltrials-database", "role": "检索试验设计、状态与终点", "handoff": "试验证据表"},
+      {"id": "fda-database", "role": "核对药械、警示与监管记录", "handoff": "监管事实"},
+      {"id": "clinical-reports", "role": "形成结构化临床研究报告", "handoff": "临床报告草稿"},
+      {"id": "peer-review", "role": "审查方法、统计与报告规范", "handoff": "审查问题清单"},
+      {"id": "iso-13485-certification", "role": "分析医疗器械 QMS 文档缺口", "handoff": "合规整改路线"}
+    ]
+  },
+  {
+    "id": "34-neurophysiology-modeling",
+    "chapter": "临床与精准医学",
+    "title": "神经与生理信号：从原始波形到预后模型",
+    "goal": "同步处理多模态生理信号和神经电活动，并建立带时间结局的预测模型。",
+    "input": "ECG/EEG/EDA 或 Neuropixels 数据、事件标记、临床结局",
+    "output": "清洗信号、事件特征、神经活动指标、生存模型与不确定性",
+    "gain": "信号处理、神经数据分析和临床结局建模在患者与时间粒度上严格对齐。",
+    "quality": "防止事件和患者泄漏；记录滤波与伪迹规则；模型不替代临床判断。",
+    "pattern": "signal-to-outcome",
+    "skills": [
+      {"id": "neurokit2", "role": "处理心脑与自主神经生理信号", "handoff": "信号特征"},
+      {"id": "neuropixels-analysis", "role": "分析高密度神经电活动", "handoff": "神经元与事件指标"},
+      {"id": "pyhealth", "role": "统一临床任务和医疗编码", "handoff": "患者级建模数据"},
+      {"id": "scikit-survival", "role": "建立时间结局与风险模型", "handoff": "生存预测与校准"},
+      {"id": "statistical-analysis", "role": "报告效应、不确定性和敏感性", "handoff": "统计解释"}
+    ]
+  },
+  {
+    "id": "35-clinical-ai-governance",
+    "chapter": "临床与精准医学",
+    "title": "临床 AI 治理：从模型结果到可解释、可审查的决策材料",
+    "goal": "把医疗 AI 输出转换为带适用范围、证据等级和人工决策点的临床材料。",
+    "input": "模型、目标人群、性能结果、临床路径与风险阈值",
+    "output": "模型证据卡、适用边界、临床决策表、治疗讨论稿与评价报告",
+    "gain": "预测、临床规则、治疗方案和学术评价各自独立，避免模型直接越权决策。",
+    "quality": "外部验证、亚组公平性、校准和人工复核必须明确；不构成诊疗建议。",
+    "pattern": "human-in-the-loop",
+    "skills": [
+      {"id": "pyhealth", "role": "训练与评估医疗预测模型", "handoff": "模型结果与误差"},
+      {"id": "clinical-decision-support", "role": "映射指南与临床证据", "handoff": "决策依据"},
+      {"id": "treatment-plans", "role": "组织受控治疗讨论路径", "handoff": "方案与监测点"},
+      {"id": "scholar-evaluation", "role": "量化评价研究质量和缺陷", "handoff": "研究质量报告"},
+      {"id": "scientific-writing", "role": "形成透明的方法与结果报告", "handoff": "可审查论文文本"}
+    ]
+  },
+  {
+    "id": "36-statistical-baseline",
+    "chapter": "数据科学与人工智能",
+    "title": "统计基线工程：从脏数据到可信基线模型",
+    "goal": "先建立变量字典、质量画像和透明基线，再考虑复杂模型。",
+    "input": "表格数据、变量含义、研究设计、终点和排除规则",
+    "output": "质量报告、清洗数据、基线模型、诊断和可复现图表",
+    "gain": "数据清理、统计假设和预测基线彼此连接，复杂模型有了可靠参照。",
+    "quality": "不静默删异常；按设计划分数据；报告效应量、残差和缺失机制。",
+    "pattern": "baseline-pipeline",
+    "skills": [
+      {"id": "exploratory-data-analysis", "role": "发现缺失、异常、分布与关联", "handoff": "数据质量画像"},
+      {"id": "polars", "role": "高效清理和变换表格数据", "handoff": "分析就绪数据"},
+      {"id": "statsmodels", "role": "建立可诊断统计基线", "handoff": "参数、效应与诊断"},
+      {"id": "scikit-learn", "role": "建立统一预测基线和验证", "handoff": "基线性能"},
+      {"id": "matplotlib", "role": "生成可复现基础图形", "handoff": "质量与模型图"}
+    ]
+  },
+  {
+    "id": "37-time-series-intelligence",
+    "chapter": "数据科学与人工智能",
+    "title": "时间序列智能：从海量时点到可解释预测",
+    "goal": "统一时点、频率和特征，比较经典、专用和基础模型预测。",
+    "input": "时间序列、频率、预测窗、外生变量与业务/科研约束",
+    "output": "时序特征、基线、基础模型预测、回测和交互诊断",
+    "gain": "传统模型、时序工具和基础模型在同一滚动回测框架中公平比较。",
+    "quality": "严格防止未来信息泄漏；报告修订、季节性、区间和漂移。",
+    "pattern": "forecast-arena",
+    "skills": [
+      {"id": "polars", "role": "对齐高频时点和构造特征", "handoff": "规则化时序表"},
+      {"id": "aeon", "role": "提取时序特征并建立专用模型", "handoff": "时序基准"},
+      {"id": "statsmodels", "role": "建立可解释统计预测模型", "handoff": "经典预测与区间"},
+      {"id": "timesfm-forecasting", "role": "调用时间序列基础模型", "handoff": "零样本/微调预测"},
+      {"id": "plotly", "role": "交互检查回测、漂移与误差", "handoff": "预测诊断图"}
+    ]
+  },
+  {
+    "id": "38-bayesian-hypothesis-engine",
+    "chapter": "数据科学与人工智能",
+    "title": "贝叶斯假设引擎：从自动发现到后验不确定性",
+    "goal": "生成候选假设，构建概率模型，并通过批判检查保留不确定性。",
+    "input": "数据集、先验知识、候选机制、观测模型与决策阈值",
+    "output": "候选假设、概率模型、后验分布、模型检查与决策条件",
+    "gain": "自动假设生成不直接输出结论，而被统计建模和证据批判双重约束。",
+    "quality": "先验与模型选择透明；执行 posterior predictive check；不得把后验概率写成因果证明。",
+    "pattern": "inference-loop",
+    "skills": [
+      {"id": "hypogenic", "role": "从数据生成和测试候选假设", "handoff": "假设与实验建议"},
+      {"id": "pymc", "role": "建立贝叶斯层级与概率模型", "handoff": "后验分布"},
+      {"id": "sympy", "role": "校验符号关系和模型推导", "handoff": "解析表达与约束"},
+      {"id": "statistical-analysis", "role": "执行诊断、比较和敏感性分析", "handoff": "统计审计"},
+      {"id": "scientific-critical-thinking", "role": "检查替代解释和证据强度", "handoff": "结论边界"}
+    ]
+  },
+  {
+    "id": "39-reinforcement-learning-simulation",
+    "chapter": "数据科学与人工智能",
+    "title": "强化学习与数字仿真：先在可控世界中验证策略",
+    "goal": "构建离散事件环境，比较强化学习策略并评估资源与失败边界。",
+    "input": "状态、动作、奖励、事件机制、约束和计算预算",
+    "output": "仿真环境、策略模型、基线比较、风险情景和资源报告",
+    "gain": "环境假设、训练框架、策略性能和资源约束共同接受检查。",
+    "quality": "训练与评估随机种子分离；报告奖励设计敏感性；仿真结果不自动外推现实。",
+    "pattern": "simulation-loop",
+    "skills": [
+      {"id": "get-available-resources", "role": "盘点 CPU、GPU、内存和磁盘", "handoff": "计算策略建议"},
+      {"id": "simpy", "role": "构建离散事件环境和基线", "handoff": "可控仿真世界"},
+      {"id": "pufferlib", "role": "并行化高吞吐 RL 环境", "handoff": "快速训练接口"},
+      {"id": "stable-baselines3", "role": "训练标准强化学习策略", "handoff": "策略与评估指标"},
+      {"id": "plotly", "role": "比较奖励、稳定性和失败情景", "handoff": "策略诊断面板"}
+    ]
+  },
+  {
+    "id": "40-deep-learning-governance",
+    "chapter": "数据科学与人工智能",
+    "title": "深度学习治理：从训练编排到解释与弹性部署",
+    "goal": "以可复现训练、预训练模型、解释分析和云资源构成完整深度学习工程。",
+    "input": "数据集、任务、预训练模型、评价指标与算力预算",
+    "output": "训练记录、模型权重、验证结果、解释报告与可复现环境",
+    "gain": "训练框架、模型生态、解释工具和算力平台各自负责一个可审计层。",
+    "quality": "数据拆分防泄漏；记录模型和数据版本；解释结果不能替代因果分析。",
+    "pattern": "mlops-stack",
+    "skills": [
+      {"id": "pytorch-lightning", "role": "组织可复现训练、验证和日志", "handoff": "训练产物"},
+      {"id": "transformers", "role": "加载和微调预训练模型", "handoff": "任务模型"},
+      {"id": "shap", "role": "解释预测与特征贡献", "handoff": "解释报告"},
+      {"id": "modal", "role": "提供弹性 GPU 容器和批处理", "handoff": "可复现算力环境"},
+      {"id": "scientific-visualization", "role": "呈现性能、误差与解释结果", "handoff": "论文级模型图"}
+    ]
+  },
+  {
+    "id": "41-graph-learning",
+    "chapter": "数据科学与人工智能",
+    "title": "图学习研究：从关系网络到低维结构和可解释预测",
+    "goal": "把实体关系构造成图，执行结构分析、图神经网络和嵌入解释。",
+    "input": "节点、边、特征、标签、图粒度与验证方案",
+    "output": "图结构指标、嵌入、GNN 模型、误差分析与结构示意图",
+    "gain": "经典网络科学、图深度学习和可视解释形成互相校验的三层结构。",
+    "quality": "节点/边拆分防止邻域泄漏；报告孤立点、同质性和采样偏差。",
+    "pattern": "graph-stack",
+    "skills": [
+      {"id": "networkx", "role": "构建图并计算结构指标", "handoff": "图对象与网络特征"},
+      {"id": "torch-geometric", "role": "训练图神经网络", "handoff": "节点/图预测"},
+      {"id": "umap-learn", "role": "投影嵌入和局部结构", "handoff": "低维表示"},
+      {"id": "scikit-learn", "role": "提供非图基线与统一验证", "handoff": "基线比较"},
+      {"id": "scientific-schematics", "role": "绘制模型与信息传递结构", "handoff": "可读架构图"}
+    ]
+  },
+  {
+    "id": "42-multiobjective-big-data",
+    "chapter": "数据科学与人工智能",
+    "title": "大数据多目标优化：让速度、精度、成本和约束同时可见",
+    "goal": "在超内存数据上评估多个相互冲突的目标并形成 Pareto 决策面。",
+    "input": "大规模表格、目标函数、约束、计算预算和停止条件",
+    "output": "分布式特征、优化轨迹、Pareto 前沿与资源—性能权衡",
+    "gain": "大数据计算和多目标搜索共享资源上限，避免追求单一指标的伪最优。",
+    "quality": "先小样本验证目标函数；记录随机种子和停止条件；检查解的稳定性。",
+    "pattern": "pareto-engine",
+    "skills": [
+      {"id": "vaex", "role": "低内存探索超大表格", "handoff": "大数据统计与特征"},
+      {"id": "dask", "role": "并行构建计算任务图", "handoff": "分布式计算结果"},
+      {"id": "pymoo", "role": "执行约束多目标优化", "handoff": "Pareto 解集"},
+      {"id": "get-available-resources", "role": "约束并行度和内存策略", "handoff": "资源边界"}
+    ]
+  },
+  {
+    "id": "43-quantum-algorithm-benchmark",
+    "chapter": "物理、材料与复杂系统",
+    "title": "量子算法基准：跨框架验证线路、噪声与变分结果",
+    "goal": "在多个量子计算框架中复现实验，比较线路、噪声模型和变分优化。",
+    "input": "量子问题、哈密顿量、线路深度、后端与噪声条件",
+    "output": "等价线路、模拟结果、噪声敏感性和跨框架基准",
+    "gain": "不同软件栈提供独立实现，能发现框架默认值和后端差异。",
+    "quality": "统一初态、测量和随机种子；记录后端版本；模拟不代表真实硬件优势。",
+    "pattern": "benchmark-arena",
+    "skills": [
+      {"id": "qiskit", "role": "构建 IBM 生态线路与运行", "handoff": "Qiskit 基准结果"},
+      {"id": "cirq", "role": "构建门级线路和噪声模拟", "handoff": "Cirq 对照结果"},
+      {"id": "pennylane", "role": "实现可微分变分量子算法", "handoff": "优化轨迹"},
+      {"id": "qutip", "role": "模拟开放量子系统动力学", "handoff": "态与演化结果"},
+      {"id": "sympy", "role": "校验算符和解析表达", "handoff": "符号验证"}
+    ]
+  },
+  {
+    "id": "44-astronomical-discovery",
+    "chapter": "物理、材料与复杂系统",
+    "title": "天文数据发现：从坐标和时序到可发表观测结论",
+    "goal": "处理天文坐标、时间和表格，完成探索、可视化与规范科学报告。",
+    "input": "FITS/表格、坐标系、观测时间、误差与科学问题",
+    "output": "校准数据、天体目录、时序/光谱图、统计结果与论文段落",
+    "gain": "领域单位与坐标处理先于统计图表，避免通用分析破坏天文语义。",
+    "quality": "统一坐标系、时间标准和单位；处理选择效应与观测不确定性。",
+    "pattern": "observation-pipeline",
+    "skills": [
+      {"id": "astropy", "role": "处理 FITS、坐标、时间与单位", "handoff": "规范天文数据"},
+      {"id": "dask", "role": "并行处理大规模观测表", "handoff": "可扩展计算结果"},
+      {"id": "matplotlib", "role": "绘制光变、光谱和天区图", "handoff": "科学图形"},
+      {"id": "scientific-writing", "role": "组织方法、结果与不确定性", "handoff": "论文级叙述"}
+    ]
+  },
+  {
+    "id": "45-fluid-physics-simulation",
+    "chapter": "物理、材料与复杂系统",
+    "title": "流体与物理仿真：从方程原型到并行数值证据",
+    "goal": "定义边界条件、实现求解、检查收敛并形成可复现模拟证据。",
+    "input": "控制方程、几何、边界、网格、物性和观测量",
+    "output": "求解代码、收敛报告、流场数据、敏感性分析与图形",
+    "gain": "符号推导、工程原型、专业流体求解和并行计算形成逐层验证。",
+    "quality": "检查网格独立性、守恒和时间步；未收敛结果不得用于结论。",
+    "pattern": "verification-ladder",
+    "skills": [
+      {"id": "sympy", "role": "推导方程与解析边界检查", "handoff": "符号模型"},
+      {"id": "matlab", "role": "快速实现数值原型和对照", "handoff": "原型结果"},
+      {"id": "fluidsim", "role": "执行专业流体数值模拟", "handoff": "流场与诊断"},
+      {"id": "dask", "role": "并行参数扫描与后处理", "handoff": "敏感性结果"},
+      {"id": "scientific-visualization", "role": "呈现场变量、误差与收敛", "handoff": "出版级物理图"}
+    ]
+  },
+  {
+    "id": "46-materials-discovery",
+    "chapter": "物理、材料与复杂系统",
+    "title": "材料发现：结构表示、多目标搜索与计算证据",
+    "goal": "在结构有效性、目标性质、稳定性和计算成本之间寻找材料候选。",
+    "input": "晶体结构、目标性质、化学空间、约束与计算预算",
+    "output": "结构特征、候选材料、Pareto 排序、计算性质与可视比较",
+    "gain": "结构工具、量子计算服务和多目标优化共同限定候选，而非只追单一预测值。",
+    "quality": "记录计算设置和单位；检查结构有效性；计算候选必须实验验证。",
+    "pattern": "discovery-funnel",
+    "skills": [
+      {"id": "pymatgen", "role": "解析晶体并生成结构特征", "handoff": "材料结构数据"},
+      {"id": "rowan", "role": "执行候选量子化学计算", "handoff": "计算性质"},
+      {"id": "pymoo", "role": "优化性能、稳定性与成本", "handoff": "Pareto 候选"},
+      {"id": "scientific-visualization", "role": "比较结构—性质与不确定性", "handoff": "材料发现图谱"}
+    ]
+  },
+  {
+    "id": "47-metabolic-systems-model",
+    "chapter": "物理、材料与复杂系统",
+    "title": "代谢系统建模：从酶动力学和通路到约束网络",
+    "goal": "整合酶参数和通路知识，建立可检验的代谢网络与通量预测。",
+    "input": "物种、代谢网络、培养条件、反应约束与目标产物",
+    "output": "规范反应网络、通量解、敏感节点与实验验证建议",
+    "gain": "数据库反应、酶动力学和网络优化共同解释通量变化。",
+    "quality": "质量与电荷平衡必须检查；参数缺失和多解性需显式报告。",
+    "pattern": "systems-loop",
+    "skills": [
+      {"id": "kegg-database", "role": "获取代谢通路和反应映射", "handoff": "通路骨架"},
+      {"id": "brenda-database", "role": "补充酶动力学与物种条件", "handoff": "反应参数"},
+      {"id": "cobrapy", "role": "执行约束代谢与通量分析", "handoff": "通量解与敲除预测"},
+      {"id": "networkx", "role": "分析代谢网络拓扑和关键节点", "handoff": "网络结构证据"}
+    ]
+  },
+  {
+    "id": "48-robotic-laboratory",
+    "chapter": "自动化、经济与空间研究",
+    "title": "机器人实验室：从协议到多设备执行与数据回流",
+    "goal": "把版本化实验协议转换为安全的液体处理和多设备自动化流程。",
+    "input": "协议、板图、耗材、体积、设备型号、安全与停止条件",
+    "output": "可执行机器人协议、模拟报告、运行日志、样本位置与 ELN 记录",
+    "gain": "协议管理、单设备控制、跨厂商编排和实验资产管理形成闭环。",
+    "quality": "先模拟和小规模试运行；独立复核体积、死体积、板位与碰撞风险。",
+    "pattern": "automation-loop",
+    "skills": [
+      {"id": "protocolsio-integration", "role": "维护协议步骤、材料和版本", "handoff": "标准实验协议"},
+      {"id": "opentrons-integration", "role": "生成官方 OT-2/Flex 协议", "handoff": "设备级执行代码"},
+      {"id": "pylabrobot", "role": "编排多厂商仪器和模拟", "handoff": "统一自动化流程"},
+      {"id": "benchling-integration", "role": "管理样本、注册表和工作流", "handoff": "实验资产状态"},
+      {"id": "labarchive-integration", "role": "归档日志、附件与偏差", "handoff": "ELN 审计记录"}
+    ]
+  },
+  {
+    "id": "49-financial-macro-research",
+    "chapter": "自动化、经济与空间研究",
+    "title": "金融宏观研究：市场、企业、财政与系统风险同框验证",
+    "goal": "对齐市场价格、公司披露、宏观指标、财政数据和对冲基金风险。",
+    "input": "研究假设、标的/行业、时间窗、频率、币种与信息时点",
+    "output": "多源对齐数据、指标体系、计量/情景结果与专业研究报告",
+    "gain": "市场、基本面和宏观财政数据互相校验，减少单一数据源叙事。",
+    "quality": "处理修订、复权、时区和前视偏差；结果不构成投资建议。",
+    "pattern": "macro-dashboard",
+    "skills": [
+      {"id": "alpha-vantage", "role": "获取市场、外汇和技术指标", "handoff": "价格与市场数据"},
+      {"id": "edgartools", "role": "解析 SEC 披露和 XBRL 财务", "handoff": "公司基本面"},
+      {"id": "fred-economic-data", "role": "获取宏观经济时间序列", "handoff": "宏观指标"},
+      {"id": "usfiscaldata", "role": "获取美国财政和国债数据", "handoff": "财政变量"},
+      {"id": "hedgefundmonitor", "role": "补充杠杆、流动性和系统风险", "handoff": "金融稳定指标"},
+      {"id": "market-research-reports", "role": "综合框架并生成研究报告", "handoff": "咨询级研究交付"}
+    ]
+  },
+  {
+    "id": "50-geospatial-research-delivery",
+    "chapter": "自动化、经济与空间研究",
+    "title": "地理空间研究：从公共统计和遥感到可发布地图证据",
+    "goal": "整合公共统计、矢量与遥感数据，完成空间分析、可视化和数据共享说明。",
+    "input": "研究区域、时间范围、坐标系、遥感/矢量数据与统计指标",
+    "output": "规范空间数据、空间统计、专题地图、精度报告与共享声明",
+    "gain": "社会统计、GIS 处理、遥感方法和可视传播在同一空间—时间框架内协同。",
+    "quality": "统一 CRS、分辨率和时间；独立验证分类精度；保护敏感位置。",
+    "pattern": "spatial-evidence",
+    "skills": [
+      {"id": "datacommons-client", "role": "获取地区人口、经济与环境统计", "handoff": "地理公共指标"},
+      {"id": "geopandas", "role": "执行矢量投影、连接和叠加", "handoff": "规范空间图层"},
+      {"id": "geomaster", "role": "处理遥感、栅格和空间模型", "handoff": "地球观测结果"},
+      {"id": "scientific-visualization", "role": "生成地图、比较图和精度图", "handoff": "可发布空间图形"},
+      {"id": "ll-research-data-availability", "role": "记录许可、敏感性和复用条件", "handoff": "空间数据可用性声明"}
+    ]
+  }
+]

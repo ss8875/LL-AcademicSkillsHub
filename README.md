@@ -7,6 +7,7 @@
   <a href="./README.en.md">English</a> ·
   <a href="https://ky.ec51.com/">官方网站</a> ·
   <a href="#18-大分类--187-项技能完整能力清单">全部技能</a> ·
+  <a href="./docs/skill-combinations.zh-CN.md">技能组合</a> ·
   <a href="./docs/deployment.zh-CN.md">本地部署</a> ·
   <a href="./docs/github-publishing-guide.zh-CN.md">GitHub 发布手册</a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe">下载科研 AI 平台</a> ·
@@ -101,6 +102,21 @@ LL-AcademicSkillsHub 将科研技能按任务体系，分门别类全流程完�
   <a href="https://ky.ec51.com/"><strong>访问链邻科研 AI 平台官网</strong></a> ·
   <a href="https://github.com/ss8875/LL-AcademicSkillsHub/releases/download/lianlin-ai-v0.3.18/Lianlin-Research-AI-Platform-Setup-0.3.18.exe"><strong>⬇ 下载链邻科研 AI 平台 0.3.18（Windows 安装版）</strong></a><br>
   <sub>约 116.75 MB · SHA-256：<code>E502A3422E69A015BFBD56B8A1483C5CE4E1663F08C75D9AE0DE2639CAE280F6</code></sub>
+</p>
+
+## 技能组合使用举例
+
+187 项技能不仅可以单独调用，还可以按照科研任务的输入、处理、验证与交付关系组合使用。下面只展示一张总览脑图；完整页面收录 **50 个科研组合场景**、**245 个技能协作席位**，每张图均说明 3–6 项技能如何衔接、交接什么产物以及如何完成质量复核。
+
+<p align="center">
+  <a href="./docs/skill-combinations.zh-CN.md">
+    <img src="./assets/brand/skill-combinations/index.svg" alt="187 项技能与 50 个专业协作脑图总览" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="./docs/skill-combinations.zh-CN.md"><strong>进入独立页面，查看 50 张技能组合图及组合使用说明</strong></a> ·
+  <a href="./reports/skill-combination-audit.zh-CN.md">查看 187 项技能覆盖审计</a>
 </p>
 
 ### 18 大分类 · 187 项技能完整能力清单

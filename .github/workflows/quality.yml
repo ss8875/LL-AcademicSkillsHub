@@ -21,8 +21,14 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
-      - name: Rebuild catalog
-        run: python scripts/build_catalog.py
+      - name: Rebuild catalog and skill-combination maps
+        run: |
+          python scripts/build_skill_combinations.py
+          python scripts/build_skill_combination_index.py
+          python scripts/build_skill_combination_docs.py
+          python scripts/build_catalog.py
+      - name: Validate skill combinations
+        run: python scripts/validate_skill_combinations.py
       - name: Validate repository
         run: python scripts/validate_repo.py
       - name: Run regression tests
